@@ -1,9 +1,14 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
+using System.Threading;
+using System.Windows.Forms;
 
 namespace MultiDesk
 {
     public partial class MainMenu : Form
     {
+        private string currentDesktop = "Default";
         public MainMenu()
         {
             InitializeComponent();
@@ -148,6 +153,10 @@ namespace MultiDesk
         private void btnStart_Click(object sender, System.EventArgs e)
         {
             Hide();
+            for (int b = 0; b < Globals.NoDesktops; b++)
+            {
+                DesktopInitialise("desktop" + b.ToString());
+            }
             RunningWindow open = new RunningWindow();
             open.ShowDialog();
             Close();
@@ -168,5 +177,81 @@ namespace MultiDesk
                 Close();
             }
         }
+
+        private void DesktopInitialise(string name)
+        {
+            DesktopSave();
+
+            if (!Desktops.DesktopExists(name))
+            {
+                Desktops.DesktopCreate(name);
+                Processes.ProcessCreate(name, Application.ExecutablePath, "running");
+            }
+            Desktops.DesktopSwitch(name);
+        }
+
+        private void DesktopSave()
+        {
+            string path = Application.UserAppDataPath + "\\";
+            string desktop = currentDesktop;
+            if (desktop == "Default")
+            {
+                desktop = "Desktop1";
+            }
+            path = path + desktop;
+            Thread.Sleep(500);
+            Screenshots.ScreenSave(path, ImageFormat.Jpeg, this);
+        }
+
+        private void ScreenshotsLoad()
+        {
+            for (int index = 1; index < 5; index++)
+            {
+                string path = Application.UserAppDataPath + "\\";
+                path += "Desktop" + index.ToString();
+                if (File.Exists(path))
+                {
+                    MemoryStream stream = new MemoryStream();
+                    Image image = Bitmap.FromFile(path);
+                    image.Save(stream, ImageFormat.Jpeg);
+                    image.Dispose();
+                    string pictureBox = "pictureBox" + index.ToString();
+                }
+            }
+
+        }
+
+        private void ScreenshotLoad()
+        {
+            switch (currentDesktop)
+            {
+                case "Default":
+                    //pictureBox1.Image = Screenshots.ScreenCapture(this);
+                    break;
+                case "Desktop2":
+                    //ictureBox2.Image = Screenshots.ScreenCapture(this);
+                    break;
+                case "Desktop3":
+                    //pictureBox3.Image = Screenshots.ScreenCapture(this);
+                    break;
+                case "Desktop4":
+                    //pictureBox4.Image = Screenshots.ScreenCapture(this);
+                    break;
+            }
+        }
+
+        private void ScreenshotsDelete()
+        {
+            for (int index = 2; index < 5; index++)
+            {
+                string desktop = "Desktop" + index.ToString();
+                string path = Application.UserAppDataPath + "\\" + desktop;
+                if (File.Exists(path) && !Desktops.DesktopExists(desktop))
+                {
+                    File.Delete(path);
+                }
+            }
+        }
+
     }
 }
