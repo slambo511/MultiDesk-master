@@ -32,9 +32,10 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.makeRunningMenuFloatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contactUsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gbxNumberOfDesktops = new System.Windows.Forms.GroupBox();
             this.rbEight = new System.Windows.Forms.RadioButton();
             this.rbSeven = new System.Windows.Forms.RadioButton();
@@ -54,7 +55,6 @@
             this.rbTopLeft = new System.Windows.Forms.RadioButton();
             this.btnStart = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.makeRunningMenuFloatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnFloatDock = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.gbxNumberOfDesktops.SuspendLayout();
@@ -84,9 +84,24 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // editStripMenuItem1
+            // 
+            this.editStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.makeRunningMenuFloatToolStripMenuItem});
+            this.editStripMenuItem1.Name = "editStripMenuItem1";
+            this.editStripMenuItem1.Size = new System.Drawing.Size(39, 20);
+            this.editStripMenuItem1.Text = "&Edit";
+            // 
+            // makeRunningMenuFloatToolStripMenuItem
+            // 
+            this.makeRunningMenuFloatToolStripMenuItem.Name = "makeRunningMenuFloatToolStripMenuItem";
+            this.makeRunningMenuFloatToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.makeRunningMenuFloatToolStripMenuItem.Text = "Make Running Menu &Float";
+            this.makeRunningMenuFloatToolStripMenuItem.Click += new System.EventHandler(this.makeRunningMenuFloatToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -101,14 +116,6 @@
             this.contactUsToolStripMenuItem.Name = "contactUsToolStripMenuItem";
             this.contactUsToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.contactUsToolStripMenuItem.Text = "&Contact Us";
-            // 
-            // editStripMenuItem1
-            // 
-            this.editStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.makeRunningMenuFloatToolStripMenuItem});
-            this.editStripMenuItem1.Name = "editStripMenuItem1";
-            this.editStripMenuItem1.Size = new System.Drawing.Size(39, 20);
-            this.editStripMenuItem1.Text = "&Edit";
             // 
             // gbxNumberOfDesktops
             // 
@@ -332,13 +339,6 @@
             this.btnExit.Text = "E&xit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // makeRunningMenuFloatToolStripMenuItem
-            // 
-            this.makeRunningMenuFloatToolStripMenuItem.Name = "makeRunningMenuFloatToolStripMenuItem";
-            this.makeRunningMenuFloatToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
-            this.makeRunningMenuFloatToolStripMenuItem.Text = "Make Running Menu &Float";
-            this.makeRunningMenuFloatToolStripMenuItem.Click += new System.EventHandler(this.makeRunningMenuFloatToolStripMenuItem_Click);
             // 
             // btnFloatDock
             // 

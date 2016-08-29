@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Threading;
@@ -155,7 +156,8 @@ namespace MultiDesk
             Hide();
             for (int b = 0; b < Globals.NoDesktops; b++)
             {
-                DesktopInitialise("desktop" + b.ToString());
+                int c = b + 1;
+                DesktopInitialise("desktop" + c.ToString());
             }
             RunningWindow open = new RunningWindow();
             open.ShowDialog();
@@ -165,12 +167,11 @@ namespace MultiDesk
 
         #region Functions
 
-        #endregion
-
         private void MainMenu_Load(object sender, System.EventArgs e)
         {
-            if (Program.Running == "running")
+            if (Program.Arguments[0] == "running")
             {
+                Globals.NoDesktops = Convert.ToInt32(Program.Arguments[1]);
                 Hide();
                 RunningWindow open = new RunningWindow();
                 open.ShowDialog();
@@ -184,8 +185,9 @@ namespace MultiDesk
 
             if (!Desktops.DesktopExists(name))
             {
+                string[] args = {"running", Globals.NoDesktops.ToString()};
                 Desktops.DesktopCreate(name);
-                Processes.ProcessCreate(name, Application.ExecutablePath, "running");
+                Processes.ProcessCreate(name, Application.ExecutablePath, String.Join(" ", args));             
             }
             Desktops.DesktopSwitch(name);
         }
@@ -252,6 +254,7 @@ namespace MultiDesk
                 }
             }
         }
+        #endregion
 
     }
 }

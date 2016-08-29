@@ -95,13 +95,13 @@ namespace MultiDesk
                 Width = Width - 32;
             }
 
-            if (Program.Running == "running")
+            if (Program.Arguments[0] == "running")
             {
                 Process.Start("explorer.exe");
                 Thread.Sleep(500);
                 this.Opacity = 0;
                 this.WindowState = FormWindowState.Normal;
-                this.WindowState = FormWindowState.Minimized;
+                //this.WindowState = FormWindowState.Minimized;
                 Thread.Sleep(500);
                 this.Opacity = 100;
             }
