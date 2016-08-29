@@ -21,40 +21,40 @@ namespace MultiDesk
         private static extern bool GetUserObjectInformation(IntPtr hObj, int nIndex, IntPtr pvInfo,
             int nLength, ref int lpnLengthNeeded);
 
-        private const long DESKTOP_CREATEWINDOW = 0x0002L;
-        private const long DESKTOP_ENUMERATE = 0x0040L;
-        private const long DESKTOP_WRITEOBJECTS = 0x0080L;
-        private const long DESKTOP_SWITCHDESKTOP = 0x0100L;
-        private const long DESKTOP_CREATEMENU = 0x0004L;
-        private const long DESKTOP_HOOKCONTROL = 0x0008L;
-        private const long DESKTOP_READOBJECTS = 0x0001L;
-        private const long DESKTOP_JOURNALRECORD = 0x0010L;
-        private const long DESKTOP_JOURNALPLAYBACK = 0x0020L;
+        private const long DesktopCreatewindow = 0x0002L;
+        private const long DesktopEnumerate = 0x0040L;
+        private const long DesktopWriteobjects = 0x0080L;
+        private const long DesktopSwitchdesktop = 0x0100L;
+        private const long DesktopCreatemenu = 0x0004L;
+        private const long DesktopHookcontrol = 0x0008L;
+        private const long DesktopReadobjects = 0x0001L;
+        private const long DesktopJournalrecord = 0x0010L;
+        private const long DesktopJournalplayback = 0x0020L;
 
-        private const long rights =
-            DESKTOP_CREATEWINDOW |
-            DESKTOP_ENUMERATE |
-            DESKTOP_WRITEOBJECTS |
-            DESKTOP_SWITCHDESKTOP |
-            DESKTOP_CREATEMENU |
-            DESKTOP_HOOKCONTROL |
-            DESKTOP_READOBJECTS |
-            DESKTOP_JOURNALRECORD |
-            DESKTOP_JOURNALPLAYBACK;
+        private const long Rights =
+            DesktopCreatewindow |
+            DesktopEnumerate |
+            DesktopWriteobjects |
+            DesktopSwitchdesktop |
+            DesktopCreatemenu |
+            DesktopHookcontrol |
+            DesktopReadobjects |
+            DesktopJournalrecord |
+            DesktopJournalplayback;
 
         public static IntPtr DesktopCreate(string name)
         {
-            return CreateDesktop(name, IntPtr.Zero, IntPtr.Zero, 0, rights, IntPtr.Zero);
+            return CreateDesktop(name, IntPtr.Zero, IntPtr.Zero, 0, Rights, IntPtr.Zero);
         }
 
         public static IntPtr DesktopOpen(string name)
         {
-            return OpenDesktop(name, 0, true, rights);
+            return OpenDesktop(name, 0, true, Rights);
         }
 
         public static IntPtr DesktopOpenInput()
         {
-            return OpenInputDesktop(0, true, rights);
+            return OpenInputDesktop(0, true, Rights);
         }
 
         public static bool DesktopSwitch(string name)
