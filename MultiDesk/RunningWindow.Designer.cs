@@ -131,6 +131,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "RunningWindow";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.RunningWindow_Load_1);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RunningWindow_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RunningWindow_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.RunningWindow_MouseUp);

@@ -24,6 +24,7 @@ namespace MultiDesk
             set { base.BackColor = value; }
         }
 
+        #region HandleFloatingMovementAndPositionOfWindow
         private void RunningWindow_Load(object sender, System.EventArgs e)
         {
             if (!Globals.IsFloating)
@@ -33,11 +34,13 @@ namespace MultiDesk
             }
             
         }
-
         private void RunningWindow_MouseDown(object sender, MouseEventArgs e)
         {
-            _mouseDown = true;
-            _lastLocation = e.Location;
+            if (Globals.IsFloating)
+            {
+                _mouseDown = true;
+                _lastLocation = e.Location;
+            }
         }
 
         private void RunningWindow_MouseUp(object sender, MouseEventArgs e)
@@ -54,6 +57,41 @@ namespace MultiDesk
                 this.Update();
             }
         }
+        #endregion
 
+        private void RunningWindow_Load_1(object sender, EventArgs e)
+        {
+            // Handles the removal of superflous buttons and resizes form accordingly
+            if (Globals.NoDesktops == 2)
+            {
+                btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide(); btnFour.Hide(); btnThree.Hide();
+                Width = Width - (32*6);
+            }
+            else if (Globals.NoDesktops == 3)
+            {
+                btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide(); btnFour.Hide();
+                Width = Width - (32 * 5);
+            }
+            else if (Globals.NoDesktops == 4)
+            {
+                btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide();
+                Width = Width - (32 * 4);
+            }
+            else if (Globals.NoDesktops == 5)
+            {
+                btnEight.Hide(); btnSeven.Hide(); btnSix.Hide();
+                Width = Width - (32 * 3);
+            }
+            else if (Globals.NoDesktops == 6)
+            {
+                btnEight.Hide(); btnSeven.Hide();
+                Width = Width - (36 * 2);
+            }
+            else if (Globals.NoDesktops == 7)
+            {
+                btnEight.Hide();
+                Width = Width - 32;
+            }
+        }
     }
 }
