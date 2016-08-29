@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MultiDesk
 {
     public class Desktops
     {
         [DllImport("user32.dll")]
-        public static extern IntPtr CreateDestop(string lpszDesktop, IntPtr lpszDevice, IntPtr pDevmode, 
+        public static extern IntPtr CreateDesktop(string lpszDesktop, IntPtr lpszDevice, IntPtr pDevmode, 
             int dwFlags, long dwDesiredAccess, IntPtr lpsa);
         [DllImport("user32.dll")]
         public static extern IntPtr OpenDesktop(string lpszDesktop, int dwFlags, bool fInherit,
@@ -48,7 +44,7 @@ namespace MultiDesk
 
         public static IntPtr DesktopCreate(string name)
         {
-            return CreateDestop(name, IntPtr.Zero, IntPtr.Zero, 0, rights, IntPtr.Zero);
+            return CreateDesktop(name, IntPtr.Zero, IntPtr.Zero, 0, rights, IntPtr.Zero);
         }
 
         public static IntPtr DesktopOpen(string name)
