@@ -5,7 +5,7 @@ namespace MultiDesk
 {
     static class Program
     {
-        public static string[] Arguments;      
+        public static string[] Arguments = {string.Empty, String.Empty};      
         private static int count = 0;
         /// <summary>
         /// The main entry point for the application.
@@ -13,7 +13,6 @@ namespace MultiDesk
         [STAThread]
         static void Main(string[] args)
         {
-            Arguments[0] = String.Empty;
             foreach (string arg in args)
             {
                 Arguments[count] = arg.Trim();
