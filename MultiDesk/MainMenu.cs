@@ -169,13 +169,16 @@ namespace MultiDesk
 
         private void MainMenu_Load(object sender, System.EventArgs e)
         {
-            if (Program.Arguments[0] == "running")
+            if (Program.Arguments[0] != null)
             {
-                Globals.NoDesktops = Convert.ToInt32(Program.Arguments[1]);
-                Hide();
-                RunningWindow open = new RunningWindow();
-                open.ShowDialog();
-                Close();
+                if (Program.Arguments[0] == "running")
+                {
+                    Globals.NoDesktops = Convert.ToInt32(Program.Arguments[1]);
+                    Hide();
+                    RunningWindow open = new RunningWindow();
+                    open.ShowDialog();
+                    Close();
+                }
             }
         }
 
