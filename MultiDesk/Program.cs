@@ -5,7 +5,7 @@ namespace MultiDesk
 {
     static class Program
     {
-        public static string running = string.Empty;
+        public static string Running = string.Empty;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -14,7 +14,7 @@ namespace MultiDesk
         {
             foreach (string arg in args)
             {
-                running = arg.Trim();
+                Running = arg.Trim();
             }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

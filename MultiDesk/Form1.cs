@@ -94,7 +94,7 @@ namespace MultiDesk
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            if (Program.running == "running")
+            if (Program.Running == "running")
             {
                 Process.Start("explorer.exe");
                 Thread.Sleep(500);
