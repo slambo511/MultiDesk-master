@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
 namespace MultiDesk
@@ -13,6 +8,15 @@ namespace MultiDesk
         public RunningWindow()
         {
             InitializeComponent();
+
+            TransparencyKey = Color.Aquamarine;
+            BackColor = Color.Aquamarine;
+
+        }
+        public sealed override Color BackColor
+        {
+            get { return base.BackColor; }
+            set { base.BackColor = value; }
         }
     }
 }
