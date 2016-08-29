@@ -35,7 +35,7 @@ namespace MultiDesk
         private const long DESKTOP_JOURNALRECORD = 0x0010L;
         private const long DESKTOP_JOURNALPLAYBACK = 0x0020L;
 
-        private const long RIGHTS =
+        private const long rights =
             DESKTOP_CREATEWINDOW |
             DESKTOP_ENUMERATE |
             DESKTOP_WRITEOBJECTS |
@@ -48,17 +48,17 @@ namespace MultiDesk
 
         public static IntPtr DesktopCreate(string name)
         {
-            return CreateDestop(name, IntPtr.Zero, IntPtr.Zero, 0, RIGHTS, IntPtr.Zero);
+            return CreateDestop(name, IntPtr.Zero, IntPtr.Zero, 0, rights, IntPtr.Zero);
         }
 
         public static IntPtr DesktopOpen(string name)
         {
-            return OpenDesktop(name, 0, true, RIGHTS);
+            return OpenDesktop(name, 0, true, rights);
         }
 
         public static IntPtr DesktopOpenInput()
         {
-            return OpenInputDesktop(0, true, RIGHTS);
+            return OpenInputDesktop(0, true, rights);
         }
 
         public static bool DesktopSwitch(string name)
