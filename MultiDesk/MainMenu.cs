@@ -156,7 +156,17 @@ namespace MultiDesk
 
         #region Functions
 
-#endregion
+        #endregion
 
+        private void MainMenu_Load(object sender, System.EventArgs e)
+        {
+            if (Program.Running == "running")
+            {
+                Hide();
+                RunningWindow open = new RunningWindow();
+                open.ShowDialog();
+                Close();
+            }
+        }
     }
 }

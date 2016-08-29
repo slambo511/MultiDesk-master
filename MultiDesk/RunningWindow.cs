@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace MultiDesk
@@ -92,6 +94,20 @@ namespace MultiDesk
                 btnEight.Hide();
                 Width = Width - 32;
             }
+
+            if (Program.Running == "running")
+            {
+                Process.Start("explorer.exe");
+                Thread.Sleep(500);
+                this.Opacity = 0;
+                this.WindowState = FormWindowState.Normal;
+                this.WindowState = FormWindowState.Minimized;
+                Thread.Sleep(500);
+                this.Opacity = 100;
+            }
+            //currentDesktop = Desktops.DesktopName(Desktops.DesktopOpenInput());
+            //ScreenshotsDelete();
+
         }
     }
 }
