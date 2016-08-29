@@ -9,6 +9,7 @@ namespace MultiDesk
             InitializeComponent();
         }
 
+        #region DesktopNumberRadioButtons
         private void rbTwo_CheckedChanged(object sender, System.EventArgs e)
         {
             Globals.NoDesktops = 2;
@@ -43,7 +44,9 @@ namespace MultiDesk
         {
             Globals.NoDesktops = 8;
         }
+        #endregion
 
+        #region DektopPositionRadioButtons
         private void rbTopLeft_CheckedChanged(object sender, System.EventArgs e)
         {
             Globals.ScreenPosition = Globals.TopLeft;
@@ -83,19 +86,62 @@ namespace MultiDesk
         {
             Globals.ScreenPosition = Globals.BottomRight;
         }
+        #endregion
 
+        #region FloatOrDockRunningMenuHandlers
         private void makeRunningMenuFloatToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             if (!Globals.IsFloating)
             {
-                Globals.IsFloating = true;
-                makeRunningMenuFloatToolStripMenuItem.Text = @"Make Running Menu Docked";
+                FloatMenu();
             }
             else
             {
-                Globals.IsFloating = false;
-                makeRunningMenuFloatToolStripMenuItem.Text = @"Make Running Menu Float";
+                DockMenu();
             }
         }
+
+        private void btnFloatDock_Click(object sender, System.EventArgs e)
+        {
+            if (!Globals.IsFloating)
+            {
+                FloatMenu();
+            }
+            else
+            {
+                DockMenu();
+            }
+        }
+        #endregion
+
+        #region ExitHandlers    
+        private void btnExit_Click(object sender, System.EventArgs e)
+        {
+            Globals.Exit();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            Globals.Exit();
+        }
+        #endregion
+
+        #region CustomMethods
+        private void FloatMenu()
+        {
+            Globals.IsFloating = true;
+            makeRunningMenuFloatToolStripMenuItem.Text = @"Make Running Menu Docked";
+            gbxPosition.Enabled = false;
+            btnFloatDock.Text = @"Dock Menu";
+        }
+
+        private void DockMenu()
+        {
+            Globals.IsFloating = false;
+            makeRunningMenuFloatToolStripMenuItem.Text = @"Make Running Menu Float";
+            gbxPosition.Enabled = true;
+            btnFloatDock.Text = @"Float Menu";
+        }
+        #endregion 
     }
 }

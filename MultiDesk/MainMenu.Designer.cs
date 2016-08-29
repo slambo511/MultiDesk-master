@@ -55,6 +55,7 @@
             this.btnStart = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.makeRunningMenuFloatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnFloatDock = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.gbxNumberOfDesktops.SuspendLayout();
             this.gbxPosition.SuspendLayout();
@@ -68,7 +69,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(676, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(730, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -83,8 +84,9 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -119,7 +121,7 @@
             this.gbxNumberOfDesktops.Controls.Add(this.rbTwo);
             this.gbxNumberOfDesktops.Location = new System.Drawing.Point(23, 44);
             this.gbxNumberOfDesktops.Name = "gbxNumberOfDesktops";
-            this.gbxNumberOfDesktops.Size = new System.Drawing.Size(127, 181);
+            this.gbxNumberOfDesktops.Size = new System.Drawing.Size(167, 181);
             this.gbxNumberOfDesktops.TabIndex = 1;
             this.gbxNumberOfDesktops.TabStop = false;
             this.gbxNumberOfDesktops.Text = "Number of desktops";
@@ -213,7 +215,7 @@
             this.gbxPosition.Controls.Add(this.rbTopRight);
             this.gbxPosition.Controls.Add(this.rbTopCentre);
             this.gbxPosition.Controls.Add(this.rbTopLeft);
-            this.gbxPosition.Location = new System.Drawing.Point(196, 44);
+            this.gbxPosition.Location = new System.Drawing.Point(256, 44);
             this.gbxPosition.Name = "gbxPosition";
             this.gbxPosition.Size = new System.Drawing.Size(454, 181);
             this.gbxPosition.TabIndex = 2;
@@ -322,12 +324,13 @@
             // btnExit
             // 
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnExit.Location = new System.Drawing.Point(575, 253);
+            this.btnExit.Location = new System.Drawing.Point(115, 253);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 4;
             this.btnExit.Text = "E&xit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // makeRunningMenuFloatToolStripMenuItem
             // 
@@ -336,13 +339,24 @@
             this.makeRunningMenuFloatToolStripMenuItem.Text = "Make Running Menu &Float";
             this.makeRunningMenuFloatToolStripMenuItem.Click += new System.EventHandler(this.makeRunningMenuFloatToolStripMenuItem_Click);
             // 
+            // btnFloatDock
+            // 
+            this.btnFloatDock.Location = new System.Drawing.Point(635, 253);
+            this.btnFloatDock.Name = "btnFloatDock";
+            this.btnFloatDock.Size = new System.Drawing.Size(75, 23);
+            this.btnFloatDock.TabIndex = 8;
+            this.btnFloatDock.Text = "Float Menu";
+            this.btnFloatDock.UseVisualStyleBackColor = true;
+            this.btnFloatDock.Click += new System.EventHandler(this.btnFloatDock_Click);
+            // 
             // MainMenu
             // 
             this.AcceptButton = this.btnStart;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnExit;
-            this.ClientSize = new System.Drawing.Size(676, 295);
+            this.ClientSize = new System.Drawing.Size(730, 295);
+            this.Controls.Add(this.btnFloatDock);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.gbxPosition);
@@ -391,5 +405,6 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.ToolStripMenuItem editStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem makeRunningMenuFloatToolStripMenuItem;
+        private System.Windows.Forms.Button btnFloatDock;
     }
 }

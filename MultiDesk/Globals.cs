@@ -18,5 +18,11 @@ namespace MultiDesk
         public static int[] BottomRight = { (ScreenHeight - (ScreenHeight - 10)), (ScreenWidth - 286) };
         public static int[] ScreenPosition = TopCentre;
         public static bool IsFloating = false;
+
+        public static void Exit()
+        {
+            Application.Exit();
+        }
+
     }
 }
