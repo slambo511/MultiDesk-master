@@ -109,5 +109,45 @@ namespace MultiDesk
             //ScreenshotsDelete();
 
         }
+
+        private void btnOne_Click(object sender, EventArgs e)
+        {
+            Desktops.DesktopSwitch("desktop1");
+        }
+
+        private void btnTwo_Click(object sender, EventArgs e)
+        {
+            Desktops.DesktopSwitch("desktop2");
+        }
+
+        private void btnThree_Click(object sender, EventArgs e)
+        {
+            Desktops.DesktopSwitch("desktop3");
+        }
+
+        private void btnFour_Click(object sender, EventArgs e)
+        {
+            Desktops.DesktopSwitch("desktop4");
+        }
+
+        private void btnFive_Click(object sender, EventArgs e)
+        {
+            Desktops.DesktopSwitch("desktop5");
+        }
+
+        private void btnSix_Click(object sender, EventArgs e)
+        {
+            Desktops.DesktopSwitch("desktop6");
+        }
+
+        private void btnSeven_Click(object sender, EventArgs e)
+        {
+            Desktops.DesktopSwitch("desktop7");
+        }
+
+        private void btnEight_Click(object sender, EventArgs e)
+        {
+            Desktops.DesktopSwitch("desktop8");
+        }
     }
 }
