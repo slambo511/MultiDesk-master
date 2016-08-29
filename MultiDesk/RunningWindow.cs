@@ -21,8 +21,11 @@ namespace MultiDesk
 
         private void RunningWindow_Load(object sender, System.EventArgs e)
         {
-            this.Location = new Point(Globals.ScreenPosition[0],
-            Globals.ScreenPosition[1]);
-        }
+            if (!Globals.IsFloating)
+            {
+                this.Location = new Point(Globals.ScreenPosition[0],
+                    Globals.ScreenPosition[1]);
+            }
+    }
     }
 }

@@ -142,6 +142,16 @@ namespace MultiDesk
             gbxPosition.Enabled = true;
             btnFloatDock.Text = @"Float Menu";
         }
+        #endregion
+
+        #region StartHandler
+        private void btnStart_Click(object sender, System.EventArgs e)
+        {
+            Hide();
+            RunningWindow open = new RunningWindow();
+            open.ShowDialog();
+            Close();
+        }
         #endregion 
     }
 }

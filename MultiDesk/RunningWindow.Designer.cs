@@ -128,7 +128,9 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "RunningWindow";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.RunningWindow_Load);
             this.ResumeLayout(false);
 
