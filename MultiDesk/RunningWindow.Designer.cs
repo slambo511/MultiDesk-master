@@ -125,7 +125,11 @@
             this.Controls.Add(this.btnOne);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RunningWindow";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "RunningWindow";
+            this.Load += new System.EventHandler(this.RunningWindow_Load);
             this.ResumeLayout(false);
 
         }

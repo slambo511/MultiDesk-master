@@ -18,5 +18,11 @@ namespace MultiDesk
             get { return base.BackColor; }
             set { base.BackColor = value; }
         }
+
+        private void RunningWindow_Load(object sender, System.EventArgs e)
+        {
+            this.Location = new Point(Globals.ScreenPosition[0],
+            Globals.ScreenPosition[1]);
+        }
     }
 }
