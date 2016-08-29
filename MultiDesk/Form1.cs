@@ -1,20 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Drawing.Imaging;
-using System.Drawing.Text;
+using System.Threading;
 
 namespace MultiDesk
 {
     public partial class Form1 : Form
     {
+        private string currentDesktop = "";
         public Form1()
         {
             InitializeComponent();
@@ -34,7 +30,7 @@ namespace MultiDesk
 
         private void DesktopSave()
         {
-            string path = Application.UserAppDataPath = "\\";
+            string path = Application.UserAppDataPath + "\\";
             string desktop = currentDesktop;
             if (desktop == "Default")
             {
@@ -42,7 +38,7 @@ namespace MultiDesk
             }
             path = path + desktop;
             Thread.Sleep(500);
-            ScreenShots.ScreenSave(path, ImageFormat.Jpeg, this);
+            Screenshots.ScreenSave(path, ImageFormat.Jpeg, this);
         }
 
         private void ScreenshotsLoad()
@@ -98,7 +94,7 @@ namespace MultiDesk
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            if (Program.Start == "running")
+            if (Program.running == "running")
             {
                 Process.Start("explorer.exe");
                 Thread.Sleep(500);

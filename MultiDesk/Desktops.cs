@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MultiDesk
 {
-    class Desktops
+    public class Desktops
     {
         [DllImport("user32.dll")]
         public static extern IntPtr CreateDestop(string lpszDesktop, IntPtr lpszDevice, IntPtr pDevmode, 
@@ -107,6 +107,7 @@ namespace MultiDesk
             {
                 return string.Empty;
             }
+            return name;
         }
 
     }
