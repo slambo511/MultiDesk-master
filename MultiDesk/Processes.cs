@@ -21,6 +21,7 @@ namespace MultiDesk
             );
 
         [StructLayout(LayoutKind.Sequential)]
+        // ReSharper disable once InconsistentNaming
         public struct STARTUPINFO
         {
             public int cb;
@@ -44,6 +45,7 @@ namespace MultiDesk
         }
 
         [StructLayout(LayoutKind.Sequential)]
+        // ReSharper disable once InconsistentNaming
         public struct PROCESS_INFORMATION
         {
             public IntPtr hProcess;
@@ -52,6 +54,7 @@ namespace MultiDesk
             public int dwThreadId;
         }
 
+        // ReSharper disable once InconsistentNaming
         private const int NORMAL_PRIORITY_CLASS = 0x00000020;
 
         public static bool ProcessCreate(string name, string path, string args)

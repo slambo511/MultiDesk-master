@@ -16,86 +16,86 @@ namespace MultiDesk
         }
 
         #region DesktopNumberRadioButtons
-        private void rbTwo_CheckedChanged(object sender, System.EventArgs e)
+        private void rbTwo_CheckedChanged(object sender, EventArgs e)
         {
             Globals.NoDesktops = 2;
         }
 
-        private void rbThree_CheckedChanged(object sender, System.EventArgs e)
+        private void rbThree_CheckedChanged(object sender, EventArgs e)
         {
             Globals.NoDesktops = 3;
         }
 
-        private void rbFour_CheckedChanged(object sender, System.EventArgs e)
+        private void rbFour_CheckedChanged(object sender, EventArgs e)
         {
             Globals.NoDesktops = 4;
         }
 
-        private void rbFive_CheckedChanged(object sender, System.EventArgs e)
+        private void rbFive_CheckedChanged(object sender, EventArgs e)
         {
             Globals.NoDesktops = 5;
         }
 
-        private void rbSix_CheckedChanged(object sender, System.EventArgs e)
+        private void rbSix_CheckedChanged(object sender, EventArgs e)
         {
             Globals.NoDesktops = 6;
         }
 
-        private void rbSeven_CheckedChanged(object sender, System.EventArgs e)
+        private void rbSeven_CheckedChanged(object sender, EventArgs e)
         {
             Globals.NoDesktops = 7;
         }
 
-        private void rbEight_CheckedChanged(object sender, System.EventArgs e)
+        private void rbEight_CheckedChanged(object sender, EventArgs e)
         {
             Globals.NoDesktops = 8;
         }
         #endregion
 
         #region DektopPositionRadioButtons
-        private void rbTopLeft_CheckedChanged(object sender, System.EventArgs e)
+        private void rbTopLeft_CheckedChanged(object sender, EventArgs e)
         {
             Globals.ScreenPosition = Globals.TopLeft;
         }
 
-        private void rbTopCentre_CheckedChanged(object sender, System.EventArgs e)
+        private void rbTopCentre_CheckedChanged(object sender, EventArgs e)
         {
             Globals.ScreenPosition = Globals.TopCentre;
         }
 
-        private void rbTopRight_CheckedChanged(object sender, System.EventArgs e)
+        private void rbTopRight_CheckedChanged(object sender, EventArgs e)
         {
             Globals.ScreenPosition = Globals.TopRight;
         }
 
-        private void rbCentreLeft_CheckedChanged(object sender, System.EventArgs e)
+        private void rbCentreLeft_CheckedChanged(object sender, EventArgs e)
         {
             Globals.ScreenPosition = Globals.CentreLeft;
         }
 
-        private void rbCentreRight_CheckedChanged(object sender, System.EventArgs e)
+        private void rbCentreRight_CheckedChanged(object sender, EventArgs e)
         {
             Globals.ScreenPosition = Globals.CentreRight;
         }
 
-        private void rbBottomLeft_CheckedChanged(object sender, System.EventArgs e)
+        private void rbBottomLeft_CheckedChanged(object sender, EventArgs e)
         {
             Globals.ScreenPosition = Globals.BottomLeft;
         }
 
-        private void rbBottomCentre_CheckedChanged(object sender, System.EventArgs e)
+        private void rbBottomCentre_CheckedChanged(object sender, EventArgs e)
         {
             Globals.ScreenPosition = Globals.BottomCentre;
         }
 
-        private void rbBottomRight_CheckedChanged(object sender, System.EventArgs e)
+        private void rbBottomRight_CheckedChanged(object sender, EventArgs e)
         {
             Globals.ScreenPosition = Globals.BottomRight;
         }
         #endregion
 
         #region FloatOrDockRunningMenuHandlers
-        private void makeRunningMenuFloatToolStripMenuItem_Click(object sender, System.EventArgs e)
+        private void makeRunningMenuFloatToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (!Globals.IsFloating)
             {
@@ -107,7 +107,7 @@ namespace MultiDesk
             }
         }
 
-        private void btnFloatDock_Click(object sender, System.EventArgs e)
+        private void btnFloatDock_Click(object sender, EventArgs e)
         {
             if (!Globals.IsFloating)
             {
@@ -121,12 +121,12 @@ namespace MultiDesk
         #endregion
 
         #region ExitHandlers    
-        private void btnExit_Click(object sender, System.EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
             Globals.Exit();
         }
 
-        private void exitToolStripMenuItem_Click(object sender, System.EventArgs e)
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Globals.Exit();
         }
@@ -151,7 +151,7 @@ namespace MultiDesk
         #endregion
 
         #region StartHandler
-        private void btnStart_Click(object sender, System.EventArgs e)
+        private void btnStart_Click(object sender, EventArgs e)
         {
             Hide();
             for (int b = 0; b < Globals.NoDesktops; b++)
@@ -167,7 +167,7 @@ namespace MultiDesk
 
         #region Functions
 
-        private void MainMenu_Load(object sender, System.EventArgs e)
+        private void MainMenu_Load(object sender, EventArgs e)
         {
             
             if (Program.Arguments[0] == "running")
@@ -216,7 +216,7 @@ namespace MultiDesk
                 if (File.Exists(path))
                 {
                     MemoryStream stream = new MemoryStream();
-                    Image image = Bitmap.FromFile(path);
+                    Image image = Image.FromFile(path);
                     image.Save(stream, ImageFormat.Jpeg);
                     image.Dispose();
                     string pictureBox = "pictureBox" + index.ToString();

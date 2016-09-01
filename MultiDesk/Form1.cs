@@ -10,7 +10,7 @@ namespace MultiDesk
 {
     public partial class Form1 : Form
     {
-        private string currentDesktop = "";
+        private string _currentDesktop = "";
         public Form1()
         {
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace MultiDesk
         private void DesktopSave()
         {
             string path = Application.UserAppDataPath + "\\";
-            string desktop = currentDesktop;
+            string desktop = _currentDesktop;
             if (desktop == "Default")
             {
                 desktop = "Desktop1";
@@ -50,11 +50,11 @@ namespace MultiDesk
                 if (File.Exists(path))
                 {
                     MemoryStream stream = new MemoryStream();
-                    Image image = Bitmap.FromFile(path);
+                    Image image = Image.FromFile(path);
                     image.Save(stream, ImageFormat.Jpeg);
                     image.Dispose();
                     string pictureBox = "pictureBox" + index.ToString();
-                    ((PictureBox) tableLayoutPanel1.Controls[pictureBox]).Image = Bitmap.FromStream(stream);
+                    ((PictureBox) tableLayoutPanel1.Controls[pictureBox]).Image = Image.FromStream(stream);
                 }
             }
 
@@ -62,7 +62,7 @@ namespace MultiDesk
 
         private void ScreenshotLoad()
         {
-            switch (currentDesktop)
+            switch (_currentDesktop)
             {
                 case "Default":
                     pictureBox1.Image = Screenshots.ScreenCapture(this);
@@ -98,13 +98,13 @@ namespace MultiDesk
             {
                 Process.Start("explorer.exe");
                 Thread.Sleep(500);
-                this.Opacity = 0;
-                this.WindowState = FormWindowState.Normal;
-                this.WindowState = FormWindowState.Minimized;
+                Opacity = 0;
+                WindowState = FormWindowState.Normal;
+                WindowState = FormWindowState.Minimized;
                 Thread.Sleep(500);
-                this.Opacity = 100;
+                Opacity = 100;
             }
-            currentDesktop = Desktops.DesktopName(Desktops.DesktopOpenInput());
+            _currentDesktop = Desktops.DesktopName(Desktops.DesktopOpenInput());
             ScreenshotsDelete();
         }
 
@@ -112,40 +112,40 @@ namespace MultiDesk
         {
             ScreenshotsLoad();
             ScreenshotLoad();
-            string caption = currentDesktop;
+            string caption = _currentDesktop;
             if (caption == "Default")
             {
                 caption = "Desktop1";
             }
-            this.Text = "MultiDesk: " + caption;
+            Text = "MultiDesk: " + caption;
         }
 
         private void Form1_Deactivate(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            WindowState = FormWindowState.Minimized;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            WindowState = FormWindowState.Minimized;
             DesktopInitialise("Default");
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            WindowState = FormWindowState.Minimized;
             DesktopInitialise("Desktop2");
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            WindowState = FormWindowState.Minimized;
             DesktopInitialise("Desktop3");
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            WindowState = FormWindowState.Minimized;
             DesktopInitialise("Desktop4");
         }
     }
