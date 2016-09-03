@@ -102,32 +102,6 @@ namespace MultiDesk
         }
         #endregion
 
-        #region FloatOrDockRunningMenuHandlers
-        private void makeRunningMenuFloatToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (!Globals.IsFloating)
-            {
-                FloatMenu();
-            }
-            else
-            {
-                DockMenu();
-            }
-        }
-
-        private void btnFloatDock_Click(object sender, EventArgs e)
-        {
-            if (!Globals.IsFloating)
-            {
-                FloatMenu();
-            }
-            else
-            {
-                DockMenu();
-            }
-        }
-        #endregion
-
         #region ExitHandlers    
         private void btnExit_Click(object sender, EventArgs e)
         {
