@@ -47,11 +47,9 @@ namespace MultiDesk
 
         private void RunningWindow_MouseDown(object sender, MouseEventArgs e)
         {
-            if (Globals.IsFloating)
-            {
-                _mouseDown = true;
-                _lastLocation = e.Location;
-            }
+            if (!Globals.IsFloating) return;
+            _mouseDown = true;
+            _lastLocation = e.Location;
         }
 
         private void RunningWindow_MouseUp(object sender, MouseEventArgs e)
@@ -61,12 +59,10 @@ namespace MultiDesk
 
         private void RunningWindow_MouseMove(object sender, MouseEventArgs e)
         {
-            if (_mouseDown)
-            {
-                Location = new Point((Location.X - _lastLocation.X) + e.X,
-                    (Location.Y - _lastLocation.Y) + e.Y);
-                Update();
-            }
+            if (!_mouseDown) return;
+            Location = new Point((Location.X - _lastLocation.X) + e.X,
+                (Location.Y - _lastLocation.Y) + e.Y);
+            Update();
         }
         #endregion
 
