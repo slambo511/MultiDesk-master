@@ -20,36 +20,43 @@ namespace MultiDesk
         private void rbTwo_CheckedChanged(object sender, EventArgs e)
         {
             Globals.NoDesktops = 2;
+            Globals.RemainingDesktops = 1;
         }
 
         private void rbThree_CheckedChanged(object sender, EventArgs e)
         {
             Globals.NoDesktops = 3;
+            Globals.RemainingDesktops = 2;
         }
 
         private void rbFour_CheckedChanged(object sender, EventArgs e)
         {
             Globals.NoDesktops = 4;
+            Globals.RemainingDesktops = 3;
         }
 
         private void rbFive_CheckedChanged(object sender, EventArgs e)
         {
             Globals.NoDesktops = 5;
+            Globals.RemainingDesktops = 4;
         }
 
         private void rbSix_CheckedChanged(object sender, EventArgs e)
         {
             Globals.NoDesktops = 6;
+            Globals.RemainingDesktops = 5;
         }
 
         private void rbSeven_CheckedChanged(object sender, EventArgs e)
         {
             Globals.NoDesktops = 7;
+            Globals.RemainingDesktops = 6;
         }
 
         private void rbEight_CheckedChanged(object sender, EventArgs e)
         {
             Globals.NoDesktops = 8;
+            Globals.RemainingDesktops = 7;
         }
         #endregion
 
@@ -155,9 +162,9 @@ namespace MultiDesk
         private void btnStart_Click(object sender, EventArgs e)
         {
             Hide();
-            for (int b = 0; b < Globals.NoDesktops; b++)
+            for (int b = 0; b < Globals.RemainingDesktops; b++)
             {
-                int c = b + 1;
+                int c = b + 2;
                 DesktopInitialise("desktop" + c.ToString());
             }
             RunningWindow open = new RunningWindow();
