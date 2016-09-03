@@ -43,7 +43,6 @@ namespace MultiDesk
 
         private void RunningWindow_MouseDown(object sender, MouseEventArgs e)
         {
-            if (!Globals.IsFloating) return;
             _mouseDown = true;
             _lastLocation = e.Location;
         }
