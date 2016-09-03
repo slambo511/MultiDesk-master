@@ -11,6 +11,7 @@ namespace MultiDesk
 
         private bool _mouseDown;
         private Point _lastLocation;
+
         public RunningWindow()
         {
             InitializeComponent();
@@ -19,6 +20,7 @@ namespace MultiDesk
             BackColor = Color.Aquamarine;
 
         }
+
         public sealed override Color BackColor
         {
             get { return base.BackColor; }
@@ -110,6 +112,7 @@ namespace MultiDesk
 
         }
 
+        #region ButtonHandlers
         private void btnOne_Click(object sender, EventArgs e)
         {
             Desktops.DesktopSwitch("default");
@@ -149,5 +152,6 @@ namespace MultiDesk
         {
             Desktops.DesktopSwitch("desktop8");
         }
+        #endregion
     }
 }
