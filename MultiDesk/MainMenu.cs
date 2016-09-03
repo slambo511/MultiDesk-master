@@ -60,48 +60,6 @@ namespace MultiDesk
         }
         #endregion
 
-        #region DektopPositionRadioButtons
-        private void rbTopLeft_CheckedChanged(object sender, EventArgs e)
-        {
-            Globals.ScreenPosition = Globals.TopLeft;
-        }
-
-        private void rbTopCentre_CheckedChanged(object sender, EventArgs e)
-        {
-            Globals.ScreenPosition = Globals.TopCentre;
-        }
-
-        private void rbTopRight_CheckedChanged(object sender, EventArgs e)
-        {
-            Globals.ScreenPosition = Globals.TopRight;
-        }
-
-        private void rbCentreLeft_CheckedChanged(object sender, EventArgs e)
-        {
-            Globals.ScreenPosition = Globals.CentreLeft;
-        }
-
-        private void rbCentreRight_CheckedChanged(object sender, EventArgs e)
-        {
-            Globals.ScreenPosition = Globals.CentreRight;
-        }
-
-        private void rbBottomLeft_CheckedChanged(object sender, EventArgs e)
-        {
-            Globals.ScreenPosition = Globals.BottomLeft;
-        }
-
-        private void rbBottomCentre_CheckedChanged(object sender, EventArgs e)
-        {
-            Globals.ScreenPosition = Globals.BottomCentre;
-        }
-
-        private void rbBottomRight_CheckedChanged(object sender, EventArgs e)
-        {
-            Globals.ScreenPosition = Globals.BottomRight;
-        }
-        #endregion
-
         #region ExitHandlers    
         private void btnExit_Click(object sender, EventArgs e)
         {

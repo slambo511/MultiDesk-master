@@ -42,20 +42,10 @@
             this.rbFour = new System.Windows.Forms.RadioButton();
             this.rbThree = new System.Windows.Forms.RadioButton();
             this.rbTwo = new System.Windows.Forms.RadioButton();
-            this.gbxPosition = new System.Windows.Forms.GroupBox();
-            this.rbBottomRight = new System.Windows.Forms.RadioButton();
-            this.rbBottomCentre = new System.Windows.Forms.RadioButton();
-            this.rbBottomLeft = new System.Windows.Forms.RadioButton();
-            this.rbCentreRight = new System.Windows.Forms.RadioButton();
-            this.rbCentreLeft = new System.Windows.Forms.RadioButton();
-            this.rbTopRight = new System.Windows.Forms.RadioButton();
-            this.rbTopCentre = new System.Windows.Forms.RadioButton();
-            this.rbTopLeft = new System.Windows.Forms.RadioButton();
             this.btnStart = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.gbxNumberOfDesktops.SuspendLayout();
-            this.gbxPosition.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -65,7 +55,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(730, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(215, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -95,7 +85,7 @@
             // contactUsToolStripMenuItem
             // 
             this.contactUsToolStripMenuItem.Name = "contactUsToolStripMenuItem";
-            this.contactUsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.contactUsToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.contactUsToolStripMenuItem.Text = "&Contact Us";
             // 
             // gbxNumberOfDesktops
@@ -193,113 +183,6 @@
             this.rbTwo.UseVisualStyleBackColor = true;
             this.rbTwo.CheckedChanged += new System.EventHandler(this.rbTwo_CheckedChanged);
             // 
-            // gbxPosition
-            // 
-            this.gbxPosition.Controls.Add(this.rbBottomRight);
-            this.gbxPosition.Controls.Add(this.rbBottomCentre);
-            this.gbxPosition.Controls.Add(this.rbBottomLeft);
-            this.gbxPosition.Controls.Add(this.rbCentreRight);
-            this.gbxPosition.Controls.Add(this.rbCentreLeft);
-            this.gbxPosition.Controls.Add(this.rbTopRight);
-            this.gbxPosition.Controls.Add(this.rbTopCentre);
-            this.gbxPosition.Controls.Add(this.rbTopLeft);
-            this.gbxPosition.Location = new System.Drawing.Point(256, 44);
-            this.gbxPosition.Name = "gbxPosition";
-            this.gbxPosition.Size = new System.Drawing.Size(454, 181);
-            this.gbxPosition.TabIndex = 2;
-            this.gbxPosition.TabStop = false;
-            this.gbxPosition.Text = "Select menu position";
-            // 
-            // rbBottomRight
-            // 
-            this.rbBottomRight.AutoSize = true;
-            this.rbBottomRight.Location = new System.Drawing.Point(363, 157);
-            this.rbBottomRight.Name = "rbBottomRight";
-            this.rbBottomRight.Size = new System.Drawing.Size(81, 17);
-            this.rbBottomRight.TabIndex = 7;
-            this.rbBottomRight.Text = "Bottom right";
-            this.rbBottomRight.UseVisualStyleBackColor = true;
-            this.rbBottomRight.CheckedChanged += new System.EventHandler(this.rbBottomRight_CheckedChanged);
-            // 
-            // rbBottomCentre
-            // 
-            this.rbBottomCentre.AutoSize = true;
-            this.rbBottomCentre.Location = new System.Drawing.Point(185, 157);
-            this.rbBottomCentre.Name = "rbBottomCentre";
-            this.rbBottomCentre.Size = new System.Drawing.Size(91, 17);
-            this.rbBottomCentre.TabIndex = 6;
-            this.rbBottomCentre.Text = "Bottom centre";
-            this.rbBottomCentre.UseVisualStyleBackColor = true;
-            this.rbBottomCentre.CheckedChanged += new System.EventHandler(this.rbBottomCentre_CheckedChanged);
-            // 
-            // rbBottomLeft
-            // 
-            this.rbBottomLeft.AutoSize = true;
-            this.rbBottomLeft.Location = new System.Drawing.Point(16, 157);
-            this.rbBottomLeft.Name = "rbBottomLeft";
-            this.rbBottomLeft.Size = new System.Drawing.Size(79, 17);
-            this.rbBottomLeft.TabIndex = 5;
-            this.rbBottomLeft.Text = "Bottom Left";
-            this.rbBottomLeft.UseVisualStyleBackColor = true;
-            this.rbBottomLeft.CheckedChanged += new System.EventHandler(this.rbBottomLeft_CheckedChanged);
-            // 
-            // rbCentreRight
-            // 
-            this.rbCentreRight.AutoSize = true;
-            this.rbCentreRight.Location = new System.Drawing.Point(363, 88);
-            this.rbCentreRight.Name = "rbCentreRight";
-            this.rbCentreRight.Size = new System.Drawing.Size(85, 17);
-            this.rbCentreRight.TabIndex = 4;
-            this.rbCentreRight.Text = "Centre RIght";
-            this.rbCentreRight.UseVisualStyleBackColor = true;
-            this.rbCentreRight.CheckedChanged += new System.EventHandler(this.rbCentreRight_CheckedChanged);
-            // 
-            // rbCentreLeft
-            // 
-            this.rbCentreLeft.AutoSize = true;
-            this.rbCentreLeft.Location = new System.Drawing.Point(16, 88);
-            this.rbCentreLeft.Name = "rbCentreLeft";
-            this.rbCentreLeft.Size = new System.Drawing.Size(73, 17);
-            this.rbCentreLeft.TabIndex = 3;
-            this.rbCentreLeft.Text = "Centre left";
-            this.rbCentreLeft.UseVisualStyleBackColor = true;
-            this.rbCentreLeft.CheckedChanged += new System.EventHandler(this.rbCentreLeft_CheckedChanged);
-            // 
-            // rbTopRight
-            // 
-            this.rbTopRight.AutoSize = true;
-            this.rbTopRight.Location = new System.Drawing.Point(363, 19);
-            this.rbTopRight.Name = "rbTopRight";
-            this.rbTopRight.Size = new System.Drawing.Size(72, 17);
-            this.rbTopRight.TabIndex = 2;
-            this.rbTopRight.Text = "Top Right";
-            this.rbTopRight.UseVisualStyleBackColor = true;
-            this.rbTopRight.CheckedChanged += new System.EventHandler(this.rbTopRight_CheckedChanged);
-            // 
-            // rbTopCentre
-            // 
-            this.rbTopCentre.AutoSize = true;
-            this.rbTopCentre.Checked = true;
-            this.rbTopCentre.Location = new System.Drawing.Point(185, 19);
-            this.rbTopCentre.Name = "rbTopCentre";
-            this.rbTopCentre.Size = new System.Drawing.Size(78, 17);
-            this.rbTopCentre.TabIndex = 1;
-            this.rbTopCentre.TabStop = true;
-            this.rbTopCentre.Text = "Top Centre";
-            this.rbTopCentre.UseVisualStyleBackColor = true;
-            this.rbTopCentre.CheckedChanged += new System.EventHandler(this.rbTopCentre_CheckedChanged);
-            // 
-            // rbTopLeft
-            // 
-            this.rbTopLeft.AutoSize = true;
-            this.rbTopLeft.Location = new System.Drawing.Point(16, 19);
-            this.rbTopLeft.Name = "rbTopLeft";
-            this.rbTopLeft.Size = new System.Drawing.Size(61, 17);
-            this.rbTopLeft.TabIndex = 0;
-            this.rbTopLeft.Text = "Top left";
-            this.rbTopLeft.UseVisualStyleBackColor = true;
-            this.rbTopLeft.CheckedChanged += new System.EventHandler(this.rbTopLeft_CheckedChanged);
-            // 
             // btnStart
             // 
             this.btnStart.Location = new System.Drawing.Point(23, 253);
@@ -327,23 +210,20 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnExit;
-            this.ClientSize = new System.Drawing.Size(730, 295);
+            this.ClientSize = new System.Drawing.Size(215, 295);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnStart);
-            this.Controls.Add(this.gbxPosition);
             this.Controls.Add(this.gbxNumberOfDesktops);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainMenu";
-            this.Text = "MultiDesk Main Menu";
+            this.Text = "MultiDesk";
             this.Load += new System.EventHandler(this.MainMenu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.gbxNumberOfDesktops.ResumeLayout(false);
             this.gbxNumberOfDesktops.PerformLayout();
-            this.gbxPosition.ResumeLayout(false);
-            this.gbxPosition.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,15 +244,6 @@
         private System.Windows.Forms.RadioButton rbFour;
         private System.Windows.Forms.RadioButton rbThree;
         private System.Windows.Forms.RadioButton rbTwo;
-        private System.Windows.Forms.GroupBox gbxPosition;
-        private System.Windows.Forms.RadioButton rbCentreLeft;
-        private System.Windows.Forms.RadioButton rbTopRight;
-        private System.Windows.Forms.RadioButton rbTopCentre;
-        private System.Windows.Forms.RadioButton rbTopLeft;
-        private System.Windows.Forms.RadioButton rbBottomLeft;
-        private System.Windows.Forms.RadioButton rbCentreRight;
-        private System.Windows.Forms.RadioButton rbBottomRight;
-        private System.Windows.Forms.RadioButton rbBottomCentre;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnExit;
     }
