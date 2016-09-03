@@ -70,31 +70,41 @@ namespace MultiDesk
             {
                 btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide(); btnFour.Hide(); btnThree.Hide();
                 Width = Width - (32*6);
+                btnTwo.Select();
             }
             else if (Globals.NoDesktops == 3)
             {
                 btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide(); btnFour.Hide();
                 Width = Width - (32 * 5);
+                btnThree.Select();
             }
             else if (Globals.NoDesktops == 4)
             {
                 btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide();
                 Width = Width - (32 * 4);
+                btnFour.Select();
             }
             else if (Globals.NoDesktops == 5)
             {
                 btnEight.Hide(); btnSeven.Hide(); btnSix.Hide();
                 Width = Width - (32 * 3);
+                btnFive.Select();
             }
             else if (Globals.NoDesktops == 6)
             {
                 btnEight.Hide(); btnSeven.Hide();
                 Width = Width - (36 * 2);
+                btnSix.Select();
             }
             else if (Globals.NoDesktops == 7)
             {
                 btnEight.Hide();
                 Width = Width - 32;
+                btnSeven.Select();
+            }
+            else
+            {
+                btnEight.Select();
             }
 
             if (Program.Arguments[0] == "running")
