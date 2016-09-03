@@ -26,11 +26,12 @@ namespace MultiDesk
         }
 
         #region HandleFloatingMovementAndPositionOfWindow
-        private void RunningWindow_Load(object sender, System.EventArgs e)
+        [JetBrains.Annotations.UsedImplicitly]
+        private void RunningWindow_Load(object sender, EventArgs e)
         {
             if (!Globals.IsFloating)
             {
-                this.Location = new Point(Globals.ScreenPosition[0],
+                Location = new Point(Globals.ScreenPosition[0],
                     Globals.ScreenPosition[1]);
             }
             
@@ -53,9 +54,9 @@ namespace MultiDesk
         {
             if (_mouseDown)
             {
-                this.Location = new Point((this.Location.X - _lastLocation.X) + e.X,
-                    (this.Location.Y - _lastLocation.Y) + e.Y);
-                this.Update();
+                Location = new Point((Location.X - _lastLocation.X) + e.X,
+                    (Location.Y - _lastLocation.Y) + e.Y);
+                Update();
             }
         }
         #endregion
@@ -98,11 +99,11 @@ namespace MultiDesk
             {
                 Process.Start("explorer.exe");
                 Thread.Sleep(500);
-                this.Opacity = 0;
-                this.WindowState = FormWindowState.Normal;
+                Opacity = 0;
+                WindowState = FormWindowState.Normal;
                 //this.WindowState = FormWindowState.Minimized;
                 Thread.Sleep(500);
-                this.Opacity = 100;
+                Opacity = 100;
             }
             //currentDesktop = Desktops.DesktopName(Desktops.DesktopOpenInput());
             //ScreenshotsDelete();

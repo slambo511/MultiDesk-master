@@ -1,7 +1,8 @@
-﻿using System;
-using System.Drawing;
+﻿// Commented usings are for Picture handlers. DO NOT REMOVE
+using System;
+// using System.Drawing;
 using System.Drawing.Imaging;
-using System.IO;
+// using System.IO;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -9,7 +10,7 @@ namespace MultiDesk
 {
     public partial class MainMenu : Form
     {
-        private string currentDesktop = "Default";
+        private string _currentDesktop = "Default";
         public MainMenu()
         {
             InitializeComponent();
@@ -197,7 +198,7 @@ namespace MultiDesk
         private void DesktopSave()
         {
             string path = Application.UserAppDataPath + "\\";
-            string desktop = currentDesktop;
+            string desktop = _currentDesktop;
             if (desktop == "Default")
             {
                 desktop = "Desktop1";
@@ -207,7 +208,7 @@ namespace MultiDesk
             Screenshots.ScreenSave(path, ImageFormat.Jpeg, this);
         }
 
-        private void ScreenshotsLoad()
+        /*private void ScreenshotsLoad()
         {
             for (int index = 1; index < 5; index++)
             {
@@ -223,11 +224,11 @@ namespace MultiDesk
                 }
             }
 
-        }
+        }*/
 
-        private void ScreenshotLoad()
+        /*private void ScreenshotLoad()
         {
-            switch (currentDesktop)
+            switch (_currentDesktop)
             {
                 case "Default":
                     //pictureBox1.Image = Screenshots.ScreenCapture(this);
@@ -242,9 +243,9 @@ namespace MultiDesk
                     //pictureBox4.Image = Screenshots.ScreenCapture(this);
                     break;
             }
-        }
+        }*/
 
-        private void ScreenshotsDelete()
+        /*private void ScreenshotsDelete()
         {
             for (int index = 2; index < 5; index++)
             {
@@ -255,7 +256,7 @@ namespace MultiDesk
                     File.Delete(path);
                 }
             }
-        }
+        }*/
         #endregion
 
     }

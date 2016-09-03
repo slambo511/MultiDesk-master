@@ -65,7 +65,7 @@ namespace MultiDesk
                 STARTUPINFO startupInfo = new STARTUPINFO();
                 startupInfo.cb = Marshal.SizeOf(startupInfo);
                 startupInfo.lpDesktop = name;
-                string path2 = string.Format("\"{0}\" {1}", path, args);
+                string path2 = $"\"{path}\" {args}";
                 bool result = CreateProcess(path, path2, IntPtr.Zero, IntPtr.Zero, true, NORMAL_PRIORITY_CLASS,
                     IntPtr.Zero, null, ref startupInfo, ref processInformation);
                 return result;

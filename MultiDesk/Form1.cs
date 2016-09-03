@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
@@ -79,7 +78,7 @@ namespace MultiDesk
             }
         }
 
-        private void ScreenshotsDelete()
+        /*private void ScreenshotsDelete()
         {
             for (int index = 2; index < 5; index++)
             {
@@ -90,11 +89,11 @@ namespace MultiDesk
                     File.Delete(path);
                 }
             }
-        }
+        }*/
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            if (!true)//(Program.Running == "running")
+            /*if (!true)//(Program.Running == "running")
             {
                 Process.Start("explorer.exe");
                 Thread.Sleep(500);
@@ -105,7 +104,7 @@ namespace MultiDesk
                 Opacity = 100;
             }
             _currentDesktop = Desktops.DesktopName(Desktops.DesktopOpenInput());
-            ScreenshotsDelete();
+            ScreenshotsDelete();*/
         }
 
         private void Form1_Activated(object sender, EventArgs e)
@@ -117,7 +116,7 @@ namespace MultiDesk
             {
                 caption = "Desktop1";
             }
-            Text = "MultiDesk: " + caption;
+            Text = @"MultiDesk: " + caption;
         }
 
         private void Form1_Deactivate(object sender, EventArgs e)
