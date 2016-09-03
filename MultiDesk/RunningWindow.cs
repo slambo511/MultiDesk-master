@@ -19,6 +19,12 @@ namespace MultiDesk
             TransparencyKey = Color.Aquamarine;
             BackColor = Color.Aquamarine;
 
+            if (!Globals.IsFloating)
+            {
+                Location = new Point(Globals.ScreenPosition[0],
+                    Globals.ScreenPosition[1]);
+            }
+
         }
 
         public sealed override Color BackColor
@@ -29,7 +35,7 @@ namespace MultiDesk
 
         #region HandleFloatingMovementAndPositionOfWindow
         [JetBrains.Annotations.UsedImplicitly]
-        private void RunningWindow_Load(object sender, EventArgs e)
+        /*private void RunningWindow_Load(object sender, EventArgs e)
         {
             if (!Globals.IsFloating)
             {
@@ -37,7 +43,8 @@ namespace MultiDesk
                     Globals.ScreenPosition[1]);
             }
             
-        }
+        }*/
+
         private void RunningWindow_MouseDown(object sender, MouseEventArgs e)
         {
             if (Globals.IsFloating)
