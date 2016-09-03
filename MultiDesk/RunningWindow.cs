@@ -166,8 +166,7 @@ namespace MultiDesk
 
         private void PositionMenu()
         {
-             Location = new Point(Globals.ScreenPosition[0],
-                    Globals.ScreenPosition[1]);
+             Location = new Point(10, 10);
         }
 
     }
