@@ -24,6 +24,10 @@ namespace MultiDesk
                 Location = new Point(Globals.ScreenPosition[0],
                     Globals.ScreenPosition[1]);
             }
+            else
+            {
+                Location = new Point(10, 10);
+            }
 
         }
 
