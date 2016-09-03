@@ -19,15 +19,7 @@ namespace MultiDesk
             TransparencyKey = Color.Aquamarine;
             BackColor = Color.Aquamarine;
 
-            if (!Globals.IsFloating)
-            {
-                Location = new Point(Globals.ScreenPosition[0],
-                    Globals.ScreenPosition[1]);
-            }
-            else
-            {
-                Location = new Point(10, 10);
-            }
+            PositionMenu();
 
         }
 
@@ -127,6 +119,8 @@ namespace MultiDesk
             //currentDesktop = Desktops.DesktopName(Desktops.DesktopOpenInput());
             //ScreenshotsDelete();
 
+            PositionMenu();
+
         }
 
         #region ButtonHandlers
@@ -170,5 +164,19 @@ namespace MultiDesk
             Desktops.DesktopSwitch("desktop8");
         }
         #endregion
+
+        private void PositionMenu()
+        {
+            if (!Globals.IsFloating)
+            {
+                Location = new Point(Globals.ScreenPosition[0],
+                    Globals.ScreenPosition[1]);
+            }
+            else
+            {
+                Location = new Point(10, 10);
+            }
+        }
+
     }
 }
