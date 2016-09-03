@@ -114,24 +114,6 @@ namespace MultiDesk
         }
         #endregion
 
-        #region CustomMethods
-        private void FloatMenu()
-        {
-            Globals.IsFloating = true;
-            makeRunningMenuFloatToolStripMenuItem.Text = @"Make Running Menu Docked";
-            gbxPosition.Enabled = false;
-            btnFloatDock.Text = @"Dock Menu";
-        }
-
-        private void DockMenu()
-        {
-            Globals.IsFloating = false;
-            makeRunningMenuFloatToolStripMenuItem.Text = @"Make Running Menu Float";
-            gbxPosition.Enabled = true;
-            btnFloatDock.Text = @"Float Menu";
-        }
-        #endregion
-
         #region StartHandler
         private void btnStart_Click(object sender, EventArgs e)
         {
