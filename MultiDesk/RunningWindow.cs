@@ -112,7 +112,7 @@ namespace MultiDesk
 
         private void btnOne_Click(object sender, EventArgs e)
         {
-            Desktops.DesktopSwitch("desktop1");
+            Desktops.DesktopSwitch("default");
         }
 
         private void btnTwo_Click(object sender, EventArgs e)
