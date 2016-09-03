@@ -17,7 +17,7 @@ namespace MultiDesk
         public static int[] BottomCentre = { ((ScreenWidth / 2) - 143), (ScreenHeight - (ScreenHeight - 10)) };
         public static int[] BottomRight = { (ScreenWidth - 286), (ScreenHeight - (ScreenHeight - 10)) };
         public static int[] ScreenPosition = TopCentre;
-        public static bool IsFloating = false;
+        public static bool IsFloating = true;
 
         public static void Exit()
         {
