@@ -49,39 +49,6 @@ namespace MultiDesk
             //TransparencyKey = Color.Aquamarine;
             //BackColor = Color.Aquamarine;
 
-            string _currentDesktop = Desktops.DesktopName(Desktops.DesktopOpenInput());
-
-            //test
-            MessageBox.Show(_currentDesktop, "_currentDesktop", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            switch (_currentDesktop)
-            {
-                case "default":
-                    btnOne.Focus();
-                    break;
-                case "desktop2":
-                    btnTwo.Focus();
-                    break;
-                case "desktop3":
-                    btnThree.Focus();
-                    break;
-                case "desktop4":
-                    btnFour.Focus();
-                    break;
-                case "desktop5":
-                    btnFive.Focus();
-                    break;
-                case "desktop6":
-                    btnSix.Focus();
-                    break;
-                case "desktop7":
-                    btnSeven.Focus();
-                    break;
-                case "desktop8":
-                    btnEight.Focus();
-                    break;
-            }
-
             // Handles the removal of superflous buttons and resizes form accordingly
             if (Globals.NoDesktops == 2)
             {
@@ -179,7 +146,46 @@ namespace MultiDesk
 
         private void RunningWindow_Activated(object sender, EventArgs e)
         {
-            
+            string _currentDesktop = Desktops.DesktopName(Desktops.DesktopOpenInput());
+
+            //test
+            MessageBox.Show(_currentDesktop, "_currentDesktop", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            switch (_currentDesktop)
+            {
+                case "default":
+                    btnOne.Focus();
+                    btnOne.Select();
+                    break;
+                case "desktop2":
+                    btnTwo.Focus();
+                    btnTwo.Select();
+                    break;
+                case "desktop3":
+                    btnThree.Focus();
+                    btnThree.Select();
+                    break;
+                case "desktop4":
+                    btnFour.Focus();
+                    btnFour.Select();
+                    break;
+                case "desktop5":
+                    btnFive.Focus();
+                    btnFive.Select();
+                    break;
+                case "desktop6":
+                    btnSix.Focus();
+                    btnSix.Select();
+                    break;
+                case "desktop7":
+                    btnSeven.Focus();
+                    btnSeven.Select();
+                    break;
+                case "desktop8":
+                    btnEight.Focus();
+                    btnEight.Select();
+                    break;
+            }
         }
     }
 }
