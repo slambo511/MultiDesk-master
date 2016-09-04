@@ -141,7 +141,7 @@ namespace MultiDesk
 
         private void PositionMenu()
         {
-             Location = new Point(10, 10);
+            Location = new Point(10, 10);
         }
 
         private void RunningWindow_Activated(object sender, EventArgs e)
