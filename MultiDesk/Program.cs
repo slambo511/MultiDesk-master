@@ -5,7 +5,7 @@ namespace MultiDesk
 {
     static class Program
     {
-        public static string[] Arguments = {string.Empty, string.Empty, string.Empty};      
+        public static string[] Arguments = {string.Empty, string.Empty};      
         private static int _count;
         /// <summary>
         /// The main entry point for the application.

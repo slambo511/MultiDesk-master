@@ -66,7 +66,6 @@ namespace MultiDesk
                 return false;
             }
             return SwitchDesktop(handle);
-            Program.Arguments[2] = name; // TESTING
         }
 
         public static bool DesktopClose(string name)

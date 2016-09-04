@@ -93,37 +93,8 @@ namespace MultiDesk
             }
             //currentDesktop = Desktops.DesktopName(Desktops.DesktopOpenInput());
             //ScreenshotsDelete();
-
-            switch (Program.Arguments[2])
-            {
-                case "default":
-                    btnOne.Focus();
-                    break;
-                case "desktop2":
-                    btnTwo.Focus();
-                    break;
-                case "desktop3":
-                    btnThree.Focus();
-                    break;
-                case "desktop4":
-                    btnFour.Focus();
-                    break;
-                case "desktop5":
-                    btnFive.Focus();
-                    break;
-                case "desktop6":
-                    btnSix.Focus();
-                    break;
-                case "desktop7":
-                    btnSeven.Focus();
-                    break;
-                default:
-                    btnEight.Focus();
-                    break;
-            }
-
+        
             PositionMenu();
-
         }
 
         #region ButtonHandlers
