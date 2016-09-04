@@ -100,7 +100,15 @@ namespace MultiDesk
 
             // Find current desktop number and set button nuber to match
             int currentDT;
-            currentDT = Program.Arguments[1] == "default" ? 1 : Convert.ToInt32(Program.Arguments[1]);
+            try
+            {
+                currentDT = Convert.ToInt32(Program.Arguments[1]);
+            }
+            catch
+            {
+                currentDT = 1;
+            }
+
 
             if (currentDT == 1)
             {
