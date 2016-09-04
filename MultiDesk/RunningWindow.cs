@@ -49,6 +49,36 @@ namespace MultiDesk
             //TransparencyKey = Color.Aquamarine;
             //BackColor = Color.Aquamarine;
 
+            string _currentDesktop = Desktops.DesktopName(Desktops.DesktopOpenInput());
+
+            switch (_currentDesktop)
+            {
+                case "default":
+                    btnOne.Focus();
+                    break;
+                case "desktop2":
+                    btnTwo.Focus();
+                    break;
+                case "desktop3":
+                    btnThree.Focus();
+                    break;
+                case "desktop4":
+                    btnFour.Focus();
+                    break;
+                case "desktop5":
+                    btnFive.Focus();
+                    break;
+                case "desktop6":
+                    btnSix.Focus();
+                    break;
+                case "desktop7":
+                    btnSeven.Focus();
+                    break;
+                case "desktop8":
+                    btnEight.Focus();
+                    break;
+            }
+
             // Handles the removal of superflous buttons and resizes form accordingly
             if (Globals.NoDesktops == 2)
             {
