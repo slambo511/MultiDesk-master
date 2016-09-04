@@ -18,7 +18,7 @@ namespace MultiDesk
 
             //TransparencyKey = Color.Aquamarine;
             //BackColor = Color.Aquamarine;
-            Opacity = .25;
+            //Opacity = .25;
         }
 
         public sealed override Color BackColor
@@ -50,6 +50,9 @@ namespace MultiDesk
 
         private void RunningWindow_Load_1(object sender, EventArgs e)
         {
+            TransparencyKey = Color.Aquamarine;
+            BackColor = Color.Aquamarine;
+
             // Handles the removal of superflous buttons and resizes form accordingly
             if (Globals.NoDesktops == 2)
             {
@@ -94,6 +97,34 @@ namespace MultiDesk
             }
             //currentDesktop = Desktops.DesktopName(Desktops.DesktopOpenInput());
             //ScreenshotsDelete();
+
+            switch (Program.Arguments[2])
+            {
+                case "default":
+                    btnOne.Focus();
+                    break;
+                case "desktop2":
+                    btnTwo.Focus();
+                    break;
+                case "desktop3":
+                    btnThree.Focus();
+                    break;
+                case "desktop4":
+                    btnFour.Focus();
+                    break;
+                case "desktop5":
+                    btnFive.Focus();
+                    break;
+                case "desktop6":
+                    btnSix.Focus();
+                    break;
+                case "desktop7":
+                    btnSeven.Focus();
+                    break;
+                default:
+                    btnEight.Focus();
+                    break;
+            }
 
             PositionMenu();
 
@@ -148,38 +179,7 @@ namespace MultiDesk
 
         private void RunningWindow_Activated(object sender, EventArgs e)
         {
-            if (Program.Arguments[2] == "default")
-            {
-                btnOne.Focus();
-            }
-            else if (Program.Arguments[2] == "desktop2")
-            {
-                btnTwo.Focus();
-            }
-            else if (Program.Arguments[2] == "desktop3")
-            {
-                btnThree.Focus();
-            }
-            else if (Program.Arguments[2] == "desktop4")
-            {
-                btnFour.Focus();
-            }
-            else if (Program.Arguments[2] == "desktop5")
-            {
-                btnFive.Focus();
-            }
-            else if (Program.Arguments[2] == "desktop6")
-            {
-                btnSix.Focus();
-            }
-            else if (Program.Arguments[2] == "desktop7")
-            {
-                btnSeven.Focus();
-            }
-            else
-            {
-                btnEight.Focus();
-            }
+            
         }
     }
 }
