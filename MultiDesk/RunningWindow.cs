@@ -99,36 +99,38 @@ namespace MultiDesk
 
 
             // Find current desktop number and set button nuber to match
-            int currentDt = Convert.ToInt32(Program.Arguments[1]);
-            if (currentDt == 1)
+            int currentDT;
+            currentDT = Program.Arguments[1] == "default" ? 1 : Convert.ToInt32(Program.Arguments[1]);
+
+            if (currentDT == 1)
             {
                 btnOne.Select();
             }
-            if (currentDt == 2)
+            if (currentDT == 2)
             {
                 btnTwo.Select();
             }
-            if (currentDt == 3)
+            if (currentDT == 3)
             {
                 btnThree.Select();
             }
-            if (currentDt == 4)
+            if (currentDT == 4)
             {
                 btnFour.Select();
             }
-            if (currentDt == 5)
+            if (currentDT == 5)
             {
                 btnFive.Select();
             }
-            if (currentDt == 6)
+            if (currentDT == 6)
             {
                 btnSix.Select();
             }
-            if (currentDt == 7)
+            if (currentDT == 7)
             {
                 btnSeven.Select();
             }
-            if (currentDt == 8)
+            if (currentDT == 8)
             {
                 btnEight.Select();
             }
