@@ -15,10 +15,6 @@ namespace MultiDesk
         public RunningWindow()
         {
             InitializeComponent();
-
-            //TransparencyKey = Color.Aquamarine;
-            //BackColor = Color.Aquamarine;
-            //Opacity = .25;
         }
 
         public sealed override Color BackColor
@@ -52,7 +48,6 @@ namespace MultiDesk
         {
             //TransparencyKey = Color.Aquamarine;
             //BackColor = Color.Aquamarine;
-            Opacity = .25;
 
             // Handles the removal of superflous buttons and resizes form accordingly
             if (Globals.NoDesktops == 2)
