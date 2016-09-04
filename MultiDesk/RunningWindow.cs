@@ -50,8 +50,9 @@ namespace MultiDesk
 
         private void RunningWindow_Load_1(object sender, EventArgs e)
         {
-            TransparencyKey = Color.Aquamarine;
-            BackColor = Color.Aquamarine;
+            //TransparencyKey = Color.Aquamarine;
+            //BackColor = Color.Aquamarine;
+            Opacity = .25;
 
             // Handles the removal of superflous buttons and resizes form accordingly
             if (Globals.NoDesktops == 2)
