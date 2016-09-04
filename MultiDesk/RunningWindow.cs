@@ -18,9 +18,6 @@ namespace MultiDesk
 
             TransparencyKey = Color.Aquamarine;
             BackColor = Color.Aquamarine;
-
-            PositionMenu();
-
         }
 
         public sealed override Color BackColor
