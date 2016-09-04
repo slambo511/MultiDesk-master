@@ -112,35 +112,35 @@ namespace MultiDesk
 
             if (currentDT == 1)
             {
-                btnOne.Select();
+                btnOne.Focus();
             }
             if (currentDT == 2)
             {
-                btnTwo.Select();
+                btnTwo.Focus();
             }
             if (currentDT == 3)
             {
-                btnThree.Select();
+                btnThree.Focus();
             }
             if (currentDT == 4)
             {
-                btnFour.Select();
+                btnFour.Focus();
             }
             if (currentDT == 5)
             {
-                btnFive.Select();
+                btnFive.Focus();
             }
             if (currentDT == 6)
             {
-                btnSix.Select();
+                btnSix.Focus();
             }
             if (currentDT == 7)
             {
-                btnSeven.Select();
+                btnSeven.Focus();
             }
             if (currentDT == 8)
             {
-                btnEight.Select();
+                btnEight.Focus();
             }
 
             PositionMenu();
