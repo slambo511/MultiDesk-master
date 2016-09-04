@@ -56,42 +56,32 @@ namespace MultiDesk
             if (Globals.NoDesktops == 2)
             {
                 btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide(); btnFour.Hide(); btnThree.Hide();
-                Width = Width - (32*6);
-                btnTwo.Select();
+                Width = Width - (46 * 6);
             }
             else if (Globals.NoDesktops == 3)
             {
                 btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide(); btnFour.Hide();
-                Width = Width - (32 * 5);
-                btnThree.Select();
+                Width = Width - (46 * 5);
             }
             else if (Globals.NoDesktops == 4)
             {
                 btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide();
-                Width = Width - (32 * 4);
-                btnFour.Select();
+                Width = Width - (46 * 4);
             }
             else if (Globals.NoDesktops == 5)
             {
                 btnEight.Hide(); btnSeven.Hide(); btnSix.Hide();
-                Width = Width - (32 * 3);
-                btnFive.Select();
+                Width = Width - (46 * 3);
             }
             else if (Globals.NoDesktops == 6)
             {
                 btnEight.Hide(); btnSeven.Hide();
-                Width = Width - (36 * 2);
-                btnSix.Select();
+                Width = Width - (46 * 2);
             }
             else if (Globals.NoDesktops == 7)
             {
                 btnEight.Hide();
-                Width = Width - 32;
-                btnSeven.Select();
-            }
-            else
-            {
-                btnEight.Select();
+                Width = Width - 46;
             }
 
             if (Program.Arguments[0] == "running")
@@ -106,6 +96,42 @@ namespace MultiDesk
             }
             //currentDesktop = Desktops.DesktopName(Desktops.DesktopOpenInput());
             //ScreenshotsDelete();
+
+
+            // Find current desktop number and set button nuber to match
+            int currentDt = Convert.ToInt32(Program.Arguments[1]);
+            if (currentDt == 1)
+            {
+                btnOne.Select();
+            }
+            if (currentDt == 2)
+            {
+                btnTwo.Select();
+            }
+            if (currentDt == 3)
+            {
+                btnThree.Select();
+            }
+            if (currentDt == 4)
+            {
+                btnFour.Select();
+            }
+            if (currentDt == 5)
+            {
+                btnFive.Select();
+            }
+            if (currentDt == 6)
+            {
+                btnSix.Select();
+            }
+            if (currentDt == 7)
+            {
+                btnSeven.Select();
+            }
+            if (currentDt == 8)
+            {
+                btnEight.Select();
+            }
 
             PositionMenu();
 
