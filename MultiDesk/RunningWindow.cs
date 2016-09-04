@@ -97,52 +97,6 @@ namespace MultiDesk
             //currentDesktop = Desktops.DesktopName(Desktops.DesktopOpenInput());
             //ScreenshotsDelete();
 
-
-            // Find current desktop number and set button nuber to match
-            int currentDT;
-            try
-            {
-                currentDT = Convert.ToInt32(Program.Arguments[1]);
-            }
-            catch
-            {
-                currentDT = 1;
-            }
-
-
-            if (currentDT == 1)
-            {
-                btnOne.Focus();
-            }
-            if (currentDT == 2)
-            {
-                btnTwo.Focus();
-            }
-            if (currentDT == 3)
-            {
-                btnThree.Focus();
-            }
-            if (currentDT == 4)
-            {
-                btnFour.Focus();
-            }
-            if (currentDT == 5)
-            {
-                btnFive.Focus();
-            }
-            if (currentDT == 6)
-            {
-                btnSix.Focus();
-            }
-            if (currentDT == 7)
-            {
-                btnSeven.Focus();
-            }
-            if (currentDT == 8)
-            {
-                btnEight.Focus();
-            }
-
             PositionMenu();
 
         }
@@ -194,5 +148,52 @@ namespace MultiDesk
              Location = new Point(10, 10);
         }
 
+        private void RunningWindow_Activated(object sender, EventArgs e)
+        {
+            // Find current desktop number and set button nuber to match
+            int currentDT;
+            try
+            {
+                currentDT = Convert.ToInt32(Program.Arguments[1]);
+            }
+            catch
+            {
+                currentDT = 1;
+            }
+
+
+            if (currentDT == 1)
+            {
+                btnOne.BringToFront();
+            }
+            if (currentDT == 2)
+            {
+                btnTwo.Focus();
+            }
+            if (currentDT == 3)
+            {
+                btnThree.Focus();
+            }
+            if (currentDT == 4)
+            {
+                btnFour.Focus();
+            }
+            if (currentDT == 5)
+            {
+                btnFive.Focus();
+            }
+            if (currentDT == 6)
+            {
+                btnSix.Focus();
+            }
+            if (currentDT == 7)
+            {
+                btnSeven.Focus();
+            }
+            if (currentDT == 8)
+            {
+                btnEight.Focus();
+            }
+        }
     }
 }
