@@ -16,8 +16,9 @@ namespace MultiDesk
         {
             InitializeComponent();
 
-            TransparencyKey = Color.Aquamarine;
-            BackColor = Color.Aquamarine;
+            //TransparencyKey = Color.Aquamarine;
+            //BackColor = Color.Aquamarine;
+            Opacity = .25;
         }
 
         public sealed override Color BackColor
@@ -147,47 +148,35 @@ namespace MultiDesk
 
         private void RunningWindow_Activated(object sender, EventArgs e)
         {
-            // Find current desktop number and set button nuber to match
-            int currentDT;
-            try
+            if (Program.Arguments[2] == "default")
             {
-                currentDT = Convert.ToInt32(Program.Arguments[1]);
+                btnOne.Focus();
             }
-            catch
-            {
-                currentDT = 1;
-            }
-
-
-            if (currentDT == 1)
-            {
-                btnOne.BringToFront();
-            }
-            if (currentDT == 2)
+            else if (Program.Arguments[2] == "desktop2")
             {
                 btnTwo.Focus();
             }
-            if (currentDT == 3)
+            else if (Program.Arguments[2] == "desktop3")
             {
                 btnThree.Focus();
             }
-            if (currentDT == 4)
+            else if (Program.Arguments[2] == "desktop4")
             {
                 btnFour.Focus();
             }
-            if (currentDT == 5)
+            else if (Program.Arguments[2] == "desktop5")
             {
                 btnFive.Focus();
             }
-            if (currentDT == 6)
+            else if (Program.Arguments[2] == "desktop6")
             {
                 btnSix.Focus();
             }
-            if (currentDT == 7)
+            else if (Program.Arguments[2] == "desktop7")
             {
                 btnSeven.Focus();
             }
-            if (currentDT == 8)
+            else
             {
                 btnEight.Focus();
             }

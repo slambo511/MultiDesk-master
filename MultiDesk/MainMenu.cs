@@ -109,7 +109,7 @@ namespace MultiDesk
 
             if (!Desktops.DesktopExists(name))
             {
-                string[] args = {"running", Globals.NoDesktops.ToString()};
+                string[] args = {"running", Globals.NoDesktops.ToString(), name};
                 Desktops.DesktopCreate(name);
                 Processes.ProcessCreate(name, Application.ExecutablePath, String.Join(" ", args));             
             }
