@@ -56,32 +56,49 @@ namespace MultiDesk
             {
                 btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide(); btnFour.Hide(); btnThree.Hide();
                 Width = Width - (46 * 6);
+                btnTwo.Focus();
+                btnTwo.Select();
             }
             else if (Globals.NoDesktops == 3)
             {
                 btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide(); btnFour.Hide();
                 Width = Width - (46 * 5);
+                btnThree.Focus();
+                btnThree.Select();
             }
             else if (Globals.NoDesktops == 4)
             {
                 btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide();
                 Width = Width - (46 * 4);
+                btnFour.Focus();
+                btnFour.Select();
             }
             else if (Globals.NoDesktops == 5)
             {
                 btnEight.Hide(); btnSeven.Hide(); btnSix.Hide();
                 Width = Width - (46 * 3);
+                btnFive.Focus();
+                btnFive.Select();
             }
             else if (Globals.NoDesktops == 6)
             {
                 btnEight.Hide(); btnSeven.Hide();
                 Width = Width - (46 * 2);
+                btnSix.Focus();
+                btnSix.Select();
             }
             else if (Globals.NoDesktops == 7)
             {
                 btnEight.Hide();
                 Width = Width - 46;
-            }            
+                btnSeven.Focus();
+                btnSeven.Select();
+            }
+            else
+            {
+                btnEight.Focus();
+                btnEight.Select();
+            }
 
             if (Program.Arguments[0] == "running")
             {
