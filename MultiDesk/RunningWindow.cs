@@ -83,7 +83,7 @@ namespace MultiDesk
                 Width = Width - 46;
             }
 
-            switch (Program.Arguments[2])
+            /*switch (Program.Arguments[2])
             {
                 case "1":
                     btnOne.BackColor = Color.Aqua;
@@ -110,7 +110,7 @@ namespace MultiDesk
                     btnEight.BackColor = Color.Aqua;
                     break;
 
-            }
+            }*/
             
 
             if (Program.Arguments[0] == "running")
