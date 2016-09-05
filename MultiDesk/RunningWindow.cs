@@ -104,48 +104,64 @@ namespace MultiDesk
         {
             Desktops.DesktopSwitch("default");
             Program.Arguments[2] = "1";
+            btnOne.Focus();
+            btnOne.Select();
         }
 
         private void btnTwo_Click(object sender, EventArgs e)
         {
             Desktops.DesktopSwitch("desktop2");
             Program.Arguments[2] = "2";
+            btnTwo.Focus();
+            btnTwo.Select();
         }
 
         private void btnThree_Click(object sender, EventArgs e)
         {
             Desktops.DesktopSwitch("desktop3");
             Program.Arguments[2] = "3";
+            btnThree.Focus();
+            btnThree.Select();
         }
 
         private void btnFour_Click(object sender, EventArgs e)
         {
             Desktops.DesktopSwitch("desktop4");
             Program.Arguments[2] = "4";
+            btnFour.Focus();
+            btnFour.Select();
         }
 
         private void btnFive_Click(object sender, EventArgs e)
         {
             Desktops.DesktopSwitch("desktop5");
             Program.Arguments[2] = "5";
+            btnFive.Focus();
+            btnFive.Select();
         }
 
         private void btnSix_Click(object sender, EventArgs e)
         {
             Desktops.DesktopSwitch("desktop6");
             Program.Arguments[2] = "6";
+            btnSix.Focus();
+            btnSix.Select();
         }
 
         private void btnSeven_Click(object sender, EventArgs e)
         {
             Desktops.DesktopSwitch("desktop7");
             Program.Arguments[2] = "7";
+            btnSeven.Focus();
+            btnSeven.Select();
         }
 
         private void btnEight_Click(object sender, EventArgs e)
         {
             Desktops.DesktopSwitch("desktop8");
             Program.Arguments[2] = "8";
+            btnEight.Focus();
+            btnEight.Select();
         }
         #endregion
 
