@@ -50,7 +50,7 @@ namespace MultiDesk
         {
             //TransparencyKey = Color.Aquamarine;
             //BackColor = Color.Aquamarine;
-
+            MessageBox.Show("Refresh");
             // Handles the removal of superflous buttons and resizes form accordingly
             if (Globals.NoDesktops == 2)
             {
