@@ -134,48 +134,56 @@ namespace MultiDesk
         {
             Desktops.DesktopSwitch("default");
             Program.Arguments[2] = "1";
+            Refresh();
         }
 
         private void btnTwo_Click(object sender, EventArgs e)
         {
             Desktops.DesktopSwitch("desktop2");
             Program.Arguments[2] = "2";
+            Refresh();
         }
 
         private void btnThree_Click(object sender, EventArgs e)
         {
             Desktops.DesktopSwitch("desktop3");
             Program.Arguments[2] = "3";
+            Refresh();
         }
 
         private void btnFour_Click(object sender, EventArgs e)
         {
             Desktops.DesktopSwitch("desktop4");
             Program.Arguments[2] = "4";
+            Refresh();
         }
 
         private void btnFive_Click(object sender, EventArgs e)
         {
             Desktops.DesktopSwitch("desktop5");
             Program.Arguments[2] = "5";
+            Refresh();
         }
 
         private void btnSix_Click(object sender, EventArgs e)
         {
             Desktops.DesktopSwitch("desktop6");
             Program.Arguments[2] = "6";
+            Refresh();
         }
 
         private void btnSeven_Click(object sender, EventArgs e)
         {
             Desktops.DesktopSwitch("desktop7");
             Program.Arguments[2] = "7";
+            Refresh();
         }
 
         private void btnEight_Click(object sender, EventArgs e)
         {
             Desktops.DesktopSwitch("desktop8");
             Program.Arguments[2] = "8";
+            Refresh();
         }
         #endregion
 
