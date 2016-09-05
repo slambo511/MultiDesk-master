@@ -169,43 +169,7 @@ namespace MultiDesk
 
         private void RunningWindow_Enter(object sender, EventArgs e)
         {
-            MessageBox.Show(Program.Arguments[2]);
-
-            switch (Program.Arguments[2])
-            {
-                case "1":
-                    btnOne.Focus();
-                    btnOne.Select();
-                    break;
-                case "2":
-                    btnTwo.Focus();
-                    btnTwo.Select();
-                    break;
-                case "3":
-                    btnThree.Focus();
-                    btnThree.Select();
-                    break;
-                case "4":
-                    btnFour.Focus();
-                    btnFour.Select();
-                    break;
-                case "5":
-                    btnFive.Focus();
-                    btnFive.Select();
-                    break;
-                case "6":
-                    btnSix.Focus();
-                    btnSix.Select();
-                    break;
-                case "7":
-                    btnSeven.Focus();
-                    btnSeven.Select();
-                    break;
-                case "8":
-                    btnEight.Focus();
-                    btnEight.Select();
-                    break;
-            }
+            
         }
     }
 }

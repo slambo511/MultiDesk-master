@@ -65,6 +65,43 @@ namespace MultiDesk
             {
                 return false;
             }
+            // MessageBox.Show(Program.Arguments[2]);
+
+            switch (Program.Arguments[2])
+            {
+                case "1":
+                    RunningWindow.btnOne.Focus();
+                    RunningWindow.btnOne.Select();
+                    break;
+                case "2":
+                    RunningWindow.btnTwo.Focus();
+                    RunningWindow.btnTwo.Select();
+                    break;
+                case "3":
+                    RunningWindow.btnThree.Focus();
+                    RunningWindow.btnThree.Select();
+                    break;
+                case "4":
+                    RunningWindow.btnFour.Focus();
+                    RunningWindow.btnFour.Select();
+                    break;
+                case "5":
+                    RunningWindow.btnFive.Focus();
+                    RunningWindow.btnFive.Select();
+                    break;
+                case "6":
+                    RunningWindow.btnSix.Focus();
+                    RunningWindow.btnSix.Select();
+                    break;
+                case "7":
+                    RunningWindow.btnSeven.Focus();
+                    RunningWindow.btnSeven.Select();
+                    break;
+                case "8":
+                    RunningWindow.btnEight.Focus();
+                    RunningWindow.btnEight.Select();
+                    break;
+            }
             return SwitchDesktop(handle);
         }
 
