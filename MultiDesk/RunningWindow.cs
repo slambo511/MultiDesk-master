@@ -155,9 +155,7 @@ namespace MultiDesk
         }
 
         private void RunningWindow_Activated(object sender, EventArgs e)
-        {
-            
-
+        {           
             //test
             //MessageBox.Show(_currentDesktop, "_currentDesktop", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
