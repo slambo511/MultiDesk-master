@@ -103,41 +103,49 @@ namespace MultiDesk
         private void btnOne_Click(object sender, EventArgs e)
         {
             Desktops.DesktopSwitch("default");
+            Program.Arguments[2] = "1";
         }
 
         private void btnTwo_Click(object sender, EventArgs e)
         {
             Desktops.DesktopSwitch("desktop2");
+            Program.Arguments[2] = "2";
         }
 
         private void btnThree_Click(object sender, EventArgs e)
         {
             Desktops.DesktopSwitch("desktop3");
+            Program.Arguments[2] = "3";
         }
 
         private void btnFour_Click(object sender, EventArgs e)
         {
             Desktops.DesktopSwitch("desktop4");
+            Program.Arguments[2] = "4";
         }
 
         private void btnFive_Click(object sender, EventArgs e)
         {
             Desktops.DesktopSwitch("desktop5");
+            Program.Arguments[2] = "5";
         }
 
         private void btnSix_Click(object sender, EventArgs e)
         {
             Desktops.DesktopSwitch("desktop6");
+            Program.Arguments[2] = "6";
         }
 
         private void btnSeven_Click(object sender, EventArgs e)
         {
             Desktops.DesktopSwitch("desktop7");
+            Program.Arguments[2] = "7";
         }
 
         private void btnEight_Click(object sender, EventArgs e)
         {
             Desktops.DesktopSwitch("desktop8");
+            Program.Arguments[2] = "8";
         }
         #endregion
 
@@ -153,39 +161,39 @@ namespace MultiDesk
             //test
             //MessageBox.Show(_currentDesktop, "_currentDesktop", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            switch (_currentDesktop)
-            {                
-                case "desktop2":
+            switch (Program.Arguments[2])
+            {
+                case "1":
+                    btnOne.Focus();
+                    btnOne.Select();
+                    break;
+                case "2":
                     btnTwo.Focus();
                     btnTwo.Select();
                     break;
-                case "desktop3":
+                case "3":
                     btnThree.Focus();
                     btnThree.Select();
                     break;
-                case "desktop4":
+                case "4":
                     btnFour.Focus();
                     btnFour.Select();
                     break;
-                case "desktop5":
+                case "5":
                     btnFive.Focus();
                     btnFive.Select();
                     break;
-                case "desktop6":
+                case "6":
                     btnSix.Focus();
                     btnSix.Select();
                     break;
-                case "desktop7":
+                case "7":
                     btnSeven.Focus();
                     btnSeven.Select();
                     break;
-                case "desktop8":
+                case "8":
                     btnEight.Focus();
                     btnEight.Select();
-                    break;
-                case "Default":
-                    btnOne.Focus();
-                    btnOne.Select();
                     break;
             }
         }
