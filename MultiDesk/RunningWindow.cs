@@ -11,12 +11,12 @@ namespace MultiDesk
 
         private bool _mouseDown;
         private Point _lastLocation;
-        public string _currentDesktop = Desktops.DesktopName(Desktops.DesktopOpenInput());
+        // public string _currentDesktop = Desktops.DesktopName(Desktops.DesktopOpenInput());
 
         public RunningWindow()
         {
             InitializeComponent();          
-            MessageBox.Show(_currentDesktop, @"_currentDesktop", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // MessageBox.Show(_currentDesktop, @"_currentDesktop", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public sealed override Color BackColor
