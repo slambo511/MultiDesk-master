@@ -132,58 +132,74 @@ namespace MultiDesk
         #region ButtonHandlers
         private void btnOne_Click(object sender, EventArgs e)
         {
-            Desktops.DesktopSwitch("default");
             Program.Arguments[2] = "1";
             Refresh();
+            btnOne.Select();
+            btnOne.Focus();
+            Desktops.DesktopSwitch("default");                    
         }
 
         private void btnTwo_Click(object sender, EventArgs e)
         {
-            Desktops.DesktopSwitch("desktop2");
             Program.Arguments[2] = "2";
             Refresh();
+            btnTwo.Select();
+            btnTwo.Focus();
+            Desktops.DesktopSwitch("desktop2");                     
         }
 
         private void btnThree_Click(object sender, EventArgs e)
         {
-            Desktops.DesktopSwitch("desktop3");
             Program.Arguments[2] = "3";
             Refresh();
+            btnThree.Select();
+            btnThree.Focus();
+            Desktops.DesktopSwitch("desktop3");                     
         }
 
         private void btnFour_Click(object sender, EventArgs e)
         {
-            Desktops.DesktopSwitch("desktop4");
             Program.Arguments[2] = "4";
             Refresh();
+            btnFour.Select();
+            btnFour.Focus();
+            Desktops.DesktopSwitch("desktop4");                        
         }
 
         private void btnFive_Click(object sender, EventArgs e)
         {
             Desktops.DesktopSwitch("desktop5");
-            Program.Arguments[2] = "5";
             Refresh();
+            btnFive.Select();
+            btnFive.Focus();
+            Program.Arguments[2] = "5";            
         }
 
         private void btnSix_Click(object sender, EventArgs e)
         {
-            Desktops.DesktopSwitch("desktop6");
             Program.Arguments[2] = "6";
             Refresh();
+            btnSix.Select();
+            btnSix.Focus();
+            Desktops.DesktopSwitch("desktop6");                       
         }
 
         private void btnSeven_Click(object sender, EventArgs e)
         {
-            Desktops.DesktopSwitch("desktop7");
             Program.Arguments[2] = "7";
             Refresh();
+            btnSeven.Select();
+            btnSeven.Focus();
+            Desktops.DesktopSwitch("desktop7");                        
         }
 
         private void btnEight_Click(object sender, EventArgs e)
         {
-            Desktops.DesktopSwitch("desktop8");
             Program.Arguments[2] = "8";
             Refresh();
+            btnEight.Select();
+            btnEight.Focus();
+            Desktops.DesktopSwitch("desktop8");                       
         }
         #endregion
 
@@ -203,11 +219,6 @@ namespace MultiDesk
         private void RunningWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
             Environment.Exit(Environment.ExitCode);
-        }
-
-        private void RunningWindow_Enter(object sender, EventArgs e)
-        {
-            MessageBox.Show("Refresh _Enter");
         }
     }
 }
