@@ -155,7 +155,7 @@ namespace MultiDesk
 
             switch (_currentDesktop)
             {
-                case "default":
+                case "desktop1":
                     btnOne.Focus();
                     btnOne.Select();
                     break;
