@@ -12,11 +12,13 @@ namespace MultiDesk
         private bool _mouseDown;
         private Point _lastLocation;
         // public string _currentDesktop = Desktops.DesktopName(Desktops.DesktopOpenInput());
+        private static int _idNumber;
 
-        public RunningWindow()
+        public RunningWindow(int count)
         {
             InitializeComponent();
-            // MessageBox.Show(_currentDesktop, @"_currentDesktop", MessageBoxButtons.OK, MessageBoxIcon.Information);           
+            // MessageBox.Show(_currentDesktop, @"_currentDesktop", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+            _idNumber = count;
         }
 
         public sealed override Color BackColor
@@ -83,34 +85,34 @@ namespace MultiDesk
                 Width = Width - 46;
             }
 
-            /*switch (Program.Arguments[2])
+            switch (_idNumber)
             {
-                case "1":
+                case 1:
                     btnOne.BackColor = Color.Aqua;
                     break;
-                case "2":
+                case 2:
                     btnTwo.BackColor = Color.Aqua;
                     break;
-                case "3":
+                case 3:
                     btnThree.BackColor = Color.Aqua;
                     break;
-                case "4":
+                case 4:
                     btnFour.BackColor = Color.Aqua;
                     break;
-                case "5":
+                case 5:
                     btnFive.BackColor = Color.Aqua;
                     break;
-                case "6":
+                case 6:
                     btnSix.BackColor = Color.Aqua;
                     break;
-                case "7":
+                case 7:
                     btnSeven.BackColor = Color.Aqua;
                     break;
-                case "8":
+                case 8:
                     btnEight.BackColor = Color.Aqua;
                     break;
 
-            }*/
+            }
             
 
             if (Program.Arguments[0] == "running")
@@ -125,7 +127,9 @@ namespace MultiDesk
             }
             //currentDesktop = Desktops.DesktopName(Desktops.DesktopOpenInput());
             //ScreenshotsDelete();
-        
+            
+            
+
             PositionMenu();
         }
 

@@ -12,6 +12,7 @@ namespace MultiDesk
     {
         private string _currentDesktop = "Default";
         private string _passedNumber = "";
+        private int _runningWindowCount = 1;
         public MainMenu()
         {
             InitializeComponent();
@@ -89,7 +90,8 @@ namespace MultiDesk
                 int c = b + 2;
                 DesktopInitialise("desktop" + c.ToString());
             }
-            RunningWindow open = new RunningWindow();
+            RunningWindow open = new RunningWindow(_runningWindowCount);
+            _runningWindowCount += 1;
             open.ShowDialog();
             Close();
         }
@@ -104,7 +106,8 @@ namespace MultiDesk
             {
                 Globals.NoDesktops = Convert.ToInt32(Program.Arguments[1]);
                 Hide();
-                RunningWindow open = new RunningWindow();
+                RunningWindow open = new RunningWindow(_runningWindowCount);
+                _runningWindowCount += 1;
                 open.ShowDialog();
                 Close();
             }
