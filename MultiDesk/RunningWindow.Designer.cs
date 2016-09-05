@@ -152,13 +152,13 @@
 
         #endregion
 
-        internal static System.Windows.Forms.Button btnOne;
-        public static System.Windows.Forms.Button btnTwo;
-        public static System.Windows.Forms.Button btnThree;
-        public static System.Windows.Forms.Button btnFour;
-        internal static System.Windows.Forms.Button btnFive;
-        internal static System.Windows.Forms.Button btnSix;
-        internal static System.Windows.Forms.Button btnSeven;
-        internal static System.Windows.Forms.Button btnEight;
+        internal System.Windows.Forms.Button btnOne;
+        public System.Windows.Forms.Button btnTwo;
+        public System.Windows.Forms.Button btnThree;
+        public System.Windows.Forms.Button btnFour;
+        internal System.Windows.Forms.Button btnFive;
+        internal System.Windows.Forms.Button btnSix;
+        internal System.Windows.Forms.Button btnSeven;
+        internal System.Windows.Forms.Button btnEight;
     }
 }
