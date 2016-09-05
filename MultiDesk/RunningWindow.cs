@@ -16,7 +16,7 @@ namespace MultiDesk
         public RunningWindow()
         {
             InitializeComponent();          
-            MessageBox.Show(_currentDesktop, "_currentDesktop", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(_currentDesktop, @"_currentDesktop", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public sealed override Color BackColor
@@ -188,6 +188,11 @@ namespace MultiDesk
                     btnEight.Select();
                     break;
             }
+        }
+
+        private void RunningWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(Environment.ExitCode);
         }
     }
 }
