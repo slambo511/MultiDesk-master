@@ -83,6 +83,36 @@ namespace MultiDesk
                 Width = Width - 46;
             }
 
+            switch (Program.Arguments[2])
+            {
+                case "1":
+                    btnOne.BackColor = Color.Aqua;
+                    break;
+                case "2":
+                    btnTwo.BackColor = Color.Aqua;
+                    break;
+                case "3":
+                    btnThree.BackColor = Color.Aqua;
+                    break;
+                case "4":
+                    btnFour.BackColor = Color.Aqua;
+                    break;
+                case "5":
+                    btnFive.BackColor = Color.Aqua;
+                    break;
+                case "6":
+                    btnSix.BackColor = Color.Aqua;
+                    break;
+                case "7":
+                    btnSeven.BackColor = Color.Aqua;
+                    break;
+                case "8":
+                    btnEight.BackColor = Color.Aqua;
+                    break;
+
+            }
+            
+
             if (Program.Arguments[0] == "running")
             {
                 Process.Start("explorer.exe");
