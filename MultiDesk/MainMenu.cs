@@ -11,6 +11,7 @@ namespace MultiDesk
     public partial class MainMenu : Form
     {
         private string _currentDesktop = "Default";
+        private string _passedNumber = ""
         public MainMenu()
         {
             InitializeComponent();
@@ -21,49 +22,49 @@ namespace MultiDesk
         {
             Globals.NoDesktops = 2;
             Globals.RemainingDesktops = 1;
-            Program.Arguments[2] = "2";
+            _passedNumber = "2";
         }
 
         private void rbThree_CheckedChanged(object sender, EventArgs e)
         {
             Globals.NoDesktops = 3;
             Globals.RemainingDesktops = 2;
-            Program.Arguments[2] = "3";
+            _passedNumber = "3";
         }
 
         private void rbFour_CheckedChanged(object sender, EventArgs e)
         {
             Globals.NoDesktops = 4;
             Globals.RemainingDesktops = 3;
-            Program.Arguments[2] = "4";
+            _passedNumber = "4";
         }
 
         private void rbFive_CheckedChanged(object sender, EventArgs e)
         {
             Globals.NoDesktops = 5;
             Globals.RemainingDesktops = 4;
-            Program.Arguments[2] = "5";
+            _passedNumber = "5";
         }
 
         private void rbSix_CheckedChanged(object sender, EventArgs e)
         {
             Globals.NoDesktops = 6;
             Globals.RemainingDesktops = 5;
-            Program.Arguments[2] = "6";
+            _passedNumber = "6";
         }
 
         private void rbSeven_CheckedChanged(object sender, EventArgs e)
         {
             Globals.NoDesktops = 7;
             Globals.RemainingDesktops = 6;
-            Program.Arguments[2] = "7";
+            _passedNumber = "7";
         }
 
         private void rbEight_CheckedChanged(object sender, EventArgs e)
         {
             Globals.NoDesktops = 8;
             Globals.RemainingDesktops = 7;
-            Program.Arguments[2] = "8";
+            _passedNumber = "8";
         }
         #endregion
 
@@ -116,7 +117,7 @@ namespace MultiDesk
 
             if (!Desktops.DesktopExists(name))
             {
-                string[] args = {"running", Globals.NoDesktops.ToString()};
+                string[] args = {"running", Globals.NoDesktops.ToString(), _passedNumber};
                 Desktops.DesktopCreate(name);
                 Processes.ProcessCreate(name, Application.ExecutablePath, String.Join(" ", args));             
             }
