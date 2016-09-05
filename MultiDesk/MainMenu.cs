@@ -11,7 +11,7 @@ namespace MultiDesk
     public partial class MainMenu : Form
     {
         private string _currentDesktop = "Default";
-        private string _passedNumber = ""
+        private string _passedNumber = "";
         public MainMenu()
         {
             InitializeComponent();
