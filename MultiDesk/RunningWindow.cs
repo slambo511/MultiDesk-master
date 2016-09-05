@@ -196,7 +196,7 @@ namespace MultiDesk
         {
             //test
             //MessageBox.Show(_currentDesktop, "_currentDesktop", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            MessageBox.Show("Refresh _Activated");
+            //MessageBox.Show("Refresh _Activated");
 
         }
 
