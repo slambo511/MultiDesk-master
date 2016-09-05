@@ -50,7 +50,7 @@ namespace MultiDesk
         {
             //TransparencyKey = Color.Aquamarine;
             //BackColor = Color.Aquamarine;
-            MessageBox.Show("Refresh");
+            
             // Handles the removal of superflous buttons and resizes form accordingly
             if (Globals.NoDesktops == 2)
             {
@@ -196,8 +196,8 @@ namespace MultiDesk
         {
             //test
             //MessageBox.Show(_currentDesktop, "_currentDesktop", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Refresh _Activated");
 
-            
         }
 
         private void RunningWindow_FormClosing(object sender, FormClosingEventArgs e)
@@ -207,7 +207,7 @@ namespace MultiDesk
 
         private void RunningWindow_Enter(object sender, EventArgs e)
         {
-            
+            MessageBox.Show("Refresh _Enter");
         }
     }
 }
