@@ -183,7 +183,7 @@ namespace MultiDesk
                     btnEight.Focus();
                     btnEight.Select();
                     break;
-                default:
+                case "Default":
                     btnOne.Focus();
                     btnOne.Select();
                     break;
