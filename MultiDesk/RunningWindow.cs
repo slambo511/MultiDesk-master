@@ -149,7 +149,7 @@ namespace MultiDesk
             string _currentDesktop = Desktops.DesktopName(Desktops.DesktopOpenInput());
 
             //test
-            MessageBox.Show(_currentDesktop, "_currentDesktop", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show(_currentDesktop, "_currentDesktop", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             switch (_currentDesktop)
             {
