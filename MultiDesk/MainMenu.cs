@@ -12,7 +12,7 @@ namespace MultiDesk
     {
         private string _currentDesktop = "Default";
         private string _passedNumber = "";
-        private int _runningWindowCount = 1;
+        private int _runningWindowCount = Convert.ToInt32(Program.Arguments[2]);
         public MainMenu()
         {
             InitializeComponent();
@@ -91,7 +91,6 @@ namespace MultiDesk
                 DesktopInitialise("desktop" + c.ToString());
             }
             RunningWindow open = new RunningWindow(_runningWindowCount);
-            _runningWindowCount += 1;
             open.ShowDialog();
             Close();
         }
@@ -106,8 +105,7 @@ namespace MultiDesk
             {
                 Globals.NoDesktops = Convert.ToInt32(Program.Arguments[1]);
                 Hide();
-                RunningWindow open = new RunningWindow(_runningWindowCount);
-                _runningWindowCount += 1;
+                RunningWindow open = new RunningWindow(Convert.ToInt32(Program.Arguments[2]));
                 open.ShowDialog();
                 Close();
             }
@@ -117,10 +115,10 @@ namespace MultiDesk
         private void DesktopInitialise(string name)
         {
             DesktopSave();
-
+            
             if (!Desktops.DesktopExists(name))
             {
-                string[] args = {"running", Globals.NoDesktops.ToString(), _passedNumber};
+                string[] args = {"running", Globals.NoDesktops.ToString(), (_runningWindowCount + 1).ToString()};
                 Desktops.DesktopCreate(name);
                 Processes.ProcessCreate(name, Application.ExecutablePath, String.Join(" ", args));             
             }
