@@ -159,6 +159,8 @@ namespace MultiDesk
             //test
             //MessageBox.Show(_currentDesktop, "_currentDesktop", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            MessageBox.Show(Program.Arguments[2]);
+
             switch (Program.Arguments[2])
             {
                 case "1":
