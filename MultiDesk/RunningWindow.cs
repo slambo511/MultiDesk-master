@@ -81,43 +81,7 @@ namespace MultiDesk
             {
                 btnEight.Hide();
                 Width = Width - 46;
-            }
-
-            switch (Program.Arguments[2])
-            {
-                case "1":
-                    btnOne.Focus();
-                    btnOne.Select();
-                    break;
-                case "2":
-                    btnTwo.Focus();
-                    btnTwo.Select();
-                    break;
-                case "3":
-                    btnThree.Focus();
-                    btnThree.Select();
-                    break;
-                case "4":
-                    btnFour.Focus();
-                    btnFour.Select();
-                    break;
-                case "5":
-                    btnFive.Focus();
-                    btnFive.Select();
-                    break;
-                case "6":
-                    btnSix.Focus();
-                    btnSix.Select();
-                    break;
-                case "7":
-                    btnSeven.Focus();
-                    btnSeven.Select();
-                    break;
-                case "8":
-                    btnEight.Focus();
-                    btnEight.Select();
-                    break;
-            }
+            }            
 
             if (Program.Arguments[0] == "running")
             {
@@ -191,11 +155,45 @@ namespace MultiDesk
         }
 
         private void RunningWindow_Activated(object sender, EventArgs e)
-        {           
+        {
             //test
             //MessageBox.Show(_currentDesktop, "_currentDesktop", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            
+            switch (Program.Arguments[2])
+            {
+                case "1":
+                    btnOne.Focus();
+                    btnOne.Select();
+                    break;
+                case "2":
+                    btnTwo.Focus();
+                    btnTwo.Select();
+                    break;
+                case "3":
+                    btnThree.Focus();
+                    btnThree.Select();
+                    break;
+                case "4":
+                    btnFour.Focus();
+                    btnFour.Select();
+                    break;
+                case "5":
+                    btnFive.Focus();
+                    btnFive.Select();
+                    break;
+                case "6":
+                    btnSix.Focus();
+                    btnSix.Select();
+                    break;
+                case "7":
+                    btnSeven.Focus();
+                    btnSeven.Select();
+                    break;
+                case "8":
+                    btnEight.Focus();
+                    btnEight.Select();
+                    break;
+            }
         }
 
         private void RunningWindow_FormClosing(object sender, FormClosingEventArgs e)
