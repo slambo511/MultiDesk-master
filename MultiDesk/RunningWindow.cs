@@ -154,11 +154,7 @@ namespace MultiDesk
             //MessageBox.Show(_currentDesktop, "_currentDesktop", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             switch (_currentDesktop)
-            {
-                case "desktop1":
-                    btnOne.Focus();
-                    btnOne.Select();
-                    break;
+            {                
                 case "desktop2":
                     btnTwo.Focus();
                     btnTwo.Select();
@@ -186,6 +182,10 @@ namespace MultiDesk
                 case "desktop8":
                     btnEight.Focus();
                     btnEight.Select();
+                    break;
+                default:
+                    btnOne.Focus();
+                    btnOne.Select();
                     break;
             }
         }
