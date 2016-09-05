@@ -133,112 +133,48 @@ namespace MultiDesk
         private void btnOne_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "1";
-            btnOne.Hide();
-            btnTwo.Show();
-            btnThree.Show();
-            btnFour.Show();
-            btnFive.Show();
-            btnSix.Show();
-            btnSeven.Show();
-            btnEight.Show();
             Desktops.DesktopSwitch("default");                    
         }
 
         private void btnTwo_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "2";
-            btnOne.Show();
-            btnTwo.Hide();
-            btnThree.Show();
-            btnFour.Show();
-            btnFive.Show();
-            btnSix.Show();
-            btnSeven.Show();
-            btnEight.Show();
             Desktops.DesktopSwitch("desktop2");                     
         }
 
         private void btnThree_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "3";
-            btnOne.Show();
-            btnTwo.Show();
-            btnThree.Hide();
-            btnFour.Show();
-            btnFive.Show();
-            btnSix.Show();
-            btnSeven.Show();
-            btnEight.Show();
             Desktops.DesktopSwitch("desktop3");                     
         }
 
         private void btnFour_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "4";
-            btnOne.Show();
-            btnTwo.Show();
-            btnThree.Show();
-            btnFour.Hide();
-            btnFive.Show();
-            btnSix.Show();
-            btnSeven.Show();
-            btnEight.Show();
             Desktops.DesktopSwitch("desktop4");                        
         }
 
         private void btnFive_Click(object sender, EventArgs e)
         {
             Desktops.DesktopSwitch("desktop5");
-            btnOne.Show();
-            btnTwo.Show();
-            btnThree.Show();
-            btnFour.Show();
-            btnFive.Hide();
-            btnSix.Show();
-            btnSeven.Show();
-            btnEight.Show();
             Program.Arguments[2] = "5";            
         }
 
         private void btnSix_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "6";
-            btnOne.Show();
-            btnTwo.Show();
-            btnThree.Show();
-            btnFour.Show();
-            btnFive.Show();
-            btnSix.Hide();
-            btnSeven.Show();
-            btnEight.Show();
             Desktops.DesktopSwitch("desktop6");                       
         }
 
         private void btnSeven_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "7";
-            btnOne.Show();
-            btnTwo.Show();
-            btnThree.Show();
-            btnFour.Show();
-            btnFive.Show();
-            btnSix.Show();
-            btnSeven.Hide();
-            btnEight.Show();
             Desktops.DesktopSwitch("desktop7");                        
         }
 
         private void btnEight_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "8";
-            btnOne.Show();
-            btnTwo.Show();
-            btnThree.Show();
-            btnFour.Show();
-            btnFive.Show();
-            btnSix.Show();
-            btnSeven.Show();
-            btnEight.Hide();
             Desktops.DesktopSwitch("desktop8");                       
         }
         #endregion
