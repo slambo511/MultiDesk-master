@@ -88,9 +88,10 @@ namespace MultiDesk
             for (int b = 0; b < Globals.RemainingDesktops; b++)
             {
                 int c = b + 2;
+                _runningWindowCount++; // try incrementing here
                 DesktopInitialise("desktop" + c.ToString());
             }
-            RunningWindow open = new RunningWindow(_runningWindowCount);
+            RunningWindow open = new RunningWindow(1); //_runningWindowCount); called this form last?
             open.ShowDialog();
             Close();
         }
@@ -114,11 +115,11 @@ namespace MultiDesk
 
         private void DesktopInitialise(string name)
         {
-            DesktopSave();
+            // DesktopSave();
             
             if (!Desktops.DesktopExists(name))
             {
-                string[] args = {"running", Globals.NoDesktops.ToString(), (_runningWindowCount + 1).ToString()};
+                string[] args = {"running", Globals.NoDesktops.ToString(), (_runningWindowCount).ToString()};
                 Desktops.DesktopCreate(name);
                 Processes.ProcessCreate(name, Application.ExecutablePath, String.Join(" ", args));             
             }
