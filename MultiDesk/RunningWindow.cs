@@ -89,27 +89,43 @@ namespace MultiDesk
             {
                 case 1:
                     btnOne.BackColor = Color.Aqua;
+                    btnOne.Select();
+                    btnOne.Focus();
                     break;
                 case 2:
                     btnTwo.BackColor = Color.Aqua;
+                    btnTwo.Select();
+                    btnTwo.Focus();
                     break;
                 case 3:
                     btnThree.BackColor = Color.Aqua;
+                    btnThree.Select();
+                    btnThree.Focus();
                     break;
                 case 4:
                     btnFour.BackColor = Color.Aqua;
+                    btnFour.Select();
+                    btnFour.Focus();
                     break;
                 case 5:
                     btnFive.BackColor = Color.Aqua;
+                    btnFive.Select();
+                    btnFive.Focus();
                     break;
                 case 6:
                     btnSix.BackColor = Color.Aqua;
+                    btnSix.Select();
+                    btnSix.Focus();
                     break;
                 case 7:
                     btnSeven.BackColor = Color.Aqua;
+                    btnSeven.Select();
+                    btnSeven.Focus();
                     break;
                 case 8:
                     btnEight.BackColor = Color.Aqua;
+                    btnEight.Select();
+                    btnEight.Focus();
                     break;
 
             }
