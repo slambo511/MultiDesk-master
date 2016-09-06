@@ -36,6 +36,7 @@
             this.btnThree = new System.Windows.Forms.Button();
             this.btnTwo = new System.Windows.Forms.Button();
             this.btnOne = new System.Windows.Forms.Button();
+            this.lblFocus = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnEight
@@ -118,11 +119,21 @@
             this.btnOne.UseVisualStyleBackColor = true;
             this.btnOne.Click += new System.EventHandler(this.btnOne_Click);
             // 
+            // lblFocus
+            // 
+            this.lblFocus.AutoSize = true;
+            this.lblFocus.Location = new System.Drawing.Point(377, 18);
+            this.lblFocus.Name = "lblFocus";
+            this.lblFocus.Size = new System.Drawing.Size(0, 13);
+            this.lblFocus.TabIndex = 8;
+            this.lblFocus.Visible = false;
+            // 
             // RunningWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(380, 36);
+            this.Controls.Add(this.lblFocus);
             this.Controls.Add(this.btnEight);
             this.Controls.Add(this.btnSeven);
             this.Controls.Add(this.btnSix);
@@ -146,6 +157,7 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RunningWindow_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.RunningWindow_MouseUp);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -159,5 +171,6 @@
         public System.Windows.Forms.Button btnThree;
         public System.Windows.Forms.Button btnTwo;
         internal System.Windows.Forms.Button btnOne;
+        private System.Windows.Forms.Label lblFocus;
     }
 }

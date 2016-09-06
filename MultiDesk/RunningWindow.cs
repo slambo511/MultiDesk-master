@@ -129,9 +129,8 @@ namespace MultiDesk
                     break;
 
             }
-
-            Select();
-            Focus();
+         
+            lblFocus.Focus();
 
             if (Program.Arguments[0] == "running")
             {
