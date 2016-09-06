@@ -128,9 +128,7 @@ namespace MultiDesk
                     //btnEight.Focus();
                     break;
 
-            }
-         
-            lblFocus.Focus();
+            }        
 
             if (Program.Arguments[0] == "running")
             {
