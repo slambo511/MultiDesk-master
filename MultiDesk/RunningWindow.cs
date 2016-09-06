@@ -89,47 +89,49 @@ namespace MultiDesk
             {
                 case 1:
                     btnOne.BackColor = Color.Aqua;
-                    btnOne.Select();
-                    btnOne.Focus();
+                    //btnOne.Select();
+                    //btnOne.Focus();
                     break;
                 case 2:
                     btnTwo.BackColor = Color.Aqua;
-                    btnTwo.Select();
-                    btnTwo.Focus();
+                    //btnTwo.Select();
+                    //btnTwo.Focus();
                     break;
                 case 3:
                     btnThree.BackColor = Color.Aqua;
-                    btnThree.Select();
-                    btnThree.Focus();
+                    //btnThree.Select();
+                    //btnThree.Focus();
                     break;
                 case 4:
                     btnFour.BackColor = Color.Aqua;
-                    btnFour.Select();
-                    btnFour.Focus();
+                    //btnFour.Select();
+                    //btnFour.Focus();
                     break;
                 case 5:
                     btnFive.BackColor = Color.Aqua;
-                    btnFive.Select();
-                    btnFive.Focus();
+                    //btnFive.Select();
+                    //btnFive.Focus();
                     break;
                 case 6:
                     btnSix.BackColor = Color.Aqua;
-                    btnSix.Select();
-                    btnSix.Focus();
+                    //btnSix.Select();
+                    //btnSix.Focus();
                     break;
                 case 7:
                     btnSeven.BackColor = Color.Aqua;
-                    btnSeven.Select();
-                    btnSeven.Focus();
+                    //btnSeven.Select();
+                    //btnSeven.Focus();
                     break;
                 case 8:
                     btnEight.BackColor = Color.Aqua;
-                    btnEight.Select();
-                    btnEight.Focus();
+                    //btnEight.Select();
+                    //btnEight.Focus();
                     break;
 
             }
-            
+
+            Select();
+            Focus();
 
             if (Program.Arguments[0] == "running")
             {
