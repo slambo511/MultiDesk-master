@@ -151,56 +151,48 @@ namespace MultiDesk
         #region ButtonHandlers
         private void btnOne_Click(object sender, EventArgs e)
         {
-            lblFocus.Focus();
             Program.Arguments[2] = "1";
             Desktops.DesktopSwitch("default");                    
         }
 
         private void btnTwo_Click(object sender, EventArgs e)
         {
-            lblFocus.Focus();
             Program.Arguments[2] = "2";
             Desktops.DesktopSwitch("desktop2");                     
         }
 
         private void btnThree_Click(object sender, EventArgs e)
         {
-            lblFocus.Focus();
             Program.Arguments[2] = "3";
             Desktops.DesktopSwitch("desktop3");                     
         }
 
         private void btnFour_Click(object sender, EventArgs e)
         {
-            lblFocus.Focus();
             Program.Arguments[2] = "4";
             Desktops.DesktopSwitch("desktop4");                        
         }
 
         private void btnFive_Click(object sender, EventArgs e)
         {
-            lblFocus.Focus();
             Desktops.DesktopSwitch("desktop5");
             Program.Arguments[2] = "5";            
         }
 
         private void btnSix_Click(object sender, EventArgs e)
         {
-            lblFocus.Focus();
             Program.Arguments[2] = "6";
             Desktops.DesktopSwitch("desktop6");                       
         }
 
         private void btnSeven_Click(object sender, EventArgs e)
         {
-            lblFocus.Focus();
             Program.Arguments[2] = "7";
             Desktops.DesktopSwitch("desktop7");                        
         }
 
         private void btnEight_Click(object sender, EventArgs e)
         {
-            lblFocus.Focus();
             Program.Arguments[2] = "8";
             Desktops.DesktopSwitch("desktop8");                       
         }
