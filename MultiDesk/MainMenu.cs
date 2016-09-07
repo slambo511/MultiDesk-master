@@ -137,7 +137,7 @@ namespace MultiDesk
             string desktop = _currentDesktop;
             if (desktop == "Default")
             {
-                desktop = "Desktop1";
+                desktop = "desktop1";
             }
             path = path + desktop;
             Thread.Sleep(500);

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -59,32 +60,42 @@ namespace MultiDesk
             // Handles the removal of superflous buttons and resizes form accordingly
             if (Globals.NoDesktops == 2)
             {
-                btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide(); btnFour.Hide(); btnThree.Hide();
-                Width = Width - (46 * 6);
+                btnTen.Hide(); btnNine.Hide(); btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide(); btnFour.Hide(); btnThree.Hide();
+                Width = Width - (46 * 8);
             }
             else if (Globals.NoDesktops == 3)
             {
-                btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide(); btnFour.Hide();
-                Width = Width - (46 * 5);
+                btnTen.Hide(); btnNine.Hide(); btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide(); btnFour.Hide();
+                Width = Width - (46 * 7);
             }
             else if (Globals.NoDesktops == 4)
             {
-                btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide();
-                Width = Width - (46 * 4);
+                btnTen.Hide(); btnNine.Hide(); btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide();
+                Width = Width - (46 * 6);
             }
             else if (Globals.NoDesktops == 5)
             {
-                btnEight.Hide(); btnSeven.Hide(); btnSix.Hide();
-                Width = Width - (46 * 3);
+                btnTen.Hide(); btnNine.Hide(); btnEight.Hide(); btnSeven.Hide(); btnSix.Hide();
+                Width = Width - (46 * 5);
             }
             else if (Globals.NoDesktops == 6)
             {
-                btnEight.Hide(); btnSeven.Hide();
-                Width = Width - (46 * 2);
+                btnTen.Hide(); btnNine.Hide(); btnEight.Hide(); btnSeven.Hide();
+                Width = Width - (46 * 4);
             }
             else if (Globals.NoDesktops == 7)
             {
-                btnEight.Hide();
+                btnTen.Hide(); btnNine.Hide(); btnEight.Hide();
+                Width = Width - (46 * 3);
+            }
+            else if (Globals.NoDesktops == 8)
+            {
+                btnTen.Hide(); btnNine.Hide();
+                Width = Width - (46 * 2);
+            }
+            else if (Globals.NoDesktops == 9)
+            {
+                btnTen.Hide();
                 Width = Width - 46;
             }
 
@@ -249,6 +260,31 @@ namespace MultiDesk
         {         
             LoadValues();
             PositionMenu();
+        }
+
+        private void createNewDesktopToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int count = Convert.ToInt32(Program.Arguments[2]);
+            if (count == 10)
+            {
+                MessageBox.Show(
+                    @"This software currently only supports ten desktops, should you need more use the Help menu on the opening window to contact us.",
+                    @"Ten Windows Maximum", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                count++;
+                // Program.Arguments[2] = count.ToString();
+                string name = "desktop" + count.ToString();
+                if (!Desktops.DesktopExists(name))
+                {
+                    string[] args = {"running", Globals.NoDesktops.ToString(), count.ToString()};
+                    Desktops.DesktopCreate(name);
+                    Processes.ProcessCreate(name, Application.ExecutablePath, String.Join(" ", args));
+                }
+                Desktops.DesktopSwitch(name);
+            }
+
         }
     }
 }

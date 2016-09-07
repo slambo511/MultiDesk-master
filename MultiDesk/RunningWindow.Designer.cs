@@ -40,6 +40,8 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.loadPositionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createNewDesktopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnNine = new System.Windows.Forms.Button();
+            this.btnTen = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -129,7 +131,7 @@
             this.loadPositionToolStripMenuItem,
             this.createNewDesktopToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(182, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(182, 48);
             // 
             // loadPositionToolStripMenuItem
             // 
@@ -143,12 +145,33 @@
             this.createNewDesktopToolStripMenuItem.Name = "createNewDesktopToolStripMenuItem";
             this.createNewDesktopToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.createNewDesktopToolStripMenuItem.Text = "&Create New Desktop";
+            this.createNewDesktopToolStripMenuItem.Click += new System.EventHandler(this.createNewDesktopToolStripMenuItem_Click);
+            // 
+            // btnNine
+            // 
+            this.btnNine.Location = new System.Drawing.Point(377, 5);
+            this.btnNine.Name = "btnNine";
+            this.btnNine.Size = new System.Drawing.Size(40, 26);
+            this.btnNine.TabIndex = 8;
+            this.btnNine.Text = "9";
+            this.btnNine.UseVisualStyleBackColor = true;
+            // 
+            // btnTen
+            // 
+            this.btnTen.Location = new System.Drawing.Point(423, 5);
+            this.btnTen.Name = "btnTen";
+            this.btnTen.Size = new System.Drawing.Size(40, 26);
+            this.btnTen.TabIndex = 9;
+            this.btnTen.Text = "10";
+            this.btnTen.UseVisualStyleBackColor = true;
             // 
             // RunningWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 36);
+            this.ClientSize = new System.Drawing.Size(472, 36);
+            this.Controls.Add(this.btnTen);
+            this.Controls.Add(this.btnNine);
             this.Controls.Add(this.btnEight);
             this.Controls.Add(this.btnSeven);
             this.Controls.Add(this.btnSix);
@@ -190,5 +213,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem loadPositionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createNewDesktopToolStripMenuItem;
+        private System.Windows.Forms.Button btnNine;
+        private System.Windows.Forms.Button btnTen;
     }
 }
