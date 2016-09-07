@@ -23,7 +23,7 @@ namespace MultiDesk
             {
                 try
                 {
-                    return (string) sk1.GetValue(KeyName.ToUpper());
+                    return (string) Convert.ToString(sk1.GetValue(KeyName.ToUpper()));
                 }
                 catch (Exception ex)
                 {
