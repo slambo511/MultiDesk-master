@@ -9,6 +9,7 @@ namespace MultiDesk
     public partial class RunningWindow : Form
     {
         RegEdit EditRegistry = new RegEdit();
+        private int[] menuPosition = new int[2];
         private bool _mouseDown;
         private Point _lastLocation;
         // public string _currentDesktop = Desktops.DesktopName(Desktops.DesktopOpenInput());
@@ -19,6 +20,14 @@ namespace MultiDesk
             InitializeComponent();
             // MessageBox.Show(_currentDesktop, @"_currentDesktop", MessageBoxButtons.OK, MessageBoxIcon.Information); 
             _idNumber = count;
+
+            EditRegistry._subKey = "SOFTWARE\\MULTIDESK\\MENUPOS";
+            EditRegistry._showError = true;
+            int numValues = EditRegistry.ValueCount();
+            for (int i = 0; i < numValues; i++)
+            {
+                menuPosition[i] = Convert.ToInt32(EditRegistry.ReadKey(i.ToString()));
+            }
         }
 
         public sealed override Color BackColor
