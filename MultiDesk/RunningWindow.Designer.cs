@@ -136,6 +136,7 @@
             this.loadPositionToolStripMenuItem.Name = "loadPositionToolStripMenuItem";
             this.loadPositionToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.loadPositionToolStripMenuItem.Text = "&Load Position";
+            this.loadPositionToolStripMenuItem.Click += new System.EventHandler(this.loadPositionToolStripMenuItem_Click);
             // 
             // createNewDesktopToolStripMenuItem
             // 

@@ -21,15 +21,7 @@ namespace MultiDesk
             // MessageBox.Show(_currentDesktop, @"_currentDesktop", MessageBoxButtons.OK, MessageBoxIcon.Information); 
             _idNumber = count;
 
-            EditRegistry._subKey = "SOFTWARE\\MULTIDESK\\MENUPOS";
-            EditRegistry._showError = true;
-            int numValues = EditRegistry.ValueCount();
-            for (int i = 0; i < numValues; i++)
-            {
-                menuPosition[i] = Convert.ToInt32(EditRegistry.ReadKey(i.ToString()));
-            }
-            ActiveForm.Left = menuPosition[0];
-            ActiveForm.Top = menuPosition[1];
+            LoadValues();
         }
 
         public sealed override Color BackColor
@@ -212,6 +204,19 @@ namespace MultiDesk
             Location = new Point(menuPosition[0], menuPosition[1]);
         }
 
+        private void LoadValues()
+        {
+            EditRegistry._subKey = "SOFTWARE\\MULTIDESK\\MENUPOS";
+            EditRegistry._showError = true;
+            int numValues = EditRegistry.ValueCount();
+            for (int i = 0; i < numValues; i++)
+            {
+                menuPosition[i] = Convert.ToInt32(EditRegistry.ReadKey(i.ToString()));
+            }
+            ActiveForm.Left = menuPosition[0];
+            ActiveForm.Top = menuPosition[1];
+        }
+
         private void RunningWindow_Activated(object sender, EventArgs e)
         {
             //test
@@ -238,6 +243,12 @@ namespace MultiDesk
             {
                 EditRegistry.WriteKey(i.ToString(), menuPosition[i]);
             }
+        }
+
+        private void loadPositionToolStripMenuItem_Click(object sender, EventArgs e)
+        {         
+            LoadValues();
+            PositionMenu();
         }
     }
 }
