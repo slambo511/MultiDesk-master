@@ -19,7 +19,7 @@ namespace MultiDesk
             InitializeComponent();
             if (EditRegistry.ReadKey("SOFTWARE\\MULTIDESK\\MENUPOS") == null)
             {
-                int[] menuPos = new int[1];
+                int[] menuPos = new int[2];
                 menuPos[0] = 10;
                 menuPos[1] = 10;
                 EditRegistry._subKey = "SOFTWARE\\MULTIDESK\\MENUPOS";
