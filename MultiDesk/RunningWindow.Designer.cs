@@ -145,6 +145,7 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RunningWindow_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RunningWindow_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.RunningWindow_MouseUp);
+            this.Move += new System.EventHandler(this.RunningWindow_Move);
             this.ResumeLayout(false);
 
         }

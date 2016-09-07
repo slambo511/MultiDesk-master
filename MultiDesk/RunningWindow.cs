@@ -222,5 +222,20 @@ namespace MultiDesk
         {
             Environment.Exit(Environment.ExitCode);
         }
+
+        private void RunningWindow_Move(object sender, EventArgs e)
+        {
+            if (ActiveForm != null)
+            {
+                menuPosition[0] = ActiveForm.Left;
+                menuPosition[1] = ActiveForm.Top;
+            }
+            EditRegistry._subKey = "SOFTWARE\\MULTIDESK\\MENUPOS";
+            EditRegistry._showError = true;
+            for (int i = 0; i < 2; i++)
+            {
+                EditRegistry.WriteKey(i.ToString(), menuPosition[i]);
+            }
+        }
     }
 }
