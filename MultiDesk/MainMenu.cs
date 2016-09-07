@@ -17,6 +17,18 @@ namespace MultiDesk
         public MainMenu()
         {
             InitializeComponent();
+            if (EditRegistry.ReadKey("SOFTWARE\\MULTIDESK\\MENUPOS") == null)
+            {
+                int[] menuPos = new int[1];
+                menuPos[0] = 10;
+                menuPos[1] = 10;
+                EditRegistry._subKey = "SOFTWARE\\MULTIDESK\\MENUPOS";
+                EditRegistry._showError = true;
+                for (int i = 0; i < 2; i++)
+                {
+                    EditRegistry.WriteKey(i.ToString(), menuPos[i]);
+                }
+            }
         }
 
         #region DesktopNumberRadioButtons

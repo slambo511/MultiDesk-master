@@ -7,9 +7,9 @@ namespace MultiDesk
 {
     class RegEdit
     {
-        private bool _showError = false;
-        private string _subKey = "SOFTWARE\\" + Application.ProductName;
-        private RegistryKey _baseRegsKey = Registry.LocalMachine;
+        public bool _showError = false;
+        public string _subKey = "SOFTWARE\\" + Application.ProductName;
+        public RegistryKey _baseRegsKey = Registry.LocalMachine;
 
         public string ReadKey(string KeyName)
         {
