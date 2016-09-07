@@ -170,6 +170,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(472, 36);
+            this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.btnTen);
             this.Controls.Add(this.btnNine);
             this.Controls.Add(this.btnEight);
