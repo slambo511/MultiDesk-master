@@ -220,6 +220,7 @@
             this.deleteRegistryEntriesToolStripMenuItem.Name = "deleteRegistryEntriesToolStripMenuItem";
             this.deleteRegistryEntriesToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.deleteRegistryEntriesToolStripMenuItem.Text = "&Delete registry entries";
+            this.deleteRegistryEntriesToolStripMenuItem.Click += new System.EventHandler(this.deleteRegistryEntriesToolStripMenuItem_Click);
             // 
             // MainMenu
             // 

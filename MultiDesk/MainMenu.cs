@@ -212,5 +212,16 @@ namespace MultiDesk
                 EditRegistry.WriteKey(i.ToString(), menuPos[i]);
             }
         }
+
+        private void deleteRegistryEntriesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult check = MessageBox.Show(@"Are you sure?", @"Delete registry entries", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+            if (check == DialogResult.Yes)
+            {
+                EditRegistry.DeleteKey("SOFTWARE\\MULTIDESK\\MENUPOS");
+            }
+
+        }
     }
 }
