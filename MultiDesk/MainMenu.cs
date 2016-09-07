@@ -220,6 +220,7 @@ namespace MultiDesk
             if (check == DialogResult.Yes)
             {
                 EditRegistry.DeleteKey("SOFTWARE\\MULTIDESK\\MENUPOS");
+                Globals.Exit();
             }
 
         }
