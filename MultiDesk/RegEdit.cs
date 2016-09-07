@@ -45,7 +45,7 @@ namespace MultiDesk
             }
             catch (Exception ex)
             {
-                ShowErrorMessage(ex, "Writing registry " + KeyName.ToUpper());
+                MessageBox.Show(ex.ToString() + @"Writing registry " + KeyName.ToUpper());
                 return false;
             }
         }

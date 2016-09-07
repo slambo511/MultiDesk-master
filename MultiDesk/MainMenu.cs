@@ -219,7 +219,11 @@ namespace MultiDesk
                 MessageBoxIcon.Warning);
             if (check == DialogResult.Yes)
             {
-                EditRegistry.DeleteKey("SOFTWARE\\MULTIDESK\\MENUPOS");
+                MessageBox.Show(@"Deleting Key");
+                if (EditRegistry.DeleteKey("SOFTWARE\\MULTIDESK\\MENUPOS"))
+                {
+                    MessageBox.Show(@"Worked");
+                }
                 Globals.Exit();
             }
 
