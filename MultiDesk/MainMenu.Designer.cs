@@ -32,6 +32,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resetMenuPositionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contactUsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gbxNumberOfDesktops = new System.Windows.Forms.GroupBox();
@@ -44,8 +45,6 @@
             this.rbTwo = new System.Windows.Forms.RadioButton();
             this.btnStart = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.resetMenuPositionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteRegistryEntriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.gbxNumberOfDesktops.SuspendLayout();
             this.SuspendLayout();
@@ -65,8 +64,7 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem,
-            this.resetMenuPositionToolStripMenuItem,
-            this.deleteRegistryEntriesToolStripMenuItem});
+            this.resetMenuPositionToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "&File";
@@ -74,9 +72,16 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // resetMenuPositionToolStripMenuItem
+            // 
+            this.resetMenuPositionToolStripMenuItem.Name = "resetMenuPositionToolStripMenuItem";
+            this.resetMenuPositionToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.resetMenuPositionToolStripMenuItem.Text = "&Reset menu position";
+            this.resetMenuPositionToolStripMenuItem.Click += new System.EventHandler(this.resetMenuPositionToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -89,7 +94,7 @@
             // contactUsToolStripMenuItem
             // 
             this.contactUsToolStripMenuItem.Name = "contactUsToolStripMenuItem";
-            this.contactUsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.contactUsToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.contactUsToolStripMenuItem.Text = "&Contact Us";
             // 
             // gbxNumberOfDesktops
@@ -208,20 +213,6 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // resetMenuPositionToolStripMenuItem
-            // 
-            this.resetMenuPositionToolStripMenuItem.Name = "resetMenuPositionToolStripMenuItem";
-            this.resetMenuPositionToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.resetMenuPositionToolStripMenuItem.Text = "&Reset menu position";
-            this.resetMenuPositionToolStripMenuItem.Click += new System.EventHandler(this.resetMenuPositionToolStripMenuItem_Click);
-            // 
-            // deleteRegistryEntriesToolStripMenuItem
-            // 
-            this.deleteRegistryEntriesToolStripMenuItem.Name = "deleteRegistryEntriesToolStripMenuItem";
-            this.deleteRegistryEntriesToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.deleteRegistryEntriesToolStripMenuItem.Text = "&Delete registry entries";
-            this.deleteRegistryEntriesToolStripMenuItem.Click += new System.EventHandler(this.deleteRegistryEntriesToolStripMenuItem_Click);
-            // 
             // MainMenu
             // 
             this.AcceptButton = this.btnStart;
@@ -265,6 +256,5 @@
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.ToolStripMenuItem resetMenuPositionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deleteRegistryEntriesToolStripMenuItem;
     }
 }

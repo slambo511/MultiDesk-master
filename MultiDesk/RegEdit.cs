@@ -58,12 +58,11 @@ namespace MultiDesk
                 RegistryKey sk1 = rk.CreateSubKey(_subKey);
                 if (sk1 == null)
                 {
+                    MessageBox.Show(@"null");
                     return true;
                 }
-                else
-                {
-                    sk1.DeleteValue(KeyName);
-                }
+                sk1.DeleteValue(KeyName);
+                MessageBox.Show(@"Deleted value.");
                 return true;
             }
             catch (Exception ex)
@@ -140,7 +139,7 @@ namespace MultiDesk
         {
             if (_showError)
             {
-                Debug.WriteLine(ex.Message + " " + Title);
+                MessageBox.Show(ex.Message + " " + Title);
             }
         }
 
