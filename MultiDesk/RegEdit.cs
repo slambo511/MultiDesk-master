@@ -87,7 +87,7 @@ namespace MultiDesk
             }
             catch (Exception ex)
             {
-                ShowErrorMessage(ex, "Deleting subley " + _subKey);
+                ShowErrorMessage(ex, "Deleting subkey " + _subKey);
                 return false;
             }
         }
