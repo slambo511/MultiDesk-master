@@ -28,6 +28,8 @@ namespace MultiDesk
             {
                 menuPosition[i] = Convert.ToInt32(EditRegistry.ReadKey(i.ToString()));
             }
+            ActiveForm.Left = menuPosition[0];
+            ActiveForm.Top = menuPosition[1];
         }
 
         public sealed override Color BackColor
