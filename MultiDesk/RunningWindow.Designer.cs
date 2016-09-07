@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnEight = new System.Windows.Forms.Button();
             this.btnSeven = new System.Windows.Forms.Button();
             this.btnSix = new System.Windows.Forms.Button();
@@ -36,6 +37,10 @@
             this.btnThree = new System.Windows.Forms.Button();
             this.btnTwo = new System.Windows.Forms.Button();
             this.btnOne = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.loadPositionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createNewDesktopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnEight
@@ -118,6 +123,26 @@
             this.btnOne.UseVisualStyleBackColor = true;
             this.btnOne.Click += new System.EventHandler(this.btnOne_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.loadPositionToolStripMenuItem,
+            this.createNewDesktopToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(182, 70);
+            // 
+            // loadPositionToolStripMenuItem
+            // 
+            this.loadPositionToolStripMenuItem.Name = "loadPositionToolStripMenuItem";
+            this.loadPositionToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.loadPositionToolStripMenuItem.Text = "&Load Position";
+            // 
+            // createNewDesktopToolStripMenuItem
+            // 
+            this.createNewDesktopToolStripMenuItem.Name = "createNewDesktopToolStripMenuItem";
+            this.createNewDesktopToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.createNewDesktopToolStripMenuItem.Text = "&Create New Desktop";
+            // 
             // RunningWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -146,6 +171,7 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RunningWindow_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.RunningWindow_MouseUp);
             this.Move += new System.EventHandler(this.RunningWindow_Move);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -160,5 +186,8 @@
         public System.Windows.Forms.Button btnThree;
         public System.Windows.Forms.Button btnTwo;
         internal System.Windows.Forms.Button btnOne;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem loadPositionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createNewDesktopToolStripMenuItem;
     }
 }
