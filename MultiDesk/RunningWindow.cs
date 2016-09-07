@@ -8,7 +8,7 @@ namespace MultiDesk
 {
     public partial class RunningWindow : Form
     {
-
+        RegEdit EditRegistry = new RegEdit();
         private bool _mouseDown;
         private Point _lastLocation;
         // public string _currentDesktop = Desktops.DesktopName(Desktops.DesktopOpenInput());

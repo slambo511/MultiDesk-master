@@ -10,6 +10,7 @@ namespace MultiDesk
 {
     public partial class MainMenu : Form
     {
+        RegEdit EditRegistry = new RegEdit();
         private string _currentDesktop = "Default";
         private string _passedNumber = "";
         private int _runningWindowCount = Convert.ToInt32(Program.Arguments[2]);
