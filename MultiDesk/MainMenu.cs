@@ -19,15 +19,7 @@ namespace MultiDesk
             InitializeComponent();
             if (EditRegistry.ReadKey("SOFTWARE\\MULTIDESK\\MENUPOS") == null)
             {
-                int[] menuPos = new int[2];
-                menuPos[0] = 10;
-                menuPos[1] = 10;
-                EditRegistry._subKey = "SOFTWARE\\MULTIDESK\\MENUPOS";
-                EditRegistry._showError = true;
-                for (int i = 0; i < 2; i++)
-                {
-                    EditRegistry.WriteKey(i.ToString(), menuPos[i]);
-                }
+                SetPos();
             }
         }
 
@@ -203,5 +195,22 @@ namespace MultiDesk
         }*/
         #endregion
 
+        private void resetMenuPositionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SetPos();
+        }
+
+        private void SetPos()
+        {
+            int[] menuPos = new int[2];
+            menuPos[0] = 10;
+            menuPos[1] = 10;
+            EditRegistry._subKey = "SOFTWARE\\MULTIDESK\\MENUPOS";
+            EditRegistry._showError = true;
+            for (int i = 0; i < 2; i++)
+            {
+                EditRegistry.WriteKey(i.ToString(), menuPos[i]);
+            }
+        }
     }
 }
