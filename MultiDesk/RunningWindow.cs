@@ -268,7 +268,7 @@ namespace MultiDesk
                 ActiveForm.Left = menuPosition[0];
                 ActiveForm.Top = menuPosition[1];
             }
-            PositionMenu();
+            //PositionMenu();
         }
 
         private void createNewDesktopToolStripMenuItem_Click(object sender, EventArgs e)
