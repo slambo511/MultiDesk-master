@@ -224,8 +224,11 @@ namespace MultiDesk
             {
                 menuPosition[i] = Convert.ToInt32(EditRegistry.ReadKey(i.ToString()));
             }
-            ActiveForm.Left = menuPosition[0];
-            ActiveForm.Top = menuPosition[1];
+            if (ActiveForm != null)
+            {
+                ActiveForm.Left = menuPosition[0];
+                ActiveForm.Top = menuPosition[1];
+            }
         }
 
         private void RunningWindow_Activated(object sender, EventArgs e)
