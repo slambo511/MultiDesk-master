@@ -48,6 +48,7 @@ namespace MultiDesk
         }
 
         #region HandleFloatingMovementAndPositionOfWindow
+
         private void RunningWindow_MouseDown(object sender, MouseEventArgs e)
         {
             _mouseDown = true;
@@ -66,48 +67,77 @@ namespace MultiDesk
                 (Location.Y - _lastLocation.Y) + e.Y);
             Update();
         }
+
         #endregion
 
         private void RunningWindow_Load_1(object sender, EventArgs e)
         {
             //TransparencyKey = Color.Aquamarine;
             //BackColor = Color.Aquamarine;
-            
+
             // Handles the removal of superflous buttons and resizes form accordingly
             if (noDesktops == 2)
             {
-                btnTen.Hide(); btnNine.Hide(); btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide(); btnFour.Hide(); btnThree.Hide();
-                Width = Width - (42 * 8);
+                btnTen.Hide();
+                btnNine.Hide();
+                btnEight.Hide();
+                btnSeven.Hide();
+                btnSix.Hide();
+                btnFive.Hide();
+                btnFour.Hide();
+                btnThree.Hide();
+                Width = Width - (42*8);
             }
             else if (noDesktops == 3)
             {
-                btnTen.Hide(); btnNine.Hide(); btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide(); btnFour.Hide();
-                Width = Width - (42 * 7);
+                btnTen.Hide();
+                btnNine.Hide();
+                btnEight.Hide();
+                btnSeven.Hide();
+                btnSix.Hide();
+                btnFive.Hide();
+                btnFour.Hide();
+                Width = Width - (42*7);
             }
             else if (noDesktops == 4)
             {
-                btnTen.Hide(); btnNine.Hide(); btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide();
-                Width = Width - (42 * 6);
+                btnTen.Hide();
+                btnNine.Hide();
+                btnEight.Hide();
+                btnSeven.Hide();
+                btnSix.Hide();
+                btnFive.Hide();
+                Width = Width - (42*6);
             }
             else if (noDesktops == 5)
             {
-                btnTen.Hide(); btnNine.Hide(); btnEight.Hide(); btnSeven.Hide(); btnSix.Hide();
-                Width = Width - (42 * 5);
+                btnTen.Hide();
+                btnNine.Hide();
+                btnEight.Hide();
+                btnSeven.Hide();
+                btnSix.Hide();
+                Width = Width - (42*5);
             }
             else if (noDesktops == 6)
             {
-                btnTen.Hide(); btnNine.Hide(); btnEight.Hide(); btnSeven.Hide();
-                Width = Width - (42 * 4);
+                btnTen.Hide();
+                btnNine.Hide();
+                btnEight.Hide();
+                btnSeven.Hide();
+                Width = Width - (42*4);
             }
             else if (noDesktops == 7)
             {
-                btnTen.Hide(); btnNine.Hide(); btnEight.Hide();
-                Width = Width - (42 * 3);
+                btnTen.Hide();
+                btnNine.Hide();
+                btnEight.Hide();
+                Width = Width - (42*3);
             }
             else if (noDesktops == 8)
             {
-                btnTen.Hide(); btnNine.Hide();
-                Width = Width - (42 * 2);
+                btnTen.Hide();
+                btnNine.Hide();
+                Width = Width - (42*2);
             }
             else if (noDesktops == 9)
             {
@@ -165,7 +195,7 @@ namespace MultiDesk
                     break;
 
 
-            }        
+            }
 
             if (Program.Arguments[0] == "running")
             {
@@ -179,57 +209,58 @@ namespace MultiDesk
             }
             //currentDesktop = Desktops.DesktopName(Desktops.DesktopOpenInput());
             //ScreenshotsDelete();
-                  
+
             PositionMenu();
         }
 
         #region ButtonHandlers
+
         private void btnOne_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "1";
-            Desktops.DesktopSwitch("default");                    
+            Desktops.DesktopSwitch("default");
         }
 
         private void btnTwo_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "2";
-            Desktops.DesktopSwitch("desktop2");                     
+            Desktops.DesktopSwitch("desktop2");
         }
 
         private void btnThree_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "3";
-            Desktops.DesktopSwitch("desktop3");                     
+            Desktops.DesktopSwitch("desktop3");
         }
 
         private void btnFour_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "4";
-            Desktops.DesktopSwitch("desktop4");                        
+            Desktops.DesktopSwitch("desktop4");
         }
 
         private void btnFive_Click(object sender, EventArgs e)
         {
             Desktops.DesktopSwitch("desktop5");
-            Program.Arguments[2] = "5";            
+            Program.Arguments[2] = "5";
         }
 
         private void btnSix_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "6";
-            Desktops.DesktopSwitch("desktop6");                       
+            Desktops.DesktopSwitch("desktop6");
         }
 
         private void btnSeven_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "7";
-            Desktops.DesktopSwitch("desktop7");                        
+            Desktops.DesktopSwitch("desktop7");
         }
 
         private void btnEight_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "8";
-            Desktops.DesktopSwitch("desktop8");                       
+            Desktops.DesktopSwitch("desktop8");
         }
 
         private void btnNine_Click(object sender, EventArgs e)
@@ -243,13 +274,14 @@ namespace MultiDesk
             Program.Arguments[2] = "10";
             Desktops.DesktopSwitch("desktop10");
         }
+
         #endregion
 
         private void PositionMenu()
         {
             Location = new Point(menuPosition[0], menuPosition[1]);
         }
-     
+
         private void RunningWindow_Activated(object sender, EventArgs e)
         {
             //test
@@ -333,38 +365,66 @@ namespace MultiDesk
         {
             if (noDesktops == 2)
             {
-                btnTen.Hide(); btnNine.Hide(); btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide(); btnFour.Hide(); btnThree.Hide();
-                Width = Width - (42 * 8);
+                btnTen.Hide();
+                btnNine.Hide();
+                btnEight.Hide();
+                btnSeven.Hide();
+                btnSix.Hide();
+                btnFive.Hide();
+                btnFour.Hide();
+                btnThree.Hide();
+                Width = Width - (42*8);
             }
             else if (noDesktops == 3)
             {
-                btnTen.Hide(); btnNine.Hide(); btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide(); btnFour.Hide();
-                Width = Width - (42 * 7);
+                btnTen.Hide();
+                btnNine.Hide();
+                btnEight.Hide();
+                btnSeven.Hide();
+                btnSix.Hide();
+                btnFive.Hide();
+                btnFour.Hide();
+                Width = Width - (42*7);
             }
             else if (noDesktops == 4)
             {
-                btnTen.Hide(); btnNine.Hide(); btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide();
-                Width = Width - (42 * 6);
+                btnTen.Hide();
+                btnNine.Hide();
+                btnEight.Hide();
+                btnSeven.Hide();
+                btnSix.Hide();
+                btnFive.Hide();
+                Width = Width - (42*6);
             }
             else if (noDesktops == 5)
             {
-                btnTen.Hide(); btnNine.Hide(); btnEight.Hide(); btnSeven.Hide(); btnSix.Hide();
-                Width = Width - (42 * 5);
+                btnTen.Hide();
+                btnNine.Hide();
+                btnEight.Hide();
+                btnSeven.Hide();
+                btnSix.Hide();
+                Width = Width - (42*5);
             }
             else if (noDesktops == 6)
             {
-                btnTen.Hide(); btnNine.Hide(); btnEight.Hide(); btnSeven.Hide();
-                Width = Width - (42 * 4);
+                btnTen.Hide();
+                btnNine.Hide();
+                btnEight.Hide();
+                btnSeven.Hide();
+                Width = Width - (42*4);
             }
             else if (noDesktops == 7)
             {
-                btnTen.Hide(); btnNine.Hide(); btnEight.Hide();
-                Width = Width - (42 * 3);
+                btnTen.Hide();
+                btnNine.Hide();
+                btnEight.Hide();
+                Width = Width - (42*3);
             }
             else if (noDesktops == 8)
             {
-                btnTen.Hide(); btnNine.Hide();
-                Width = Width - (42 * 2);
+                btnTen.Hide();
+                btnNine.Hide();
+                Width = Width - (42*2);
             }
             else if (noDesktops == 9)
             {
@@ -421,5 +481,6 @@ namespace MultiDesk
                     btnTen.BackColor = Color.Aqua;
                     break;
             }
+        }
     }
 }
