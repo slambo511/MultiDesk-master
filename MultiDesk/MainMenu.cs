@@ -36,6 +36,7 @@ namespace MultiDesk
             Globals.NoDesktops = 2;
             Globals.RemainingDesktops = 1;
             _passedNumber = "2";
+            EditRegistry._subKey = "SOFTWARE\\MULTIDESK\\MENUCOUNT";
             EditRegistry.WriteKey("count", 2);
         }
 
@@ -44,6 +45,7 @@ namespace MultiDesk
             Globals.NoDesktops = 3;
             Globals.RemainingDesktops = 2;
             _passedNumber = "3";
+            EditRegistry._subKey = "SOFTWARE\\MULTIDESK\\MENUCOUNT";
             EditRegistry.WriteKey("count", 3);
         }
 
@@ -52,6 +54,7 @@ namespace MultiDesk
             Globals.NoDesktops = 4;
             Globals.RemainingDesktops = 3;
             _passedNumber = "4";
+            EditRegistry._subKey = "SOFTWARE\\MULTIDESK\\MENUCOUNT";
             EditRegistry.WriteKey("count", 4);
         }
 
@@ -60,6 +63,7 @@ namespace MultiDesk
             Globals.NoDesktops = 5;
             Globals.RemainingDesktops = 4;
             _passedNumber = "5";
+            EditRegistry._subKey = "SOFTWARE\\MULTIDESK\\MENUCOUNT";
             EditRegistry.WriteKey("count", 5);
         }
 
@@ -68,6 +72,7 @@ namespace MultiDesk
             Globals.NoDesktops = 6;
             Globals.RemainingDesktops = 5;
             _passedNumber = "6";
+            EditRegistry._subKey = "SOFTWARE\\MULTIDESK\\MENUCOUNT";
             EditRegistry.WriteKey("count", 6);
         }
 
@@ -76,6 +81,7 @@ namespace MultiDesk
             Globals.NoDesktops = 7;
             Globals.RemainingDesktops = 6;
             _passedNumber = "7";
+            EditRegistry._subKey = "SOFTWARE\\MULTIDESK\\MENUCOUNT";
             EditRegistry.WriteKey("count", 7);
         }
 
@@ -84,6 +90,7 @@ namespace MultiDesk
             Globals.NoDesktops = 8;
             Globals.RemainingDesktops = 7;
             _passedNumber = "8";
+            EditRegistry._subKey = "SOFTWARE\\MULTIDESK\\MENUCOUNT";
             EditRegistry.WriteKey("count", 8);
         }
         #endregion
@@ -108,6 +115,7 @@ namespace MultiDesk
                 Globals.NoDesktops = 6;
                 Globals.RemainingDesktops = 5;
                 _passedNumber = "6";
+                EditRegistry._subKey = "SOFTWARE\\MULTIDESK\\MENUCOUNT";
                 EditRegistry.WriteKey("count", 6);
             }
             Hide();
