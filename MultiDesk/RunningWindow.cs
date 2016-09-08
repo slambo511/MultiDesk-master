@@ -219,10 +219,6 @@ namespace MultiDesk
         {
             Program.Arguments[2] = "1";
             Desktops.DesktopSwitch("default");
-            EditRegistry._subKey = "SOFTWARE\\MULTIDESK\\MENUCOUNT";
-            EditRegistry._showError = true;
-            noDesktops = Convert.ToInt32(EditRegistry.ReadKey("count"));
-            Globals.NoDesktops = noDesktops;
         }
 
         private void btnTwo_Click(object sender, EventArgs e)
