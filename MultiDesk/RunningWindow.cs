@@ -284,270 +284,9 @@ namespace MultiDesk
             //BackColor = Color.Aquamarine;
 
             // Handles the removal of superflous buttons and resizes form accordingly
-            if (noDesktops == 2)
-            {
-                btnOne.Show();
-                btnTwo.Show();
-                btnTen.Hide();
-                btnNine.Hide();
-                btnEight.Hide();
-                btnSeven.Hide();
-                btnSix.Hide();
-                btnFive.Hide();
-                btnFour.Hide();
-                btnThree.Hide();
-                if (Width != Globals.twoD)
-                {
-                    Width = Globals.twoD;
-                }
-                /*
-                btnTen.Hide();
-                btnNine.Hide();
-                btnEight.Hide();
-                btnSeven.Hide();
-                btnSix.Hide();
-                btnFive.Hide();
-                btnFour.Hide();
-                btnThree.Hide();
-                Width = Width - (42*8);
-                */
-            }
-            else if (noDesktops == 3)
-            {
-                btnOne.Show();
-                btnTwo.Show();
-                btnThree.Show();
-                btnTen.Hide();
-                btnNine.Hide();
-                btnEight.Hide();
-                btnSeven.Hide();
-                btnSix.Hide();
-                btnFive.Hide();
-                btnFour.Hide();
-                if (Width != Globals.threeD)
-                {
-                    Width = Globals.threeD;
-                }
+            CheckIt();
             
-            /*
-            btnTen.Hide();
-            btnNine.Hide();
-            btnEight.Hide();
-            btnSeven.Hide();
-            btnSix.Hide();
-            btnFive.Hide();
-            btnFour.Hide();
-            Width = Width - (42*7);
-            */
-            }
-            else if (noDesktops == 4)
-            {
-                btnOne.Show();
-                btnTwo.Show();
-                btnThree.Show();
-                btnFour.Show();
-                btnTen.Hide();
-                btnNine.Hide();
-                btnEight.Hide();
-                btnSeven.Hide();
-                btnSix.Hide();
-                btnFive.Hide();
-                if (Width != Globals.fourD)
-                {
-                    Width = Globals.fourD;
-                }
-                /*
-                btnTen.Hide();
-                btnNine.Hide();
-                btnEight.Hide();
-                btnSeven.Hide();
-                btnSix.Hide();
-                btnFive.Hide();
-                Width = Width - (42*6);
-                */
-            }
-            else if (noDesktops == 5)
-            {
-                btnOne.Show();
-                btnTwo.Show();
-                btnThree.Show();
-                btnFour.Show();
-                btnFive.Show();
-                btnTen.Hide();
-                btnNine.Hide();
-                btnEight.Hide();
-                btnSeven.Hide();
-                btnSix.Hide();
-                if (Width != Globals.fiveD)
-                {
-                    Width = Globals.fiveD;
-                }
-                /*
-                btnTen.Hide();
-                btnNine.Hide();
-                btnEight.Hide();
-                btnSeven.Hide();
-                btnSix.Hide();
-                Width = Width - (42*5);
-                */
-            }
-            else if (noDesktops == 6)
-            {
-                btnOne.Show();
-                btnTwo.Show();
-                btnThree.Show();
-                btnFour.Show();
-                btnFive.Show();
-                btnSix.Show();
-                btnTen.Hide();
-                btnNine.Hide();
-                btnEight.Hide();
-                btnSeven.Hide();
-                if (Width != Globals.sixD)
-                {
-                    Width = Globals.sixD;
-                }
-                /*
-                btnTen.Hide();
-                btnNine.Hide();
-                btnEight.Hide();
-                btnSeven.Hide();
-                Width = Width - (42*4);
-                */
-            }
-            else if (noDesktops == 7)
-            {
-                btnOne.Show();
-                btnTwo.Show();
-                btnThree.Show();
-                btnFour.Show();
-                btnFive.Show();
-                btnSix.Show();
-                btnSeven.Show();
-                btnTen.Hide();
-                btnNine.Hide();
-                btnEight.Hide();
-                if (Width != Globals.sevenD)
-                {
-                    Width = Globals.sevenD;
-                }
-                /*
-                btnTen.Hide();
-                btnNine.Hide();
-                btnEight.Hide();
-                Width = Width - (42*3);
-                */
-            }
-            else if (noDesktops == 8)
-            {
-                btnOne.Show();
-                btnTwo.Show();
-                btnThree.Show();
-                btnFour.Show();
-                btnFive.Show();
-                btnSix.Show();
-                btnSeven.Show();
-                btnEight.Show();
-                btnTen.Hide();
-                btnNine.Hide();
-                if (Width != Globals.eightD)
-                {
-                    Width = Globals.eightD;
-                }
-                /*
-                btnTen.Hide();
-                btnNine.Hide();
-                Width = Width - (42*2);
-                */
-            }
-            else if (noDesktops == 9)
-            {
-                btnOne.Show();
-                btnTwo.Show();
-                btnThree.Show();
-                btnFour.Show();
-                btnFive.Show();
-                btnSix.Show();
-                btnSeven.Show();
-                btnEight.Show();
-                btnNine.Show();
-                btnTen.Hide();
-                if (Width != Globals.nineD)
-                {
-                    Width = Globals.nineD;
-                }
-                /*
-                btnTen.Hide();
-                Width = Width - 42;
-                */
-            }
-            else
-            {
-                btnOne.Show();
-                btnTwo.Show();
-                btnThree.Show();
-                btnFour.Show();
-                btnFive.Show();
-                btnSix.Show();
-                btnSeven.Show();
-                btnEight.Show();
-                btnNine.Show();
-                btnTen.Show();
-                if (Width != Globals.tenD)
-                {
-                    Width = Globals.tenD;
-                }
-            }
-
-            switch (_idNumber)
-            {
-                case 1:
-                    btnOne.BackColor = Color.Aqua;
-                    //btnOne.Select();
-                    //btnOne.Focus();
-                    break;
-                case 2:
-                    btnTwo.BackColor = Color.Aqua;
-                    //btnTwo.Select();
-                    //btnTwo.Focus();
-                    break;
-                case 3:
-                    btnThree.BackColor = Color.Aqua;
-                    //btnThree.Select();
-                    //btnThree.Focus();
-                    break;
-                case 4:
-                    btnFour.BackColor = Color.Aqua;
-                    //btnFour.Select();
-                    //btnFour.Focus();
-                    break;
-                case 5:
-                    btnFive.BackColor = Color.Aqua;
-                    //btnFive.Select();
-                    //btnFive.Focus();
-                    break;
-                case 6:
-                    btnSix.BackColor = Color.Aqua;
-                    //btnSix.Select();
-                    //btnSix.Focus();
-                    break;
-                case 7:
-                    btnSeven.BackColor = Color.Aqua;
-                    //btnSeven.Select();
-                    //btnSeven.Focus();
-                    break;
-                case 8:
-                    btnEight.BackColor = Color.Aqua;
-                    //btnEight.Select();
-                    //btnEight.Focus();
-                    break;
-                case 9:
-                    btnNine.BackColor = Color.Aqua;
-                    break;
-                case 10:
-                    btnTen.BackColor = Color.Aqua;
-                    break;
-            }
+            
 
             if (Program.Arguments[0] == "running")
             {
@@ -570,60 +309,70 @@ namespace MultiDesk
         private void btnOne_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "1";
+            CheckIt();
             Desktops.DesktopSwitch("default");
         }
 
         private void btnTwo_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "2";
+            CheckIt();
             Desktops.DesktopSwitch("desktop2");
         }
 
         private void btnThree_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "3";
+            CheckIt();
             Desktops.DesktopSwitch("desktop3");
         }
 
         private void btnFour_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "4";
+            CheckIt();
             Desktops.DesktopSwitch("desktop4");
         }
 
         private void btnFive_Click(object sender, EventArgs e)
         {
             Desktops.DesktopSwitch("desktop5");
+            CheckIt();
             Program.Arguments[2] = "5";
         }
 
         private void btnSix_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "6";
+            CheckIt();
             Desktops.DesktopSwitch("desktop6");
         }
 
         private void btnSeven_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "7";
+            CheckIt();
             Desktops.DesktopSwitch("desktop7");
         }
 
         private void btnEight_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "8";
+            CheckIt();
             Desktops.DesktopSwitch("desktop8");
         }
 
         private void btnNine_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "9";
+            CheckIt();
             Desktops.DesktopSwitch("desktop9");
         }
 
         private void btnTen_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "10";
+            CheckIt();
             Desktops.DesktopSwitch("desktop10");
         }
 
@@ -713,7 +462,7 @@ namespace MultiDesk
 
         }
 
-        /*private void RunningWindow_Deactivate(object sender, EventArgs e)
+        private void CheckIt()
         {
             if (noDesktops == 2)
             {
@@ -918,6 +667,6 @@ namespace MultiDesk
                     btnTen.BackColor = Color.Aqua;
                     break;
             }
-        }*/
+        }
     }
 }
