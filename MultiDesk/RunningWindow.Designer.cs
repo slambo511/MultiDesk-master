@@ -155,6 +155,7 @@
             this.btnNine.TabIndex = 8;
             this.btnNine.Text = "9";
             this.btnNine.UseVisualStyleBackColor = true;
+            this.btnNine.Click += new System.EventHandler(this.btnNine_Click);
             // 
             // btnTen
             // 
@@ -164,6 +165,7 @@
             this.btnTen.TabIndex = 9;
             this.btnTen.Text = "10";
             this.btnTen.UseVisualStyleBackColor = true;
+            this.btnTen.Click += new System.EventHandler(this.btnTen_Click);
             // 
             // RunningWindow
             // 

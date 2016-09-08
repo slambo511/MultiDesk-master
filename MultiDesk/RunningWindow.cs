@@ -231,6 +231,18 @@ namespace MultiDesk
             Program.Arguments[2] = "8";
             Desktops.DesktopSwitch("desktop8");                       
         }
+
+        private void btnNine_Click(object sender, EventArgs e)
+        {
+            Program.Arguments[2] = "9";
+            Desktops.DesktopSwitch("desktop9");
+        }
+
+        private void btnTen_Click(object sender, EventArgs e)
+        {
+            Program.Arguments[2] = "10";
+            Desktops.DesktopSwitch("desktop10");
+        }
         #endregion
 
         private void PositionMenu()
@@ -312,5 +324,7 @@ namespace MultiDesk
             }
 
         }
+
+
     }
 }
