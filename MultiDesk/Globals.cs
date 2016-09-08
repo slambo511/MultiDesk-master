@@ -19,6 +19,16 @@ namespace MultiDesk
         public static IntPtr Handledesktop7 = Desktops.DesktopOpen("desktop7");
         public static IntPtr Handledesktop8 = Desktops.DesktopOpen("desktop8");
 
+        public const int tenD = 419;
+        public const int nineD = 377;
+        public const int eightD = 335;
+        public const int sevenD = 293;
+        public const int sixD = 251;
+        public const int fiveD = 209;
+        public const int fourD = 167;
+        public const int threeD = 125;
+        public const int twoD = 83;
+
         public static void Exit()
         {
             Application.Exit();

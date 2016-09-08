@@ -365,6 +365,8 @@ namespace MultiDesk
         {
             if (noDesktops == 2)
             {
+                btnOne.Show();
+                btnTwo.Show();
                 btnTen.Hide();
                 btnNine.Hide();
                 btnEight.Hide();
@@ -373,10 +375,13 @@ namespace MultiDesk
                 btnFive.Hide();
                 btnFour.Hide();
                 btnThree.Hide();
-                Width = Width - (42*8);
+                Width = Globals.twoD;
             }
             else if (noDesktops == 3)
             {
+                btnOne.Show();
+                btnTwo.Show();
+                btnThree.Show();
                 btnTen.Hide();
                 btnNine.Hide();
                 btnEight.Hide();
@@ -384,52 +389,104 @@ namespace MultiDesk
                 btnSix.Hide();
                 btnFive.Hide();
                 btnFour.Hide();
-                Width = Width - (42*7);
+                Width = Globals.threeD;
             }
             else if (noDesktops == 4)
             {
+                btnOne.Show();
+                btnTwo.Show();
+                btnThree.Show();
+                btnFour.Show();
                 btnTen.Hide();
                 btnNine.Hide();
                 btnEight.Hide();
                 btnSeven.Hide();
                 btnSix.Hide();
                 btnFive.Hide();
-                Width = Width - (42*6);
+                Width = Globals.fourD;
             }
             else if (noDesktops == 5)
             {
+                btnOne.Show();
+                btnTwo.Show();
+                btnThree.Show();
+                btnFour.Show();
+                btnFive.Show();    
                 btnTen.Hide();
                 btnNine.Hide();
                 btnEight.Hide();
                 btnSeven.Hide();
                 btnSix.Hide();
-                Width = Width - (42*5);
+                Width = Globals.fiveD;
             }
             else if (noDesktops == 6)
             {
+                btnOne.Show();
+                btnTwo.Show();
+                btnThree.Show();
+                btnFour.Show();
+                btnFive.Show();
+                btnSix.Show();
                 btnTen.Hide();
                 btnNine.Hide();
                 btnEight.Hide();
                 btnSeven.Hide();
-                Width = Width - (42*4);
+                Width = Globals.sixD;
             }
             else if (noDesktops == 7)
             {
+                btnOne.Show();
+                btnTwo.Show();
+                btnThree.Show();
+                btnFour.Show();
+                btnFive.Show();
+                btnSix.Show();
+                btnSeven.Show();
                 btnTen.Hide();
                 btnNine.Hide();
                 btnEight.Hide();
-                Width = Width - (42*3);
+                Width = Globals.sevenD;
             }
             else if (noDesktops == 8)
             {
+                btnOne.Show();
+                btnTwo.Show();
+                btnThree.Show();
+                btnFour.Show();
+                btnFive.Show();
+                btnSix.Show();
+                btnSeven.Show();
+                btnEight.Show();
                 btnTen.Hide();
                 btnNine.Hide();
-                Width = Width - (42*2);
+                Width = Globals.eightD;
             }
             else if (noDesktops == 9)
             {
+                btnOne.Show();
+                btnTwo.Show();
+                btnThree.Show();
+                btnFour.Show();
+                btnFive.Show();
+                btnSix.Show();
+                btnSeven.Show();
+                btnEight.Show();
+                btnNine.Show();
                 btnTen.Hide();
-                Width = Width - 42;
+                Width =Globals.nineD;
+            }
+            else
+            {
+                btnOne.Show();
+                btnTwo.Show();
+                btnThree.Show();
+                btnFour.Show();
+                btnFive.Show();
+                btnSix.Show();
+                btnSeven.Show();
+                btnEight.Show();
+                btnNine.Show();
+                btnTen.Show();
             }
 
             switch (_idNumber)
