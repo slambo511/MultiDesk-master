@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.Net.Mail;
+using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
 
 namespace MultiDesk
@@ -18,10 +19,29 @@ namespace MultiDesk
             {
                 string userName = txtName.Text;
                 string messageContents = txtMessage.Text;
+                string password = "fqm1729ARB3f5D!";
+                var to = new MailAddress("sam@sam4it.com", "Automated");
+                var from = new MailAddress("software@multidesk.com", "Automated");               
+                var smtp = new SmtpClient
+                {
+                    Host = "smtp.gmail.com",
+                    Port = 587,
+                    EnableSsl = true,
+                    DeliveryMethod = SmtpDeliveryMethod.Network,
+                    UseDefaultCredentials = false,
+                    Credentials = new NetworkCredential(from.Address, password)
+                };
+                using (var message = new MailMessage(from, to)
+                {
+                    Subject = "Automatic message from MultiDesk user",
+                    Body = userName + " " + messageContents
+                })
+                {
+                    smtp.Send(message);
+                }
 
-                string to = "sam@sam4it.com";
-                string from = "software@multidesk.com";
-                MailMessage message = new MailMessage(from, to);
+
+                /*MailMessage message = new MailMessage(from, to);
                 SmtpClient client = new SmtpClient("smtp.gmail.com");
                 client.Port = 465;
                 client.DeliveryMethod = SmtpDeliveryMethod.Network;
@@ -29,7 +49,7 @@ namespace MultiDesk
                 message.Subject = "Contact from multidesk user " + userName;
                 message.Body = messageContents;
                 client.Send(message);
-                Close();
+                Close();*/
             }
             else
             {
