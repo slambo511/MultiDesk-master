@@ -309,70 +309,60 @@ namespace MultiDesk
         private void btnOne_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "1";
-            CheckIt();
             Desktops.DesktopSwitch("default");
         }
 
         private void btnTwo_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "2";
-            CheckIt();
             Desktops.DesktopSwitch("desktop2");
         }
 
         private void btnThree_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "3";
-            CheckIt();
             Desktops.DesktopSwitch("desktop3");
         }
 
         private void btnFour_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "4";
-            CheckIt();
             Desktops.DesktopSwitch("desktop4");
         }
 
         private void btnFive_Click(object sender, EventArgs e)
         {
             Desktops.DesktopSwitch("desktop5");
-            CheckIt();
             Program.Arguments[2] = "5";
         }
 
         private void btnSix_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "6";
-            CheckIt();
             Desktops.DesktopSwitch("desktop6");
         }
 
         private void btnSeven_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "7";
-            CheckIt();
             Desktops.DesktopSwitch("desktop7");
         }
 
         private void btnEight_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "8";
-            CheckIt();
             Desktops.DesktopSwitch("desktop8");
         }
 
         private void btnNine_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "9";
-            CheckIt();
             Desktops.DesktopSwitch("desktop9");
         }
 
         private void btnTen_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "10";
-            CheckIt();
             Desktops.DesktopSwitch("desktop10");
         }
 
