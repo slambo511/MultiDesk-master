@@ -329,6 +329,97 @@ namespace MultiDesk
 
         }
 
+        private void RunningWindow_Deactivate(object sender, EventArgs e)
+        {
+            if (noDesktops == 2)
+            {
+                btnTen.Hide(); btnNine.Hide(); btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide(); btnFour.Hide(); btnThree.Hide();
+                Width = Width - (42 * 8);
+            }
+            else if (noDesktops == 3)
+            {
+                btnTen.Hide(); btnNine.Hide(); btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide(); btnFour.Hide();
+                Width = Width - (42 * 7);
+            }
+            else if (noDesktops == 4)
+            {
+                btnTen.Hide(); btnNine.Hide(); btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide();
+                Width = Width - (42 * 6);
+            }
+            else if (noDesktops == 5)
+            {
+                btnTen.Hide(); btnNine.Hide(); btnEight.Hide(); btnSeven.Hide(); btnSix.Hide();
+                Width = Width - (42 * 5);
+            }
+            else if (noDesktops == 6)
+            {
+                btnTen.Hide(); btnNine.Hide(); btnEight.Hide(); btnSeven.Hide();
+                Width = Width - (42 * 4);
+            }
+            else if (noDesktops == 7)
+            {
+                btnTen.Hide(); btnNine.Hide(); btnEight.Hide();
+                Width = Width - (42 * 3);
+            }
+            else if (noDesktops == 8)
+            {
+                btnTen.Hide(); btnNine.Hide();
+                Width = Width - (42 * 2);
+            }
+            else if (noDesktops == 9)
+            {
+                btnTen.Hide();
+                Width = Width - 42;
+            }
 
+            switch (_idNumber)
+            {
+                case 1:
+                    btnOne.BackColor = Color.Aqua;
+                    //btnOne.Select();
+                    //btnOne.Focus();
+                    break;
+                case 2:
+                    btnTwo.BackColor = Color.Aqua;
+                    //btnTwo.Select();
+                    //btnTwo.Focus();
+                    break;
+                case 3:
+                    btnThree.BackColor = Color.Aqua;
+                    //btnThree.Select();
+                    //btnThree.Focus();
+                    break;
+                case 4:
+                    btnFour.BackColor = Color.Aqua;
+                    //btnFour.Select();
+                    //btnFour.Focus();
+                    break;
+                case 5:
+                    btnFive.BackColor = Color.Aqua;
+                    //btnFive.Select();
+                    //btnFive.Focus();
+                    break;
+                case 6:
+                    btnSix.BackColor = Color.Aqua;
+                    //btnSix.Select();
+                    //btnSix.Focus();
+                    break;
+                case 7:
+                    btnSeven.BackColor = Color.Aqua;
+                    //btnSeven.Select();
+                    //btnSeven.Focus();
+                    break;
+                case 8:
+                    btnEight.BackColor = Color.Aqua;
+                    //btnEight.Select();
+                    //btnEight.Focus();
+                    break;
+                case 9:
+                    btnNine.BackColor = Color.Aqua;
+                    break;
+                case 10:
+                    btnTen.BackColor = Color.Aqua;
+                    break;
+            }
     }
 }
