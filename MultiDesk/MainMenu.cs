@@ -1,7 +1,10 @@
 ﻿// Commented usings are for Picture handlers. DO NOT REMOVE
 using System;
+using System.Drawing;
 // using System.Drawing;
 using System.Drawing.Imaging;
+using System.Net;
+using System.Net.Mail;
 // using System.IO;
 using System.Threading;
 using System.Windows.Forms;
@@ -240,6 +243,12 @@ namespace MultiDesk
             {
                 EditRegistry.WriteKey(i.ToString(), menuPos[i]);
             }
+        }
+
+        private void contactUsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNameInput f = new frmNameInput();
+            f.Show();
         }
     }
 }

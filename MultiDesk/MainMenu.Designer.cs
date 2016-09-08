@@ -94,8 +94,9 @@
             // contactUsToolStripMenuItem
             // 
             this.contactUsToolStripMenuItem.Name = "contactUsToolStripMenuItem";
-            this.contactUsToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.contactUsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.contactUsToolStripMenuItem.Text = "&Contact Us";
+            this.contactUsToolStripMenuItem.Click += new System.EventHandler(this.contactUsToolStripMenuItem_Click);
             // 
             // gbxNumberOfDesktops
             // 
