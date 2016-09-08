@@ -192,6 +192,7 @@
             this.Text = "RunningWindow";
             this.TopMost = true;
             this.Activated += new System.EventHandler(this.RunningWindow_Activated);
+            this.Deactivate += new System.EventHandler(this.RunningWindow_Deactivate);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RunningWindow_FormClosing);
             this.Load += new System.EventHandler(this.RunningWindow_Load_1);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RunningWindow_MouseDown);
