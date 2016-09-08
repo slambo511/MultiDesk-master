@@ -22,9 +22,12 @@ namespace MultiDesk
                 SetPos();
             }
 
-            EditRegistry._subKey = "SOFTWARE\\MULTIDESK\\MENUCOUNT";
-            EditRegistry._showError = true;        
-            EditRegistry.WriteKey("count", 6);            
+            if (EditRegistry.ReadKey("SOFTWARE\\MULTIDESK\\MENUCOUNT") == null)
+            {
+                EditRegistry._subKey = "SOFTWARE\\MULTIDESK\\MENUCOUNT";
+                EditRegistry._showError = true;
+                EditRegistry.WriteKey("count", 6);
+            }
         }
 
         #region DesktopNumberRadioButtons
