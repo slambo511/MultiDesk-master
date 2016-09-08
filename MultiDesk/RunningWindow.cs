@@ -241,13 +241,16 @@ namespace MultiDesk
                     Processes.ProcessCreate(name, Application.ExecutablePath, String.Join(" ", args));
                 }
                 Desktops.DesktopSwitch(name);
-                CheckIt(); //test
+                //CheckIt(); //test
             }
 
         }
 
         private void CheckIt()
         {
+            EditRegistry._subKey = "SOFTWARE\\MULTIDESK\\MENUCOUNT";
+            EditRegistry._showError = true;
+            noDesktops = Convert.ToInt32(EditRegistry.ReadKey("count"));
             if (noDesktops == 2)
             {
                 btnOne.Show();
