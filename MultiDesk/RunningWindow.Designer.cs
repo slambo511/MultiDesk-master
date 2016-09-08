@@ -47,7 +47,7 @@
             // 
             // btnEight
             // 
-            this.btnEight.Location = new System.Drawing.Point(331, 5);
+            this.btnEight.Location = new System.Drawing.Point(294, 1);
             this.btnEight.Name = "btnEight";
             this.btnEight.Size = new System.Drawing.Size(40, 26);
             this.btnEight.TabIndex = 7;
@@ -57,7 +57,7 @@
             // 
             // btnSeven
             // 
-            this.btnSeven.Location = new System.Drawing.Point(285, 5);
+            this.btnSeven.Location = new System.Drawing.Point(252, 1);
             this.btnSeven.Name = "btnSeven";
             this.btnSeven.Size = new System.Drawing.Size(40, 26);
             this.btnSeven.TabIndex = 6;
@@ -67,7 +67,7 @@
             // 
             // btnSix
             // 
-            this.btnSix.Location = new System.Drawing.Point(239, 5);
+            this.btnSix.Location = new System.Drawing.Point(210, 1);
             this.btnSix.Name = "btnSix";
             this.btnSix.Size = new System.Drawing.Size(40, 26);
             this.btnSix.TabIndex = 5;
@@ -77,7 +77,7 @@
             // 
             // btnFive
             // 
-            this.btnFive.Location = new System.Drawing.Point(193, 5);
+            this.btnFive.Location = new System.Drawing.Point(168, 1);
             this.btnFive.Name = "btnFive";
             this.btnFive.Size = new System.Drawing.Size(40, 26);
             this.btnFive.TabIndex = 4;
@@ -87,7 +87,7 @@
             // 
             // btnFour
             // 
-            this.btnFour.Location = new System.Drawing.Point(147, 5);
+            this.btnFour.Location = new System.Drawing.Point(126, 1);
             this.btnFour.Name = "btnFour";
             this.btnFour.Size = new System.Drawing.Size(40, 26);
             this.btnFour.TabIndex = 3;
@@ -97,7 +97,7 @@
             // 
             // btnThree
             // 
-            this.btnThree.Location = new System.Drawing.Point(101, 5);
+            this.btnThree.Location = new System.Drawing.Point(84, 1);
             this.btnThree.Name = "btnThree";
             this.btnThree.Size = new System.Drawing.Size(40, 26);
             this.btnThree.TabIndex = 2;
@@ -107,7 +107,7 @@
             // 
             // btnTwo
             // 
-            this.btnTwo.Location = new System.Drawing.Point(55, 5);
+            this.btnTwo.Location = new System.Drawing.Point(42, 1);
             this.btnTwo.Name = "btnTwo";
             this.btnTwo.Size = new System.Drawing.Size(40, 26);
             this.btnTwo.TabIndex = 1;
@@ -117,7 +117,7 @@
             // 
             // btnOne
             // 
-            this.btnOne.Location = new System.Drawing.Point(9, 5);
+            this.btnOne.Location = new System.Drawing.Point(1, 1);
             this.btnOne.Name = "btnOne";
             this.btnOne.Size = new System.Drawing.Size(40, 26);
             this.btnOne.TabIndex = 0;
@@ -149,7 +149,7 @@
             // 
             // btnNine
             // 
-            this.btnNine.Location = new System.Drawing.Point(377, 5);
+            this.btnNine.Location = new System.Drawing.Point(336, 1);
             this.btnNine.Name = "btnNine";
             this.btnNine.Size = new System.Drawing.Size(40, 26);
             this.btnNine.TabIndex = 8;
@@ -158,7 +158,7 @@
             // 
             // btnTen
             // 
-            this.btnTen.Location = new System.Drawing.Point(423, 5);
+            this.btnTen.Location = new System.Drawing.Point(378, 1);
             this.btnTen.Name = "btnTen";
             this.btnTen.Size = new System.Drawing.Size(40, 26);
             this.btnTen.TabIndex = 9;
@@ -169,7 +169,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(472, 36);
+            this.ClientSize = new System.Drawing.Size(419, 28);
             this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.btnTen);
             this.Controls.Add(this.btnNine);
