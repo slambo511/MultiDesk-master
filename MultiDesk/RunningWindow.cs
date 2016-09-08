@@ -307,70 +307,60 @@ namespace MultiDesk
         private void btnOne_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "1";
-            ResetIt();
             Desktops.DesktopSwitch("default");
         }
 
         private void btnTwo_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "2";
-            ResetIt();
             Desktops.DesktopSwitch("desktop2");
         }
 
         private void btnThree_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "3";
-            ResetIt();
             Desktops.DesktopSwitch("desktop3");
         }
 
         private void btnFour_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "4";
-            ResetIt();
             Desktops.DesktopSwitch("desktop4");
         }
 
         private void btnFive_Click(object sender, EventArgs e)
         {            
             Program.Arguments[2] = "5";
-            ResetIt();
             Desktops.DesktopSwitch("desktop5");
         }
 
         private void btnSix_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "6";
-            ResetIt();
             Desktops.DesktopSwitch("desktop6");
         }
 
         private void btnSeven_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "7";
-            ResetIt();
             Desktops.DesktopSwitch("desktop7");
         }
 
         private void btnEight_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "8";
-            ResetIt();
             Desktops.DesktopSwitch("desktop8");
         }
 
         private void btnNine_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "9";
-            ResetIt();
             Desktops.DesktopSwitch("desktop9");
         }
 
         private void btnTen_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "10";
-            ResetIt();
             Desktops.DesktopSwitch("desktop10");
         }
 
