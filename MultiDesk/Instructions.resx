@@ -128,6 +128,9 @@ is highlighted in cyan).
 
 You can also use the right click to set the position to the same for the current menu as the previous one as well
 as resetting the positon to its default (10, 10).
+
+You can also add more desktops (to a current limit of 10) by right clicking and selecting the option to add 
+another desktop.
 </value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />

@@ -38,13 +38,14 @@
             this.lblInstructions.AutoSize = true;
             this.lblInstructions.Location = new System.Drawing.Point(12, 18);
             this.lblInstructions.Name = "lblInstructions";
-            this.lblInstructions.Size = new System.Drawing.Size(528, 130);
+            this.lblInstructions.Size = new System.Drawing.Size(528, 169);
             this.lblInstructions.TabIndex = 0;
             this.lblInstructions.Text = resources.GetString("lblInstructions.Text");
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(240, 178);
+            this.btnOK.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnOK.Location = new System.Drawing.Point(240, 216);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 1;
@@ -58,7 +59,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnOK;
-            this.ClientSize = new System.Drawing.Size(549, 213);
+            this.ClientSize = new System.Drawing.Size(549, 251);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.lblInstructions);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
