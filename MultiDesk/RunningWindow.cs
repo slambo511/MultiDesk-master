@@ -40,6 +40,8 @@ namespace MultiDesk
                 ActiveForm.Top = menuPosition[1];
             }
 
+            CheckIt();
+
             /*if (_idNumber == 1)
             {
                 if (noDesktops == 2)
