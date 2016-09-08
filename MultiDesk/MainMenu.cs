@@ -103,6 +103,13 @@ namespace MultiDesk
         #region StartHandler
         private void btnStart_Click(object sender, EventArgs e)
         {
+            if (rbSix.Checked)
+            {
+                Globals.NoDesktops = 6;
+                Globals.RemainingDesktops = 5;
+                _passedNumber = "5";
+                EditRegistry.WriteKey("count", 6);
+            }
             Hide();
             for (int b = 0; b < Globals.RemainingDesktops; b++)
             {
