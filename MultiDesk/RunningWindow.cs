@@ -14,6 +14,7 @@ namespace MultiDesk
         private Point _lastLocation;
         // public string _currentDesktop = Desktops.DesktopName(Desktops.DesktopOpenInput());
         private static int _idNumber;
+        public int noDesktops;
 
         public RunningWindow(int count)
         {
@@ -22,7 +23,8 @@ namespace MultiDesk
             _idNumber = count;
             EditRegistry._subKey = "SOFTWARE\\MULTIDESK\\MENUCOUNT";
             EditRegistry._showError = true;
-            int noDesktops = Convert.ToInt32(EditRegistry.ReadKey("count"));
+            noDesktops = Convert.ToInt32(EditRegistry.ReadKey("count"));
+            Globals.NoDesktops = noDesktops;
 
             EditRegistry._subKey = "SOFTWARE\\MULTIDESK\\MENUPOS";
             EditRegistry._showError = true;
@@ -295,7 +297,7 @@ namespace MultiDesk
             {
                 count++;
                 // Program.Arguments[2] = count.ToString();
-                string name = "desktop" + count.ToString();
+                string name = "desktop" + (noDesktops + 1).ToString();
                 if (!Desktops.DesktopExists(name))
                 {
                     string[] args = {"running", Globals.NoDesktops.ToString(), count.ToString()};
