@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Drawing;
-using System.Drawing.Text;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -266,7 +265,7 @@ namespace MultiDesk
             }
             if (ActiveForm != null)
             {
-                this.DesktopLocation = new Point(menuPosition[0], menuPosition[1]);
+                DesktopLocation = new Point(menuPosition[0], menuPosition[1]);
                 //ActiveForm.Left = menuPosition[0];
                 //ActiveForm.Top = menuPosition[1];
             }
