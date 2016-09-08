@@ -107,7 +107,7 @@ namespace MultiDesk
             {
                 Globals.NoDesktops = 6;
                 Globals.RemainingDesktops = 5;
-                _passedNumber = "5";
+                _passedNumber = "6";
                 EditRegistry.WriteKey("count", 6);
             }
             Hide();
