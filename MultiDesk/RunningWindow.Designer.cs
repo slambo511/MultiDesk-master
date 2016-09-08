@@ -40,9 +40,9 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.loadPositionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createNewDesktopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resetPositionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnNine = new System.Windows.Forms.Button();
             this.btnTen = new System.Windows.Forms.Button();
-            this.resetPositionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -133,7 +133,7 @@
             this.createNewDesktopToolStripMenuItem,
             this.resetPositionToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(182, 92);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(182, 70);
             // 
             // loadPositionToolStripMenuItem
             // 
@@ -148,6 +148,13 @@
             this.createNewDesktopToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.createNewDesktopToolStripMenuItem.Text = "&Create New Desktop";
             this.createNewDesktopToolStripMenuItem.Click += new System.EventHandler(this.createNewDesktopToolStripMenuItem_Click);
+            // 
+            // resetPositionToolStripMenuItem
+            // 
+            this.resetPositionToolStripMenuItem.Name = "resetPositionToolStripMenuItem";
+            this.resetPositionToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.resetPositionToolStripMenuItem.Text = "&Reset Position";
+            this.resetPositionToolStripMenuItem.Click += new System.EventHandler(this.resetPositionToolStripMenuItem_Click);
             // 
             // btnNine
             // 
@@ -169,13 +176,6 @@
             this.btnTen.UseVisualStyleBackColor = true;
             this.btnTen.Click += new System.EventHandler(this.btnTen_Click);
             // 
-            // resetPositionToolStripMenuItem
-            // 
-            this.resetPositionToolStripMenuItem.Name = "resetPositionToolStripMenuItem";
-            this.resetPositionToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.resetPositionToolStripMenuItem.Text = "&Reset Position";
-            this.resetPositionToolStripMenuItem.Click += new System.EventHandler(this.resetPositionToolStripMenuItem_Click);
-            // 
             // RunningWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,6 +193,7 @@
             this.Controls.Add(this.btnTwo);
             this.Controls.Add(this.btnOne);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MinimumSize = new System.Drawing.Size(40, 30);
             this.Name = "RunningWindow";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
