@@ -26,7 +26,7 @@ namespace MultiDesk
                 {
                     Host = "smtp.gmail.com",
                     Port = 587,
-                    EnableSsl = true,
+                    EnableSsl = true,                 
                     DeliveryMethod = SmtpDeliveryMethod.Network,
                     UseDefaultCredentials = false,
                     Credentials = new NetworkCredential(from.Address, password)
