@@ -313,7 +313,7 @@ namespace MultiDesk
                 EditRegistry._showError = true;
                 EditRegistry.WriteKey("count", noDesktops);
                 // Program.Arguments[2] = count.ToString();
-                string name = "desktop" + (noDesktops + 1).ToString();
+                string name = "desktop" + (noDesktops).ToString();
                 if (!Desktops.DesktopExists(name))
                 {
                     string[] args = {"running", Globals.NoDesktops.ToString(), noDesktops.ToString()};
