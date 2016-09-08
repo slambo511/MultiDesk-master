@@ -667,9 +667,5 @@ namespace MultiDesk
             this.Hide();
         }
 
-        private void RunningWindow_Deactivate(object sender, EventArgs e)
-        {
-            CheckIt();
-        }
     }
 }
