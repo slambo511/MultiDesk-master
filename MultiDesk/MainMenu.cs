@@ -21,6 +21,12 @@ namespace MultiDesk
             {
                 SetPos();
             }
+
+            EditRegistry._subKey = "SOFTWARE\\MULTIDESK\\MENUCOUNT";
+            EditRegistry._showError = true;        
+            EditRegistry.WriteKey("count", 0);
+            
+
         }
 
         #region DesktopNumberRadioButtons
@@ -29,6 +35,7 @@ namespace MultiDesk
             Globals.NoDesktops = 2;
             Globals.RemainingDesktops = 1;
             _passedNumber = "2";
+            EditRegistry.WriteKey("count", 2);
         }
 
         private void rbThree_CheckedChanged(object sender, EventArgs e)
@@ -36,6 +43,7 @@ namespace MultiDesk
             Globals.NoDesktops = 3;
             Globals.RemainingDesktops = 2;
             _passedNumber = "3";
+            EditRegistry.WriteKey("count", 3);
         }
 
         private void rbFour_CheckedChanged(object sender, EventArgs e)
@@ -43,6 +51,7 @@ namespace MultiDesk
             Globals.NoDesktops = 4;
             Globals.RemainingDesktops = 3;
             _passedNumber = "4";
+            EditRegistry.WriteKey("count", 4);
         }
 
         private void rbFive_CheckedChanged(object sender, EventArgs e)
@@ -50,6 +59,7 @@ namespace MultiDesk
             Globals.NoDesktops = 5;
             Globals.RemainingDesktops = 4;
             _passedNumber = "5";
+            EditRegistry.WriteKey("count", 5);
         }
 
         private void rbSix_CheckedChanged(object sender, EventArgs e)
@@ -57,6 +67,7 @@ namespace MultiDesk
             Globals.NoDesktops = 6;
             Globals.RemainingDesktops = 5;
             _passedNumber = "6";
+            EditRegistry.WriteKey("count", 6);
         }
 
         private void rbSeven_CheckedChanged(object sender, EventArgs e)
@@ -64,6 +75,7 @@ namespace MultiDesk
             Globals.NoDesktops = 7;
             Globals.RemainingDesktops = 6;
             _passedNumber = "7";
+            EditRegistry.WriteKey("count", 7);
         }
 
         private void rbEight_CheckedChanged(object sender, EventArgs e)
@@ -71,6 +83,7 @@ namespace MultiDesk
             Globals.NoDesktops = 8;
             Globals.RemainingDesktops = 7;
             _passedNumber = "8";
+            EditRegistry.WriteKey("count", 8);
         }
         #endregion
 
