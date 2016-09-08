@@ -120,8 +120,8 @@
   <data name="lblInstructions.Text" xml:space="preserve">
     <value>To use this software simply select the number of dekstops you need on the initial menu.
  
-The initial menu also provides a menu for obtaining my email address to contact me and also to reset
-the default position of the window used to swap desktops.
+The initial menu provides a drop down menu for obtaining my email address to contact me and also to
+reset the default position of the window used to swap desktops.
 
 The desktop switching window allows you to select the desktop you need to access (the current desktop
 is highlighted in cyan).
