@@ -251,5 +251,11 @@ namespace MultiDesk
             //f.Show();
             MessageBox.Show(@"Mail us at sam@sam4it.com", @"Contact Us", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void instructionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Instructions i = new Instructions();
+            i.ShowDialog();
+        }
     }
 }
