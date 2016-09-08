@@ -151,6 +151,13 @@ namespace MultiDesk
                     //btnEight.Select();
                     //btnEight.Focus();
                     break;
+                case 9:
+                    btnNine.BackColor = Color.Aqua;
+                    break;
+                case 10:
+                    btnTen.BackColor = Color.Aqua;
+                    break;
+
 
             }        
 
