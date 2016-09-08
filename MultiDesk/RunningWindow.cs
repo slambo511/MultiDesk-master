@@ -262,6 +262,7 @@ namespace MultiDesk
             for (int i = 0; i < numValues; i++)
             {
                 menuPosition[i] = Convert.ToInt32(EditRegistry.ReadKey(i.ToString()));
+                MessageBox.Show(menuPosition[i].ToString());
             }
             if (ActiveForm != null)
             {
