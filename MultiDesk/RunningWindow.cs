@@ -4,6 +4,8 @@ using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 
+// Ready to go
+
 namespace MultiDesk
 {
     public partial class RunningWindow : Form
