@@ -247,8 +247,9 @@ namespace MultiDesk
 
         private void contactUsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmNameInput f = new frmNameInput();
-            f.Show();
+            // f = new frmNameInput();
+            //f.Show();
+            MessageBox.Show(@"Mail us at sam@sam4it.com", @"Contact Us", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
