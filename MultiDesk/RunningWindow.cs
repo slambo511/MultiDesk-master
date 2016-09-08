@@ -284,9 +284,211 @@ namespace MultiDesk
             //BackColor = Color.Aquamarine;
 
             // Handles the removal of superflous buttons and resizes form accordingly
-            CheckIt();
-            
-            
+            if (noDesktops == 2)
+            {
+                btnOne.Show();
+                btnTwo.Show();
+                btnTen.Hide();
+                btnNine.Hide();
+                btnEight.Hide();
+                btnSeven.Hide();
+                btnSix.Hide();
+                btnFive.Hide();
+                btnFour.Hide();
+                btnThree.Hide();
+                if (Width != Globals.twoD)
+                {
+                    Width = Globals.twoD;
+                }
+            }
+            else if (noDesktops == 3)
+            {
+                btnOne.Show();
+                btnTwo.Show();
+                btnThree.Show();
+                btnTen.Hide();
+                btnNine.Hide();
+                btnEight.Hide();
+                btnSeven.Hide();
+                btnSix.Hide();
+                btnFive.Hide();
+                btnFour.Hide();
+                if (Width != Globals.threeD)
+                {
+                    Width = Globals.threeD;
+                }
+            }
+            else if (noDesktops == 4)
+            {
+                btnOne.Show();
+                btnTwo.Show();
+                btnThree.Show();
+                btnFour.Show();
+                btnTen.Hide();
+                btnNine.Hide();
+                btnEight.Hide();
+                btnSeven.Hide();
+                btnSix.Hide();
+                btnFive.Hide();
+                if (Width != Globals.fourD)
+                {
+                    Width = Globals.fourD;
+                }
+            }
+            else if (noDesktops == 5)
+            {
+                btnOne.Show();
+                btnTwo.Show();
+                btnThree.Show();
+                btnFour.Show();
+                btnFive.Show();
+                btnTen.Hide();
+                btnNine.Hide();
+                btnEight.Hide();
+                btnSeven.Hide();
+                btnSix.Hide();
+                if (Width != Globals.fiveD)
+                {
+                    Width = Globals.fiveD;
+                }
+            }
+            else if (noDesktops == 6)
+            {
+                btnOne.Show();
+                btnTwo.Show();
+                btnThree.Show();
+                btnFour.Show();
+                btnFive.Show();
+                btnSix.Show();
+                btnTen.Hide();
+                btnNine.Hide();
+                btnEight.Hide();
+                btnSeven.Hide();
+                if (Width != Globals.sixD)
+                {
+                    Width = Globals.sixD;
+                }
+            }
+            else if (noDesktops == 7)
+            {
+                btnOne.Show();
+                btnTwo.Show();
+                btnThree.Show();
+                btnFour.Show();
+                btnFive.Show();
+                btnSix.Show();
+                btnSeven.Show();
+                btnTen.Hide();
+                btnNine.Hide();
+                btnEight.Hide();
+                if (Width != Globals.sevenD)
+                {
+                    Width = Globals.sevenD;
+                }
+            }
+            else if (noDesktops == 8)
+            {
+                btnOne.Show();
+                btnTwo.Show();
+                btnThree.Show();
+                btnFour.Show();
+                btnFive.Show();
+                btnSix.Show();
+                btnSeven.Show();
+                btnEight.Show();
+                btnTen.Hide();
+                btnNine.Hide();
+                if (Width != Globals.eightD)
+                {
+                    Width = Globals.eightD;
+                }
+            }
+            else if (noDesktops == 9)
+            {
+                btnOne.Show();
+                btnTwo.Show();
+                btnThree.Show();
+                btnFour.Show();
+                btnFive.Show();
+                btnSix.Show();
+                btnSeven.Show();
+                btnEight.Show();
+                btnNine.Show();
+                btnTen.Hide();
+                if (Width != Globals.nineD)
+                {
+                    Width = Globals.nineD;
+                }
+            }
+            else
+            {
+                btnOne.Show();
+                btnTwo.Show();
+                btnThree.Show();
+                btnFour.Show();
+                btnFive.Show();
+                btnSix.Show();
+                btnSeven.Show();
+                btnEight.Show();
+                btnNine.Show();
+                btnTen.Show();
+                if (Width != Globals.tenD)
+                {
+                    Width = Globals.tenD;
+                }
+            }
+
+            switch (_idNumber)
+            {
+                case 1:
+                    btnOne.BackColor = Color.Aqua;
+                    //btnOne.Select();
+                    //btnOne.Focus();
+                    break;
+                case 2:
+                    btnTwo.BackColor = Color.Aqua;
+                    //btnTwo.Select();
+                    //btnTwo.Focus();
+                    break;
+                case 3:
+                    btnThree.BackColor = Color.Aqua;
+                    //btnThree.Select();
+                    //btnThree.Focus();
+                    break;
+                case 4:
+                    btnFour.BackColor = Color.Aqua;
+                    //btnFour.Select();
+                    //btnFour.Focus();
+                    break;
+                case 5:
+                    btnFive.BackColor = Color.Aqua;
+                    //btnFive.Select();
+                    //btnFive.Focus();
+                    break;
+                case 6:
+                    btnSix.BackColor = Color.Aqua;
+                    //btnSix.Select();
+                    //btnSix.Focus();
+                    break;
+                case 7:
+                    btnSeven.BackColor = Color.Aqua;
+                    //btnSeven.Select();
+                    //btnSeven.Focus();
+                    break;
+                case 8:
+                    btnEight.BackColor = Color.Aqua;
+                    //btnEight.Select();
+                    //btnEight.Focus();
+                    break;
+                case 9:
+                    btnNine.BackColor = Color.Aqua;
+                    break;
+                case 10:
+                    btnTen.BackColor = Color.Aqua;
+                    break;
+            }
+
+
 
             if (Program.Arguments[0] == "running")
             {
