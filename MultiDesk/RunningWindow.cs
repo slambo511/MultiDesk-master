@@ -21,6 +21,7 @@ namespace MultiDesk
             InitializeComponent();
             // MessageBox.Show(_currentDesktop, @"_currentDesktop", MessageBoxButtons.OK, MessageBoxIcon.Information); 
             _idNumber = count;
+
             EditRegistry._subKey = "SOFTWARE\\MULTIDESK\\MENUCOUNT";
             EditRegistry._showError = true;
             noDesktops = Convert.ToInt32(EditRegistry.ReadKey("count"));
@@ -73,42 +74,42 @@ namespace MultiDesk
             //BackColor = Color.Aquamarine;
             
             // Handles the removal of superflous buttons and resizes form accordingly
-            if (Globals.NoDesktops == 2)
+            if (noDesktops == 2)
             {
                 btnTen.Hide(); btnNine.Hide(); btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide(); btnFour.Hide(); btnThree.Hide();
                 Width = Width - (41 * 8);
             }
-            else if (Globals.NoDesktops == 3)
+            else if (noDesktops == 3)
             {
                 btnTen.Hide(); btnNine.Hide(); btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide(); btnFour.Hide();
                 Width = Width - (41 * 7);
             }
-            else if (Globals.NoDesktops == 4)
+            else if (noDesktops == 4)
             {
                 btnTen.Hide(); btnNine.Hide(); btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide();
                 Width = Width - (41 * 6);
             }
-            else if (Globals.NoDesktops == 5)
+            else if (noDesktops == 5)
             {
                 btnTen.Hide(); btnNine.Hide(); btnEight.Hide(); btnSeven.Hide(); btnSix.Hide();
                 Width = Width - (41 * 5);
             }
-            else if (Globals.NoDesktops == 6)
+            else if (noDesktops == 6)
             {
                 btnTen.Hide(); btnNine.Hide(); btnEight.Hide(); btnSeven.Hide();
                 Width = Width - (41 * 4);
             }
-            else if (Globals.NoDesktops == 7)
+            else if (noDesktops == 7)
             {
                 btnTen.Hide(); btnNine.Hide(); btnEight.Hide();
                 Width = Width - (41 * 3);
             }
-            else if (Globals.NoDesktops == 8)
+            else if (noDesktops == 8)
             {
                 btnTen.Hide(); btnNine.Hide();
                 Width = Width - (41 * 2);
             }
-            else if (Globals.NoDesktops == 9)
+            else if (noDesktops == 9)
             {
                 btnTen.Hide();
                 Width = Width - 41;
