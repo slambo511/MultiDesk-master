@@ -42,6 +42,7 @@
             this.createNewDesktopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnNine = new System.Windows.Forms.Button();
             this.btnTen = new System.Windows.Forms.Button();
+            this.resetPositionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -129,9 +130,10 @@
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.loadPositionToolStripMenuItem,
-            this.createNewDesktopToolStripMenuItem});
+            this.createNewDesktopToolStripMenuItem,
+            this.resetPositionToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(182, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(182, 92);
             // 
             // loadPositionToolStripMenuItem
             // 
@@ -166,6 +168,13 @@
             this.btnTen.Text = "10";
             this.btnTen.UseVisualStyleBackColor = true;
             this.btnTen.Click += new System.EventHandler(this.btnTen_Click);
+            // 
+            // resetPositionToolStripMenuItem
+            // 
+            this.resetPositionToolStripMenuItem.Name = "resetPositionToolStripMenuItem";
+            this.resetPositionToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.resetPositionToolStripMenuItem.Text = "&Reset Position";
+            this.resetPositionToolStripMenuItem.Click += new System.EventHandler(this.resetPositionToolStripMenuItem_Click);
             // 
             // RunningWindow
             // 
@@ -218,5 +227,6 @@
         private System.Windows.Forms.ToolStripMenuItem createNewDesktopToolStripMenuItem;
         private System.Windows.Forms.Button btnNine;
         private System.Windows.Forms.Button btnTen;
+        private System.Windows.Forms.ToolStripMenuItem resetPositionToolStripMenuItem;
     }
 }

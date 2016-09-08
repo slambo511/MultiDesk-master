@@ -465,5 +465,19 @@ namespace MultiDesk
             this.Hide();
         }
 
+        private void resetPositionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditRegistry._subKey = "SOFTWARE\\MULTIDESK\\MENUPOS";
+            EditRegistry._showError = true;
+            int pos = 10;
+            int numValues = EditRegistry.ValueCount();
+            menuPosition[0] = pos; //Convert.ToInt32(EditRegistry.ReadKey(i.ToString()));
+            menuPosition[1] = pos;
+            if (ActiveForm != null)
+            {
+                ActiveForm.Left = menuPosition[0];
+                ActiveForm.Top = menuPosition[1];
+            }
+        }
     }
 }
