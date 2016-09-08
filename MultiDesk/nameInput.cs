@@ -20,7 +20,7 @@ namespace MultiDesk
                 string userName = txtName.Text;
                 string messageContents = txtMessage.Text;
                 string password = "fqm1729ARB3f5D!";
-                var to = new MailAddress("sam@sam4it.com", "Automated");
+                var to = new MailAddress("samuelbancroft@gmail.com", "Automated");
                 var from = new MailAddress("software@multidesk.com", "Automated");               
                 var smtp = new SmtpClient
                 {
