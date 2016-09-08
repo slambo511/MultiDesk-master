@@ -307,70 +307,70 @@ namespace MultiDesk
         private void btnOne_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "1";
-            CheckIt();
+            ResetIt();
             Desktops.DesktopSwitch("default");
         }
 
         private void btnTwo_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "2";
-            CheckIt();
+            ResetIt();
             Desktops.DesktopSwitch("desktop2");
         }
 
         private void btnThree_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "3";
-            CheckIt();
+            ResetIt();
             Desktops.DesktopSwitch("desktop3");
         }
 
         private void btnFour_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "4";
-            CheckIt();
+            ResetIt();
             Desktops.DesktopSwitch("desktop4");
         }
 
         private void btnFive_Click(object sender, EventArgs e)
         {            
             Program.Arguments[2] = "5";
-            CheckIt();
+            ResetIt();
             Desktops.DesktopSwitch("desktop5");
         }
 
         private void btnSix_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "6";
-            CheckIt();
+            ResetIt();
             Desktops.DesktopSwitch("desktop6");
         }
 
         private void btnSeven_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "7";
-            CheckIt();
+            ResetIt();
             Desktops.DesktopSwitch("desktop7");
         }
 
         private void btnEight_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "8";
-            CheckIt();
+            ResetIt();
             Desktops.DesktopSwitch("desktop8");
         }
 
         private void btnNine_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "9";
-            CheckIt();
+            ResetIt();
             Desktops.DesktopSwitch("desktop9");
         }
 
         private void btnTen_Click(object sender, EventArgs e)
         {
             Program.Arguments[2] = "10";
-            CheckIt();
+            ResetIt();
             Desktops.DesktopSwitch("desktop10");
         }
 
@@ -666,5 +666,13 @@ namespace MultiDesk
                     break;
             }
         }
+
+        private void ResetIt()
+        {
+            RunningWindow reset = new RunningWindow(_idNumber);
+            reset.Show();
+            this.Hide();
+        }
+
     }
 }
