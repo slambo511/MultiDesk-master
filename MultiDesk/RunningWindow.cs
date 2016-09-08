@@ -286,8 +286,8 @@ namespace MultiDesk
 
         private void createNewDesktopToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int count = Convert.ToInt32(Program.Arguments[2]);
-            if (count == 10)
+            //int count = Convert.ToInt32(Program.Arguments[2]);
+            if (noDesktops == 10)
             {
                 MessageBox.Show(
                     @"This software currently only supports ten desktops, should you need more use the Help menu on the opening window to contact us.",
@@ -295,12 +295,15 @@ namespace MultiDesk
             }
             else
             {
-                count++;
+                noDesktops++;
+                EditRegistry._subKey = "SOFTWARE\\MULTIDESK\\MENUCOUNT";
+                EditRegistry._showError = true;
+                EditRegistry.WriteKey("count", noDesktops);
                 // Program.Arguments[2] = count.ToString();
                 string name = "desktop" + (noDesktops + 1).ToString();
                 if (!Desktops.DesktopExists(name))
                 {
-                    string[] args = {"running", Globals.NoDesktops.ToString(), count.ToString()};
+                    string[] args = {"running", Globals.NoDesktops.ToString(), noDesktops.ToString()};
                     Desktops.DesktopCreate(name);
                     Processes.ProcessCreate(name, Application.ExecutablePath, String.Join(" ", args));
                 }
