@@ -40,7 +40,7 @@ namespace MultiDesk
                 ActiveForm.Top = menuPosition[1];
             }
 
-            if (_idNumber == 1)
+            /*if (_idNumber == 1)
             {
                 if (noDesktops == 2)
                 {
@@ -245,7 +245,7 @@ namespace MultiDesk
                         btnTen.BackColor = Color.Aqua;
                         break;
                 }
-            }
+            }*/
 
         }
 
