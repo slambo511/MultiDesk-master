@@ -286,6 +286,21 @@ namespace MultiDesk
             // Handles the removal of superflous buttons and resizes form accordingly
             if (noDesktops == 2)
             {
+                btnOne.Show();
+                btnTwo.Show();
+                btnTen.Hide();
+                btnNine.Hide();
+                btnEight.Hide();
+                btnSeven.Hide();
+                btnSix.Hide();
+                btnFive.Hide();
+                btnFour.Hide();
+                btnThree.Hide();
+                if (Width != Globals.twoD)
+                {
+                    Width = Globals.twoD;
+                }
+                /*
                 btnTen.Hide();
                 btnNine.Hide();
                 btnEight.Hide();
@@ -295,9 +310,13 @@ namespace MultiDesk
                 btnFour.Hide();
                 btnThree.Hide();
                 Width = Width - (42*8);
+                */
             }
             else if (noDesktops == 3)
             {
+                btnOne.Show();
+                btnTwo.Show();
+                btnThree.Show();
                 btnTen.Hide();
                 btnNine.Hide();
                 btnEight.Hide();
@@ -305,10 +324,39 @@ namespace MultiDesk
                 btnSix.Hide();
                 btnFive.Hide();
                 btnFour.Hide();
-                Width = Width - (42*7);
+                if (Width != Globals.threeD)
+                {
+                    Width = Globals.threeD;
+                }
+            
+            /*
+            btnTen.Hide();
+            btnNine.Hide();
+            btnEight.Hide();
+            btnSeven.Hide();
+            btnSix.Hide();
+            btnFive.Hide();
+            btnFour.Hide();
+            Width = Width - (42*7);
+            */
             }
             else if (noDesktops == 4)
             {
+                btnOne.Show();
+                btnTwo.Show();
+                btnThree.Show();
+                btnFour.Show();
+                btnTen.Hide();
+                btnNine.Hide();
+                btnEight.Hide();
+                btnSeven.Hide();
+                btnSix.Hide();
+                btnFive.Hide();
+                if (Width != Globals.fourD)
+                {
+                    Width = Globals.fourD;
+                }
+                /*
                 btnTen.Hide();
                 btnNine.Hide();
                 btnEight.Hide();
@@ -316,41 +364,139 @@ namespace MultiDesk
                 btnSix.Hide();
                 btnFive.Hide();
                 Width = Width - (42*6);
+                */
             }
             else if (noDesktops == 5)
             {
+                btnOne.Show();
+                btnTwo.Show();
+                btnThree.Show();
+                btnFour.Show();
+                btnFive.Show();
+                btnTen.Hide();
+                btnNine.Hide();
+                btnEight.Hide();
+                btnSeven.Hide();
+                btnSix.Hide();
+                if (Width != Globals.fiveD)
+                {
+                    Width = Globals.fiveD;
+                }
+                /*
                 btnTen.Hide();
                 btnNine.Hide();
                 btnEight.Hide();
                 btnSeven.Hide();
                 btnSix.Hide();
                 Width = Width - (42*5);
+                */
             }
             else if (noDesktops == 6)
             {
+                btnOne.Show();
+                btnTwo.Show();
+                btnThree.Show();
+                btnFour.Show();
+                btnFive.Show();
+                btnSix.Show();
+                btnTen.Hide();
+                btnNine.Hide();
+                btnEight.Hide();
+                btnSeven.Hide();
+                if (Width != Globals.sixD)
+                {
+                    Width = Globals.sixD;
+                }
+                /*
                 btnTen.Hide();
                 btnNine.Hide();
                 btnEight.Hide();
                 btnSeven.Hide();
                 Width = Width - (42*4);
+                */
             }
             else if (noDesktops == 7)
             {
+                btnOne.Show();
+                btnTwo.Show();
+                btnThree.Show();
+                btnFour.Show();
+                btnFive.Show();
+                btnSix.Show();
+                btnSeven.Show();
+                btnTen.Hide();
+                btnNine.Hide();
+                btnEight.Hide();
+                if (Width != Globals.sevenD)
+                {
+                    Width = Globals.sevenD;
+                }
+                /*
                 btnTen.Hide();
                 btnNine.Hide();
                 btnEight.Hide();
                 Width = Width - (42*3);
+                */
             }
             else if (noDesktops == 8)
             {
+                btnOne.Show();
+                btnTwo.Show();
+                btnThree.Show();
+                btnFour.Show();
+                btnFive.Show();
+                btnSix.Show();
+                btnSeven.Show();
+                btnEight.Show();
+                btnTen.Hide();
+                btnNine.Hide();
+                if (Width != Globals.eightD)
+                {
+                    Width = Globals.eightD;
+                }
+                /*
                 btnTen.Hide();
                 btnNine.Hide();
                 Width = Width - (42*2);
+                */
             }
             else if (noDesktops == 9)
             {
+                btnOne.Show();
+                btnTwo.Show();
+                btnThree.Show();
+                btnFour.Show();
+                btnFive.Show();
+                btnSix.Show();
+                btnSeven.Show();
+                btnEight.Show();
+                btnNine.Show();
+                btnTen.Hide();
+                if (Width != Globals.nineD)
+                {
+                    Width = Globals.nineD;
+                }
+                /*
                 btnTen.Hide();
                 Width = Width - 42;
+                */
+            }
+            else
+            {
+                btnOne.Show();
+                btnTwo.Show();
+                btnThree.Show();
+                btnFour.Show();
+                btnFive.Show();
+                btnSix.Show();
+                btnSeven.Show();
+                btnEight.Show();
+                btnNine.Show();
+                btnTen.Show();
+                if (Width != Globals.tenD)
+                {
+                    Width = Globals.tenD;
+                }
             }
 
             switch (_idNumber)
@@ -567,7 +713,7 @@ namespace MultiDesk
 
         }
 
-        private void RunningWindow_Deactivate(object sender, EventArgs e)
+        /*private void RunningWindow_Deactivate(object sender, EventArgs e)
         {
             if (noDesktops == 2)
             {
@@ -772,6 +918,6 @@ namespace MultiDesk
                     btnTen.BackColor = Color.Aqua;
                     break;
             }
-        }
+        }*/
     }
 }
