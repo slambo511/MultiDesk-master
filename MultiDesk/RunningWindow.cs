@@ -71,42 +71,42 @@ namespace MultiDesk
             if (Globals.NoDesktops == 2)
             {
                 btnTen.Hide(); btnNine.Hide(); btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide(); btnFour.Hide(); btnThree.Hide();
-                Width = Width - (46 * 8);
+                Width = Width - (41 * 8);
             }
             else if (Globals.NoDesktops == 3)
             {
                 btnTen.Hide(); btnNine.Hide(); btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide(); btnFour.Hide();
-                Width = Width - (46 * 7);
+                Width = Width - (41 * 7);
             }
             else if (Globals.NoDesktops == 4)
             {
                 btnTen.Hide(); btnNine.Hide(); btnEight.Hide(); btnSeven.Hide(); btnSix.Hide(); btnFive.Hide();
-                Width = Width - (46 * 6);
+                Width = Width - (41 * 6);
             }
             else if (Globals.NoDesktops == 5)
             {
                 btnTen.Hide(); btnNine.Hide(); btnEight.Hide(); btnSeven.Hide(); btnSix.Hide();
-                Width = Width - (46 * 5);
+                Width = Width - (41 * 5);
             }
             else if (Globals.NoDesktops == 6)
             {
                 btnTen.Hide(); btnNine.Hide(); btnEight.Hide(); btnSeven.Hide();
-                Width = Width - (46 * 4);
+                Width = Width - (41 * 4);
             }
             else if (Globals.NoDesktops == 7)
             {
                 btnTen.Hide(); btnNine.Hide(); btnEight.Hide();
-                Width = Width - (46 * 3);
+                Width = Width - (41 * 3);
             }
             else if (Globals.NoDesktops == 8)
             {
                 btnTen.Hide(); btnNine.Hide();
-                Width = Width - (46 * 2);
+                Width = Width - (41 * 2);
             }
             else if (Globals.NoDesktops == 9)
             {
                 btnTen.Hide();
-                Width = Width - 46;
+                Width = Width - 41;
             }
 
             switch (_idNumber)
