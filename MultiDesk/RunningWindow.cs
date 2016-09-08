@@ -266,7 +266,7 @@ namespace MultiDesk
             }
             if (ActiveForm != null)
             {
-                this.Location = new Point(menuPosition[0], menuPosition[1]);
+                this.DesktopLocation = new Point(menuPosition[0], menuPosition[1]);
                 //ActiveForm.Left = menuPosition[0];
                 //ActiveForm.Top = menuPosition[1];
             }
