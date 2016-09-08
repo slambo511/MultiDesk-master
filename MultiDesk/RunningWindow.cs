@@ -300,6 +300,10 @@ namespace MultiDesk
         private void createNewDesktopToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //int count = Convert.ToInt32(Program.Arguments[2]);
+            EditRegistry._subKey = "SOFTWARE\\MULTIDESK\\MENUCOUNT";
+            EditRegistry._showError = true;
+            noDesktops = Convert.ToInt32(EditRegistry.ReadKey("count"));
+            Globals.NoDesktops = noDesktops;
             if (noDesktops == 10)
             {
                 MessageBox.Show(
