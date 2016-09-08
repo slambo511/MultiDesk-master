@@ -24,9 +24,7 @@ namespace MultiDesk
 
             EditRegistry._subKey = "SOFTWARE\\MULTIDESK\\MENUCOUNT";
             EditRegistry._showError = true;        
-            EditRegistry.WriteKey("count", 0);
-            
-
+            EditRegistry.WriteKey("count", 6);            
         }
 
         #region DesktopNumberRadioButtons

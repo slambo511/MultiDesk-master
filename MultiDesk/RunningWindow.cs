@@ -20,6 +20,9 @@ namespace MultiDesk
             InitializeComponent();
             // MessageBox.Show(_currentDesktop, @"_currentDesktop", MessageBoxButtons.OK, MessageBoxIcon.Information); 
             _idNumber = count;
+            EditRegistry._subKey = "SOFTWARE\\MULTIDESK\\MENUCOUNT";
+            EditRegistry._showError = true;
+            int noDesktops = Convert.ToInt32(EditRegistry.ReadKey("count"));
 
             EditRegistry._subKey = "SOFTWARE\\MULTIDESK\\MENUPOS";
             EditRegistry._showError = true;
