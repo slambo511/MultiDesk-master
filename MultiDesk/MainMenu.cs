@@ -1,11 +1,5 @@
-﻿// Commented usings are for Picture handlers. DO NOT REMOVE
-using System;
-using System.Drawing;
-// using System.Drawing;
+﻿using System;
 using System.Drawing.Imaging;
-using System.Net;
-using System.Net.Mail;
-// using System.IO;
 using System.Threading;
 using System.Windows.Forms;
 
