@@ -54,12 +54,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Desktops.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Globals.cs" />
     <Compile Include="Instructions.cs">
       <SubType>Form</SubType>
@@ -73,12 +67,6 @@
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="nameInput.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="nameInput.Designer.cs">
-      <DependentUpon>nameInput.cs</DependentUpon>
-    </Compile>
     <Compile Include="Processes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -89,18 +77,11 @@
     <Compile Include="RunningWindow.Designer.cs">
       <DependentUpon>RunningWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screenshots.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Instructions.resx">
       <DependentUpon>Instructions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="nameInput.resx">
-      <DependentUpon>nameInput.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
