@@ -157,68 +157,6 @@ namespace MultiDesk
             Desktops.DesktopSwitch(name);
         }
 
-        private void DesktopSave()
-        {
-            string path = Application.UserAppDataPath + "\\";
-            string desktop = _currentDesktop;
-            if (desktop == "Default")
-            {
-                desktop = "desktop1";
-            }
-            path = path + desktop;
-            Thread.Sleep(500);
-            Screenshots.ScreenSave(path, ImageFormat.Jpeg, this);
-        }
-
-        /*private void ScreenshotsLoad()
-        {
-            for (int index = 1; index < 5; index++)
-            {
-                string path = Application.UserAppDataPath + "\\";
-                path += "Desktop" + index.ToString();
-                if (File.Exists(path))
-                {
-                    MemoryStream stream = new MemoryStream();
-                    Image image = Image.FromFile(path);
-                    image.Save(stream, ImageFormat.Jpeg);
-                    image.Dispose();
-                    string pictureBox = "pictureBox" + index.ToString();
-                }
-            }
-
-        }*/
-
-        /*private void ScreenshotLoad()
-        {
-            switch (_currentDesktop)
-            {
-                case "Default":
-                    //pictureBox1.Image = Screenshots.ScreenCapture(this);
-                    break;
-                case "Desktop2":
-                    //ictureBox2.Image = Screenshots.ScreenCapture(this);
-                    break;
-                case "Desktop3":
-                    //pictureBox3.Image = Screenshots.ScreenCapture(this);
-                    break;
-                case "Desktop4":
-                    //pictureBox4.Image = Screenshots.ScreenCapture(this);
-                    break;
-            }
-        }*/
-
-        /*private void ScreenshotsDelete()
-        {
-            for (int index = 2; index < 5; index++)
-            {
-                string desktop = "Desktop" + index.ToString();
-                string path = Application.UserAppDataPath + "\\" + desktop;
-                if (File.Exists(path) && !Desktops.DesktopExists(desktop))
-                {
-                    File.Delete(path);
-                }
-            }
-        }*/
         #endregion
 
         private void resetMenuPositionToolStripMenuItem_Click(object sender, EventArgs e)
